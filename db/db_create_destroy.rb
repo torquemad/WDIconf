@@ -8,6 +8,8 @@ rails g model AccessLevel type:string
 
 rails g migration add_duration_to_talks duration:int
 
+rails g migration rename_access_type :access_levels, :type, :access_type
+
 # Destroy models
 rails destroy model Talk
 rails destroy model Speaker
