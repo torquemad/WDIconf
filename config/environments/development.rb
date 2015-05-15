@@ -41,11 +41,12 @@ Rails.application.configure do
 
   config.generators do |g|
     g.orm               :active_record
-    g.template_engine   :erb
+    g.template_engine   :haml
     g.view_specs        false
     g.helper_specs      false
     g.stylesheets       false
     g.javascripts       false
     g.controller_specs  false
+    g.template_engine :haml
   end
 end

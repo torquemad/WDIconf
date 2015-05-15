@@ -1,5 +1,5 @@
 # Gems Usage CheatSheet
-This is a documentation on how to require gemfile
+This is a documentation on how to require gemfile for TDD
 ____
 
 
