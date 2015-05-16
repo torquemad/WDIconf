@@ -1,0 +1,12 @@
+= form_for :user, :action => user_signup_path  do |f|
+
+  = label_tag :email, "Email"
+  = f.text_field :email
+
+  = label_tag :user_type, "Type"
+
+  = f.select("access_level", @access_level.collect {|a| [a.access_type.capitalize, a.id]})
+
+  = f.hidden_field :login_type, :value =>1
+
+  = f.submit "Sign Up"
