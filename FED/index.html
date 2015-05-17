@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
-    <title>Foundation</title>
+    <title>WDI CONF 2015</title>
     
     <link rel="stylesheet" href="stylesheets/app.css" />
     <link rel="stylesheet" href="stylesheets/jared.css" />
@@ -18,7 +18,7 @@
 
 <!-- :::::::::: TEMPORARY START :::::::::: -->
 
-      <!-- schedule page -->
+    <!-- schedule page -->
   <div class='schedule-wrapper'>
     <div class="schedule-cover slider-toggle" data-slider-page=".schedule-wrapper"></div>
     <div class="schedule">
@@ -49,61 +49,64 @@
 
 <!-- :::::::::: TEMPORARY END :::::::::: -->
 
+  <!-- ::::: HEADER SECTION HTML and UX by Jared O'Loughlin ::::: -->
 
-    <div class="header-fixed">
-          <!-- empty container for fix bg-image -->  
-    </div>
+  <div class="header-fixed">
+    <!-- empty container for fix bg-image -->  
+  </div>
 
-    <header id="Home" class="row header-inner">
+
+  <header id="Home" class="row header-inner">
       
-      <p class="show-nav show-for-small-down" >Menu</p>
+    <p class="show-nav show-for-small-down" >Menu</p>
       
-      <img class="main-logo" src="images/tmp-Banner.png" alt="WDI2015">
-      <p class="welcome-msg">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid quidem fugit vero alias dolorem quo aut, hic quos rerum dolore veniam fugiat harum consequuntur reiciendis quas nam, neque voluptate dolor.</p>
+    <img class="main-logo" src="images/tmp-Banner.png" alt="WDI2015">
+    <p class="welcome-msg">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid quidem fugit vero alias dolorem quo aut, hic quos rerum dolore veniam fugiat harum consequuntur reiciendis quas nam, neque voluptate dolor.</p>
 
-
-      <button class="button slider-toggle" data-slider-page=".schedule-wrapper">Book now</button>
+    <button class="button slider-toggle" data-slider-page=".schedule-wrapper">Book now</button>
  
+    <nav class="main-nav hide-for-small-down show-for-medium-up">
+      <ul>
+        <li><a id="nav-home" href="#Home">HOME</a></li>
+        <li><a href="#Speakers">Speakers</a></li>
+        <li><a href="#About">About</a></li>
+        <li><a href="#Location">Location</a></li>
+        <li><a href="#Sponsors">Sponsors</a></li>
+        <li><a href="#Contact">Contact</a></li>
+        <li><a class="button tiny" id="nav-tickets" href="#Tickets">BUY TICKETS</a></li>
+      </ul>
+    </nav>
 
-      <nav class="main-nav hide-for-small-down show-for-medium-up">
-        <ul>
+    <!-- Mobile Nav -->
+    <nav class="mobile">
+      
+      <p id="NavClose">Close</p>
+      <h3>WDICONF 15<br>MELBOURNE<br>22 MAY</h3>
+      <ul>
           <li><a id="nav-home" href="#Home">HOME</a></li>
-          <li><a href="#Speakers">Speakers</a></li>
+          <li><a href="#Speakers-head">Speakers</a></li>
           <li><a href="#About">About</a></li>
           <li><a href="#Location">Location</a></li>
           <li><a href="#Sponsors">Sponsors</a></li>
           <li><a href="#Contact">Contact</a></li>
           <li><a class="button tiny" id="nav-tickets" href="#Tickets">BUY TICKETS</a></li>
         </ul>
-      </nav>
 
+    </nav>
 
-      <nav class="mobile">
-              <p id="NavClose">Close</p>
-        <h3>WDICONF 15<br>MELBOURNE<br>22 MAY</h3>
-        <ul>
-            <li><a id="nav-home" href="#Home">HOME</a></li>
-            <li><a href="#Speakers-head">Speakers</a></li>
-            <li><a href="#About">About</a></li>
-            <li><a href="#Location">Location</a></li>
-            <li><a href="#Sponsors">Sponsors</a></li>
-            <li><a href="#Contact">Contact</a></li>
-            <li><a class="button tiny" id="nav-tickets" href="#Tickets">BUY TICKETS</a></li>
-          </ul>
-          <p>
+  </header>
 
-      </nav>
+  <main role="main" class="main" id="main">
 
-    </header>
-
+  <!-- ::::: SPEAKER SECTION HTML and UX by Jaya Wijono and Jared O'Loughlin ::::: -->
     <section id="Speakers">
       <section class="row" id="Speakers-head">
         <h2 class="small-12 medium-6 columns small-only-text-center text-right">SPEAKERS</h2>
         <ul class="inline-list small-12 medium-6 columns small-only-text-center" id ="Speakers-head-badges">
-          <li><img src="http://placehold.it/40x40" alt="badge 1"> </li>
-          <li><img src="http://placehold.it/40x40" alt="badge 2"> </li>
-          <li><img src="http://placehold.it/40x40" alt="badge 3"> </li>
-          <li><img src="http://placehold.it/40x40" alt="badge 4"> </li>
+          <li><img src="http://placehold.it/40x40" alt="badge 1"></li>
+          <li><img src="http://placehold.it/40x40" alt="badge 2"></li>
+          <li><img src="http://placehold.it/40x40" alt="badge 3"></li>
+          <li><img src="http://placehold.it/40x40" alt="badge 4"></li>
         </ul>
       </section>
       
@@ -139,6 +142,7 @@
           <li><img class="th" src="http://placehold.it/230x180" alt="speaker"></li>
           <li><img class="th" src="http://placehold.it/230x180" alt="speaker"></li>
         </ul>
+
         <ul class="show-for-small-only">
           <li class="Speakers-item">
             <div class="row">
@@ -215,14 +219,9 @@
           <li><button id="Speakers-list-showMore">VIEW MORE</button></li>
         </ul>
       </section>
-    </section><!-- end Speakers section -->
+    </section>
 
-<!--     <section id="About">
-      <div class="row">
-        <h1 style="margin-top:30px;">About</h1>
-      </div>
-    </section> -->
-
+  <!-- ::::: ABOUT SECTION HTML by Jaya Wijono and Jared O'Loughlin, UX by Beta Ngadiman ::::: -->
     <section id="About">
       <section class="row">
         <div class="small-12 medium-6 columns">
@@ -244,6 +243,7 @@
       </section>
     </section>
 
+  <!-- ::::: LOCATION SECTION HTML and UX by Louis Moore ::::: -->
     <section id="Location" class="container">
       <div class="row">
         
@@ -265,12 +265,13 @@
         </div>
 
         <div class="large-6 medium-6 columns">
-          <div id="map-canvas"></div>
+          <div id="Map-canvas"></div>
         </div>
 
-      </div> <!-- END OF ROW -->
-    </section> <!-- end Location section -->
-    
+      </div> 
+    </section> 
+
+  <!-- ::::: SPONSORS SECTION HTML and UX by Luke Shillabeer ::::: -->    
     <section id="Sponsors">
       <div class="row">
         <h2 class="small-12 medium-12 columns text-center">Thank You!</h2>
@@ -332,6 +333,7 @@
             </li>
           </ul>
       </div>
+
       <div class="row">
         <ul class="medium-block-grid-5 hide-for-small-only">
           <li><img src="http://placehold.it/180x180" alt="small-sponsor"></li>
@@ -352,7 +354,9 @@
       </div>
     </section> <!-- end Sponsors section -->
 
-<section id="Contact">
+  <!-- ::::: CONTACT SECTION HTML by Louis Moore, UX by Beta Ngadiman ::::: -->
+
+    <section id="Contact">
       <div class="row">
         <div id="eventOrganisers" class="medium-6 large-6 columns">
           <h2>Organizers</h2>
@@ -408,10 +412,11 @@
             <input type="submit" class="nice blue radius button" value="Send Message"></button></a>
           </form>
 
-        </div><!--end 8 columns-->
-      </div> <!-- end of row -->
-    </section> <!-- end Contact section -->
+        </div>
+      </div>
+    </section> 
 
+  </main>
 
 
 
