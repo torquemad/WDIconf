@@ -14,11 +14,31 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user = User.new(user_params)
+    @user = User.new(get_user_params)
+    binding.pry
+    @user.save
+
     if @user.save
       redirect_to users_all_path
     else
+      @errors = @user.errors.full_messages
       render :new
+    end
+  end
+
+  def edit
+    @user = User.find(params[:id])
+  end
+
+  def update
+    @user = User.find(params[:id])
+    #@user = get_user_params
+    #binding.pry
+    if @user.update(get_user_params)
+      redirect_to users_all_path
+    else
+      @errors = @user.errors.full_messages
+      render :edit
     end
   end
 
@@ -26,13 +46,16 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
   end
 
-  def user_params
+  def destroy
+    @user = User.find(params[:id])
+    @user.destroy
+    redirect_to users_home
+  end
 
-    # password=params["user"]["password"]
-    # password_digest = BCrypt::Password.create(password)
-    # #password: password_digest
+  def get_user_params
     binding.pry
-    params.require(:user).permit(:email, :access_level, :login_type)
+    params.require(:user).permit(:email, :access_level_id, :login_type, :password, :password_confirmation)
+
   end
 
 end

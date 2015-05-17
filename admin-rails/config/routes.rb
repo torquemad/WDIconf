@@ -7,16 +7,11 @@ Rails.application.routes.draw do
     get   '/users/all'            => 'users#all',     :as=>'users_all'
     get   '/users/signup'         => 'users#new',     :as=>'user_signup'
     post  '/users/signup'         => 'users#create'
-    get   '/users/:id/profile'    => 'users#profile',    :as=> 'user_profile'
+    get   '/users/:id/profile'    => 'users#profile', :as=> 'user_profile'
+    get   '/users/:id/edit'       => 'users#edit',    :as=> 'user_edit'
+    put   '/users/:id/edit'       => 'users#update',  :as=> 'user_update'
+    delete '/user/delete/:id'     => 'user#destroy',  :as=> 'user_delete'
   # --------------------------
-
-  # get 'users/new'
-
-  # get 'users/profile'
-
-  # get 'users/all'
-
-  # get 'users/_form'
 
   get 'pages/index'
   get 'pages/about'

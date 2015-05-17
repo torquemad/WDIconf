@@ -1,7 +1,9 @@
 %h1 Users#profile
 
 %p
+  Email:
   = @user.email
 %p
-  = @user.access_level
+  Access Type:
+  = @user.access_level.access_type
 

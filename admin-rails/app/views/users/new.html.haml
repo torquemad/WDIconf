@@ -1,31 +1,12 @@
 %h1 Users#new
 
-= form_for :user, :action => user_signup_path  do |f|
+%div.user_form
+  = form_for :user, :action => user_signup_path  do |f|
+    = render :partial => "form", :locals => {:f => f}
+    = f.submit "Sign Up"
 
-  = label_tag :email, "Email"
-  = f.text_field :email
-
-  = label_tag :user_type, "Type"
-  / Method 1
-  / = select(:access_type, :status) do
-  /   - @access_level.each do |type|
-  /     = content_tag(:option, type.access_type.capitalize, value: type.id)
-
-  / Method 2
-  = f.select("access_level", @access_level.collect {|a| [a.access_type.capitalize, a.id]})
-
-  // Method 3
-  /= select_tag "access_type", options_from_collection_for_select(@access_level.collect{|a| [a.access_type, a.id]})
-
-  // Method 4 - Use css to Capitalize the option
-  //= select_tag "user[access_level]", options_from_collection_for_select(@access_level, "id", "access_type")
-
-  = f.hidden_field :login_type, :value =>1
-
-  / = label_tag :password, "Password"
-  / = f.password_field :password
-
-  / = label_tag :password_conf, "Password Confirmation"
-  / = f.password_field :password_conf
-
-  = f.submit "Sign Up"
+- if !@errors.nil?
+  %ul.Signup_Errors
+  - for message_error in @errors
+    %li
+      * #{message_error}

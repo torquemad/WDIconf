@@ -9,6 +9,10 @@ rails g model AccessLevel type:string
 rails g migration add_duration_to_talks duration:int
 
 rails g migration rename_access_type :access_levels, :type, :access_type
+rails g migration rename_users_access_level_to_access_level_id
+
+rails g migration add_password_digest_to_users password_digest:string
+rails g migration add_password_salt_to_users password_salt:string
 
 # Destroy models
 rails destroy model Talk

@@ -4,6 +4,6 @@
 
   %li
     = user.email
-    %a{:href => user.id} Edit
-
+    %a{:href => "#{user.id}/profile"} Show
+    %a{:href => "#{user.id}/edit"} Edit
 

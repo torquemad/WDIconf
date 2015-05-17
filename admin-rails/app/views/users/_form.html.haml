@@ -1,12 +1,22 @@
-= form_for :user, :action => user_signup_path  do |f|
-
-  = label_tag :email, "Email"
+%p
+  = label_tag :email, "Email: "
   = f.text_field :email
 
-  = label_tag :user_type, "Type"
+%p
+  = label_tag :user_type, "Type: "
+  = f.select("access_level_id", AccessLevel.all.collect {|a| [a.access_type.capitalize, a.id]}, :selected=>@user.access_level_id)
 
-  = f.select("access_level", @access_level.collect {|a| [a.access_type.capitalize, a.id]})
+%p
+  = label_tag :password, "Password: "
+  = f.password_field :password
 
-  = f.hidden_field :login_type, :value =>1
+  = label_tag :password_conf, "Password Confirmation: "
+  = f.password_field :password_confirmation
 
-  = f.submit "Sign Up"
+= f.hidden_field :login_type, :value =>@user.login_type||=1
+
+
+
+
+
+
