@@ -24,3 +24,17 @@ function initialize() {
 }
 
 google.maps.event.addDomListener(window, 'load', initialize);
+
+// Phil's Slide Script
+
+$(document).ready(function(){
+
+  // side animation toggle
+  function sliderToggle() {
+    $($(this).attr('data-slider-page')).animate({width:'toggle'}, 300);
+  }
+
+  // els w/ .slider-toggle draws slide target from data
+  $('.slider-toggle').on('click', sliderToggle);
+
+});

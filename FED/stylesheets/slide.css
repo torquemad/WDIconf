@@ -1,0 +1,47 @@
+/* PLACEHOLDER STUFF for making slider; assume ther*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* wrappers for slide out pages */
+.schedule-wrapper, .payment-wrapper {
+  display: none;
+  position: fixed;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(155,155,155,.5);
+  z-index: 15;
+}
+
+/* 'cover' left side for toggle click event */
+.schedule-cover, .payment-cover {
+  float: left;
+  height: 100vh;
+}
+
+.schedule-cover {
+  width: 14vw;
+}
+
+.payment-cover {
+  width: 29vw;
+}
+
+/* slide out pages */
+.schedule, .payment {
+  float: right;
+  background: white;
+  display: inline-block;
+  height: 100vh;
+  vertical-align: top;
+}
+
+.schedule {
+  width: 85vw;
+}
+
+.payment {
+  width: 70vw;
+}
