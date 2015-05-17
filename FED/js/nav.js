@@ -2,29 +2,26 @@
 
 
 $(document).ready(function(){
-  console.log("doc ready");
+
   //$('.main-nav').addClass('fixed');
 
  $(window).bind('scroll', function() {
- var navHeight = $( window ).height() - 380;
-  console.log(navHeight);
-  console.log($(window).scrollTop());
+ var navHeight = $( window ).height() - 410;
    if ($(window).scrollTop() > navHeight) {
      $('nav').addClass('fixed');
-     console.log("if condition");
    }
    else {
-      console.log("else condition");
      $('nav').removeClass('fixed');
    }
 });
 
- $('.show-nav').on('click', function(){
-  console.log("yo");
-  $('nav.mobile').toggleClass('open');
- })
+  $('.show-nav').on('click', function(){
+    $('nav.mobile').toggleClass('open');
+  });
 
-
+  $('#NavClose').on('click', function(){
+    $('nav.mobile').removeClass('open');
+  });
 
 
 });
@@ -66,6 +63,8 @@ $(document).on("click", "a[href^=#]", function(e) {
 
     // trigger scroll
     controller.scrollTo(id);
+    console.log("hi");
+    $('nav.mobile').removeClass('open');
 
     // If supported by the browser we can also update the URL
     if (window.history && window.history.pushState) {
