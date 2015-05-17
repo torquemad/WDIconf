@@ -11,8 +11,44 @@
     <link rel="stylesheet" href="stylesheets/jaya.css" />
     <link rel="stylesheet" href="stylesheets/louis-contact.css" />
     <link rel="stylesheet" href="stylesheets/louis-getthere.css" />
+    <link rel="stylesheet" href="stylesheets/slide.css">
+
   </head>
   <body>
+
+<!-- :::::::::: TEMPORARY START :::::::::: -->
+
+      <!-- schedule page -->
+  <div class='schedule-wrapper'>
+    <div class="schedule-cover slider-toggle" data-slider-page=".schedule-wrapper"></div>
+    <div class="schedule">
+      <h3>WDICONF 15</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime impedit aliquid laborum ipsa ratione aut fugiat quis magni nihil quam officiis quibusdam porro, velit saepe amet ipsum repellat sed vero.</p>
+      <p>Chris</p>
+      <p>Chris</p>
+      <p>Chris</p>
+      <p>Chris</p>
+      <p>Chris</p>
+      <button class="">Next</button>
+      <button class="slider-toggle" data-slider-page=".payment-wrapper">Checkout</button>
+    </div>
+  </div>
+
+  <!-- payment page -->
+  <div class='payment-wrapper'>
+    <div class="payment-cover slider-toggle" data-slider-page=".payment-wrapper"></div>
+    <div class="payment">
+      <h3>Payment</h3>
+      <p>$100</p>
+      <p>$100</p>
+      <p>$100</p>
+      <p>$100</p>
+      <p>$100</p>
+    </div>
+  </div>
+
+<!-- :::::::::: TEMPORARY END :::::::::: -->
+
 
     <div class="header-fixed">
           <!-- empty container for fix bg-image -->  
@@ -20,13 +56,13 @@
 
     <header id="Home" class="row header-inner">
       
-      <p class="show-nav show-for-small-down">Menu</p>
+      <p class="show-nav show-for-small-down" >Menu</p>
       
       <img class="main-logo" src="images/tmp-Banner.png" alt="WDI2015">
       <p class="welcome-msg">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid quidem fugit vero alias dolorem quo aut, hic quos rerum dolore veniam fugiat harum consequuntur reiciendis quas nam, neque voluptate dolor.</p>
 
 
-      <a href="#" class="button">Book now</a>
+      <button class="button slider-toggle" data-slider-page=".schedule-wrapper">Book now</button>
  
 
       <nav class="main-nav hide-for-small-down show-for-medium-up">
@@ -376,6 +412,9 @@
       </div> <!-- end of row -->
     </section> <!-- end Contact section -->
 
+
+
+
     <script src="js/jquery.min.js"></script>
     <script src="js/foundation.min.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js"></script>
@@ -387,6 +426,7 @@
 
     <script src="js/nav.js"></script>
 
+  
     
 
   </body>
