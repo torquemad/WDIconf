@@ -14,6 +14,17 @@ class User < ActiveRecord::Base
   validates :password, confirmation: true
   # validates_presence_of :password, :on => :create
 
+  def self.authenticate(email, password)
+    user = User.find_by(:email => email) || User.find_by(:username => email)
+    binding.pry
+    if user && user.password_digest == BCrypt::Engine.hash_secret(password, user.password_salt)
+      user
+    else
+      login_path
+    end
+  end
+
+
   def encrypt_password
     binding.pry
     if password.present?
