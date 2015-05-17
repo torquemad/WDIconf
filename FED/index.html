@@ -3,169 +3,316 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
     <title>Foundation</title>
+    
     <link rel="stylesheet" href="stylesheets/app.css" />
-    <script src="js/modernizr.js"></script>
+    <link rel="stylesheet" href="stylesheets/jared.css" />
+    <link rel="stylesheet" href="stylesheets/jaya.css" />
+    <link rel="stylesheet" href="stylesheets/louis-contact.css" />
+    <link rel="stylesheet" href="stylesheets/louis-getthere.css" />
   </head>
   <body>
-    <div class="row">
-      <div class="large-12 columns">
-        <h1>Welcome to Foundation</h1>
-      </div>
-    </div>
-    
-    <div class="row">
-      <div class="large-12 columns">
-        <div class="panel">
-          <h3>We&rsquo;re stoked you want to try Foundation! </h3>
-          <p>To get going, this file (index.html) includes some basic styles you can modify, play around with, or totally destroy to get going.</p>
-          <p>Once you've exhausted the fun in this document, you should check out:</p>
-          <div class="row">
-            <div class="large-4 medium-4 columns">
-              <p><a href="http://foundation.zurb.com/docs">Foundation Documentation</a><br />Everything you need to know about using the framework.</p>
-            </div>
-            <div class="large-4 medium-4 columns">
-              <p><a href="http://zurb.com/university/code-skills">Foundation Code Skills</a><br />These online courses offer you a chance to better understand how Foundation works and how you can master it to create awesome projects.</p>
-            </div>
-            <div class="large-4 medium-4 columns">
-              <p><a href="http://foundation.zurb.com/forum">Foundation Forum</a><br />Join the Foundation community to ask a question or show off your knowlege.</p>
-            </div>
-          </div>
-          <div class="row">
-            <div class="large-4 medium-4 medium-push-2 columns">
-              <p><a href="http://github.com/zurb/foundation">Foundation on Github</a><br />Latest code, issue reports, feature requests and more.</p>
-            </div>
-            <div class="large-4 medium-4 medium-pull-2 columns">
-              <p><a href="https://twitter.com/ZURBfoundation">@zurbfoundation</a><br />Ping us on Twitter if you have questions. When you build something with this we'd love to see it (and send you a totally boss sticker).</p>
-            </div>        
-          </div>
-        </div>
-      </div>
+
+    <div class="header-fixed">
+          <!-- empty container for fix bg-image -->  
     </div>
 
-    <div class="row">
-      <div class="large-8 medium-8 columns">
-        <h5>Here&rsquo;s your basic grid:</h5>
-        <!-- Grid Example -->
+    <header id="Home" class="row header-inner">
+      
+      <p class="show-nav show-for-small-down">Menu</p>
+      
+      <img class="main-logo" src="images/tmp-Banner.png" alt="WDI2015">
+      <p class="welcome-msg">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid quidem fugit vero alias dolorem quo aut, hic quos rerum dolore veniam fugiat harum consequuntur reiciendis quas nam, neque voluptate dolor.</p>
 
-        <div class="row">
-          <div class="large-12 columns">
-            <div class="callout panel">
-              <p><strong>This is a twelve column section in a row.</strong> Each of these includes a div.panel element so you can see where the columns are - it's not required at all for the grid.</p>
-            </div>
-          </div>
+
+      <a href="#" class="button">Book now</a>
+ 
+
+      <nav class="main-nav hide-for-small-down show-for-medium-up">
+        <ul>
+          <li><a id="nav-home" href="#Home">HOME</a></li>
+          <li><a href="#Speakers">Speakers</a></li>
+          <li><a href="#About">About</a></li>
+          <li><a href="#Location">Location</a></li>
+          <li><a href="#Sponsors">Sponsors</a></li>
+          <li><a href="#Contact">Contact</a></li>
+          <li><a class="button tiny" id="nav-tickets" href="#Tickets">BUY TICKETS</a></li>
+        </ul>
+      </nav>
+
+
+      <nav class="mobile">
+              <p id="NavClose">Close</p>
+        <h3>WDICONF 15<br>MELBOURNE<br>22 MAY</h3>
+        <ul>
+            <li><a id="nav-home" href="#Home">HOME</a></li>
+            <li><a href="#Speakers-head">Speakers</a></li>
+            <li><a href="#About">About</a></li>
+            <li><a href="#Location">Location</a></li>
+            <li><a href="#Sponsors">Sponsors</a></li>
+            <li><a href="#Contact">Contact</a></li>
+            <li><a class="button tiny" id="nav-tickets" href="#Tickets">BUY TICKETS</a></li>
+          </ul>
+          <p>
+
+      </nav>
+
+    </header>
+
+    <section id="Speakers">
+      <section class="row" id="Speakers-head">
+        <h2 class="small-12 medium-6 columns small-only-text-center text-right">SPEAKERS</h2>
+        <ul class="inline-list small-12 medium-6 columns small-only-text-center" id ="Speakers-head-badges">
+          <li><img src="http://placehold.it/40x40" alt="badge 1"> </li>
+          <li><img src="http://placehold.it/40x40" alt="badge 2"> </li>
+          <li><img src="http://placehold.it/40x40" alt="badge 3"> </li>
+          <li><img src="http://placehold.it/40x40" alt="badge 4"> </li>
+        </ul>
+      </section>
+      
+      <section class="row hide-for-small-only" id="Speakers-details">
+        <div class="medium-4 columns container_200">
+          <img id="Speakers-details-highlightedImage" src="http://placehold.it/300x200" alt="photo">
         </div>
-        <div class="row">
-          <div class="large-6 medium-6 columns">
-            <div class="callout panel">
-              <p>Six columns</p>
-            </div>
-          </div>
-          <div class="large-6 medium-6 columns">
-            <div class="callout panel">
-              <p>Six columns</p>
-            </div>
-          </div>
+        <div class="medium-4 columns container_200">
+          <h3>ANIMATING IN YOUR BROWSER WITH JAVASCRIPT</h3>
+          <ul class="inline-list" id ="Speakers-details-badges">
+            <li><img src="http://placehold.it/40x40" alt="badge 1"> </li>
+            <li><img src="http://placehold.it/40x40" alt="badge 2"> </li>
+          </ul>
         </div>
-        <div class="row">
-          <div class="large-4 medium-4 small-4 columns">
-            <div class="callout panel">
-              <p>Four columns</p>
-            </div>
-          </div>
-          <div class="large-4 medium-4 small-4 columns">
-            <div class="callout panel">
-              <p>Four columns</p>
-            </div>
-          </div>
-          <div class="large-4 medium-4 small-4 columns">
-            <div class="callout panel">
-              <p>Four columns</p>
-            </div>
-          </div>
+        <div class="medium-4 columns container_200">
+          <h4>By: Chris Lambert</h4>
+          <p>10:00PM - 11.30PM</p>
+          <button id="Speakers-details-CTA-btn">Book Now</button>
         </div>
-        
-        <hr />
-                
-        <h5>We bet you&rsquo;ll need a form somewhere:</h5>
-        <form>
-          <div class="row">
-            <div class="large-12 columns">
-              <label>Input Label</label>
-              <input type="text" placeholder="large-12.columns" />
-            </div>
-          </div>
-          <div class="row">
-            <div class="large-4 medium-4 columns">
-              <label>Input Label</label>
-              <input type="text" placeholder="large-4.columns" />
-            </div>
-            <div class="large-4 medium-4 columns">
-              <label>Input Label</label>
-              <input type="text" placeholder="large-4.columns" />
-            </div>
-            <div class="large-4 medium-4 columns">
-              <div class="row collapse">
-                <label>Input Label</label>
-                <div class="small-9 columns">
-                  <input type="text" placeholder="small-9.columns" />
-                </div>
-                <div class="small-3 columns">
-                  <span class="postfix">.com</span>
-                </div>
+      </section>
+
+      <section class="row" id="Speakers-list">
+        <ul class="medium-block-grid-4 hide-for-small-only">
+          <li><img class="th" src="http://placehold.it/230x180" alt="speaker"></li>
+          <li><img class="th" src="http://placehold.it/230x180" alt="speaker"></li>
+          <li><img class="th" src="http://placehold.it/230x180" alt="speaker"></li>
+          <li><img class="th" src="http://placehold.it/230x180" alt="speaker"></li>
+          <li><img class="th" src="http://placehold.it/230x180" alt="speaker"></li>
+          <li><img class="th" src="http://placehold.it/230x180" alt="speaker"></li>
+          <li><img class="th" src="http://placehold.it/230x180" alt="speaker"></li>
+          <li><img class="th" src="http://placehold.it/230x180" alt="speaker"></li>
+          <li><img class="th" src="http://placehold.it/230x180" alt="speaker"></li>
+          <li><img class="th" src="http://placehold.it/230x180" alt="speaker"></li>
+          <li><img class="th" src="http://placehold.it/230x180" alt="speaker"></li>
+        </ul>
+        <ul class="show-for-small-only">
+          <li class="Speakers-item">
+            <div class="row">
+              <div class="small-5 columns container_150">
+                <img id="Speakers-list-image" src="http://placehold.it/250x150" alt="photo">
+                <h4 id="Speakers-list-name">Chris Lambert</h4>
+              </div>
+              <div class="small-7 columns container_150">
+                <h3>ANIMATING IN YOUR BROWSER WITH JAVASCRIPT</h3>
+                <p id="Speakers-list-time">10:00PM - 11.30PM</p>
               </div>
             </div>
-          </div>
-          <div class="row">
-            <div class="large-12 columns">
-              <label>Select Box</label>
-              <select>
-                <option value="husker">Husker</option>
-                <option value="starbuck">Starbuck</option>
-                <option value="hotdog">Hot Dog</option>
-                <option value="apollo">Apollo</option>
-              </select>
+            <div class="row">
+              <div class="small-5 columns container_100">
+                <h4>SUBJECTS</h4>
+                <ul class="inline-list" id ="Speakers-list-badges">
+                  <li><img src="http://placehold.it/40x40" alt="badge 1"> </li>
+                  <li><img src="http://placehold.it/40x40" alt="badge 2"> </li>
+                </ul>
+              </div>
+              <div class="small-7 columns container_100">
+                <button id="Speakers-list-CTA-btn">Book Now</button>
+              </div>
             </div>
-          </div>
-          <div class="row">
-            <div class="large-6 medium-6 columns">
-              <label>Choose Your Favorite</label>
-              <input type="radio" name="pokemon" value="Red" id="pokemonRed"><label for="pokemonRed">Radio 1</label>
-              <input type="radio" name="pokemon" value="Blue" id="pokemonBlue"><label for="pokemonBlue">Radio 2</label>
+          </li>
+          <li class="Speakers-item">
+            <div class="row">
+              <div class="small-5 columns container_150">
+                <img id="Speakers-list-image" src="http://placehold.it/250x150" alt="photo">
+                <h4 id="Speakers-list-name">Chris Lambert</h4>
+              </div>
+              <div class="small-7 columns container_150">
+                <h3>ANIMATING IN YOUR BROWSER WITH JAVASCRIPT</h3>
+                <p id="Speakers-list-time">10:00PM - 11.30PM</p>
+              </div>
             </div>
-            <div class="large-6 medium-6 columns">
-              <label>Check these out</label>
-              <input id="checkbox1" type="checkbox"><label for="checkbox1">Checkbox 1</label>
-              <input id="checkbox2" type="checkbox"><label for="checkbox2">Checkbox 2</label>
+            <div class="row">
+              <div class="small-5 columns container_100">
+                <h4>SUBJECTS</h4>
+                <ul class="inline-list" id ="Speakers-list-badges">
+                  <li><img src="http://placehold.it/40x40" alt="badge 1"> </li>
+                  <li><img src="http://placehold.it/40x40" alt="badge 2"> </li>
+                </ul>
+              </div>
+              <div class="small-7 columns container_100">
+                <button id="Speakers-list-CTA-btn">Book Now</button>
+              </div>
             </div>
-          </div>
-          <div class="row">
-            <div class="large-12 columns">
-              <label>Textarea Label</label>
-              <textarea placeholder="small-12.columns"></textarea>
+          </li>
+          <li class="Speakers-item">
+            <div class="row">
+              <div class="small-5 columns container_150">
+                <img id="Speakers-list-image" src="http://placehold.it/250x150" alt="photo">
+                <h4 id="Speakers-list-name">Chris Lambert</h4>
+              </div>
+              <div class="small-7 columns container_150">
+                <h3>ANIMATING IN YOUR BROWSER WITH JAVASCRIPT</h3>
+                <p id="Speakers-list-time">10:00PM - 11.30PM</p>
+              </div>
             </div>
-          </div>
-        </form>
-      </div>     
+            <div class="row">
+              <div class="small-5 columns container_100">
+                <h4>SUBJECTS</h4>
+                <ul class="inline-list" id ="Speakers-list-badges">
+                  <li><img src="http://placehold.it/40x40" alt="badge 1"> </li>
+                  <li><img src="http://placehold.it/40x40" alt="badge 2"> </li>
+                </ul>
+              </div>
+              <div class="small-7 columns container_100">
+                <button id="Speakers-list-CTA-btn">Book Now</button>
+              </div>
+            </div>
+          </li>
+          <li><button id="Speakers-list-showMore">VIEW MORE</button></li>
+        </ul>
+      </section>
+    </section><!-- end Speakers section -->
 
-      <div class="large-4 medium-4 columns">
-        <h5>Try one of these buttons:</h5>
-        <p><a href="#" class="small button">Simple Button</a><br/>
-        <a href="#" class="small radius button">Radius Button</a><br/>
-        <a href="#" class="small round button">Round Button</a><br/>            
-        <a href="#" class="medium success button">Success Btn</a><br/>
-        <a href="#" class="medium alert button">Alert Btn</a><br/>
-        <a href="#" class="medium secondary button">Secondary Btn</a></p>           
-        <div class="panel">
-          <h5>So many components, girl!</h5>
-          <p>A whole kitchen sink of goodies comes with Foundation. Check out the docs to see them all, along with details on making them your own.</p>
-          <a href="http://foundation.zurb.com/docs/" class="small button">Go to Foundation Docs</a>          
-        </div>
+<!--     <section id="About">
+      <div class="row">
+        <h1 style="margin-top:30px;">About</h1>
       </div>
-    </div>
+    </section> -->
+
+    <section id="About">
+      <section class="row">
+        <div class="small-12 medium-6 columns">
+          <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis tempore.</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex est quasi impedit quidem amet quibusdam culpa maxime. Eum nobis praesentium ipsa ab nam. Quas temporibus rem delectus consectetur, veniam modi.</p>
+          <a href="">BUTTON LINK TEXT</a>
+        </div>
+        <div class="small-12 medium-5 medium-offset-1 columns">
+          <h3>Frequently Asked Questions</h3>
+          <p class="boxed">Where is the location of the WDI Conf?</p>
+          <p class="boxed">General Assembly, Melbourne</p>
+          <p class="boxed">How to get there?</p>
+          <p class="boxed">Fly your way there</p>
+        </div>
+      </section>
+
+      <section class="row">
+        <h3 class = "center">CURRENT ATTENDANCE <strong>37,000 AWESOME PEOPLE</strong></h3>
+      </section>
+    </section>
+
+    <section id="Location" class="container">
+      <div class="row">
+        
+        <div class="large-6 medium-6 columns">
+          
+          <div class="location-details">
+            <h1>FIND US AT:</h1>
+            <span>123 address street some place</span>
+            <ul class="location-ul">
+              <li class="title">Hi</li>
+              <li class="title-details">Some extra details about some stuff and things</li>
+              <li class="title">There</li>
+              <li class="title-details">Some extra details about some stuff and things</li>
+              <li class="title">Friend</li>
+              <li class="title-details">Some extra details about some stuff and things</li>
+            </ul>
+          </div>
+
+        </div>
+
+        <div class="large-6 medium-6 columns">
+          <div id="map-canvas"></div>
+        </div>
+
+      </div> <!-- END OF ROW -->
+    </section> <!-- end Location section -->
+    
+    <section id="Sponsors">
+      <div class="row">
+        <h1 style="margin-top:30px;">Sponsors</h1>
+      </div>
+    </section> <!-- end Sponsors section -->
+
+<section id="Contact">
+      <div class="row">
+        <div id="eventOrganisers" class="medium-6 large-6 columns">
+          <h2>Organizers</h2>
+          <section class="individual-contact">
+            <div class="individual-img">
+              <img src="http://www.bu.edu/ece/files/2011/09/tsui.jpg" alt="">
+            </div>
+
+            <div class="individual-details">
+              <h3>DT</h3>
+              <p>Head Honcho</p>
+              <ul>
+                <li>number</li>
+                <li>email</li>
+              </ul>
+            </div>
+          </section>
+
+          <section class="individual-contact">
+            <div class="individual-img">
+              <img width="200" src="http://www.niutoday.info/wp-content/uploads/2012/04/Swan-Matt-12.jpg" alt="">
+            </div>
+            <div class="individual-details">
+              <h3>Matt</h3>
+              <p>Organizer of Chicken</p>
+              <ul>
+                <li>number</li>
+                <li>email</li>
+              </ul>
+            </div>
+          </section>
+        </div>
+        
+        <div id="contactForm" class="medium-6 large-6 columns">
+          <form id="myForm" method="post" data-abide>
+            <h5>Contact Us</h5>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum temporibus soluta vitae consectetur neque cupiditate hic voluptas consequatur quo omnis.</p>
+            <label>Name</label>
+            <small class="error">Your full name is required.</small>
+            <input type="text" placeholder="Full Name" required>
+            
+            <label>Email</label>
+            <small class="error">An email address is required.</small>
+            <input type="email" placeholder="username@address.com" required>
+            
+            <label>Web Address</label>
+            <input type="url" placeholder="http://www.url.com">
+            
+            <label>Your Message</label>
+            <small class="error">Your message is required.</small>
+            <textarea placeholder="Enter your message here" required></textarea>
+            
+            <input type="submit" class="nice blue radius button" value="Send Message"></button></a>
+          </form>
+
+        </div><!--end 8 columns-->
+      </div> <!-- end of row -->
+    </section> <!-- end Contact section -->
 
     <script src="js/jquery.min.js"></script>
     <script src="js/foundation.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
     <script src="js/app.js"></script>
+    <script src="js/ScrollMagic.min.js"></script>
+    <script src="js/ScrollToPlugin.min.js"></script>
+    <script src="js/TweenMax.min.js"></script>
+
+
+    <script src="js/nav.js"></script>
+
+    
+
   </body>
 </html>

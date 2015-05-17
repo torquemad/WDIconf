@@ -1,0 +1,151 @@
+/* ------  SPLASH 'PAGE' ------  */
+
+.header-fixed {
+  height:400px;
+  width: 100%;
+  position: fixed;
+  background: url('http://placehold.it/1200x300');
+  z-index: -1;
+  top:0;
+  opacity:0.3;  /* temporary rule */
+}
+
+.header-inner {
+  margin:0 auto;
+  height:400px;
+  position: relative;
+  text-align: center;
+}
+
+.main-logo {
+  margin:1.7em 0 1.3em 0; 
+}
+
+.welcome-msg {
+  width: 60%;
+  margin:0 auto 1em auto;
+}
+
+/* temporary rules (to be deleted ) */
+#Speakers { background:#fff; }
+#About { background:white; }
+#Location { background:#ddd; }
+#Sponsors { background:white; min-height: 600px; }
+#Contact { background:#ddd; }
+
+/* --  Desktop Navigation --  */
+
+
+.main-nav {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  height:40px;
+}
+
+/* This class is added on scroll */
+.main-nav.fixed {
+  position: fixed; 
+  z-index: 1;
+  background-color: #ccc;
+}
+
+#nav-home,
+#nav-tickets {
+  visibility: hidden; /* elements still occupy space but are unseen */
+}
+
+.main-nav.fixed #nav-home,
+.main-nav.fixed #nav-tickets {
+  visibility: visible;
+}
+
+.main-nav ul {
+  margin:0;
+  padding:0;
+}
+
+.main-nav li {
+  display:inline-block;
+  text-align: center;
+  list-style-type: none;
+  margin-right:1em;
+  text-transform: uppercase;
+  font-size: .9em;
+  margin-top:.5em;
+}
+
+
+/* --  Mobile Navigation --  */
+
+.show-nav {
+  position:fixed;
+  top:0;
+  right:0;
+  background:#777;
+  height:40px;
+  width:100%;
+  text-align-left;
+  z-index:100;
+  padding-top:.4em;
+  color:#ccc;
+}
+
+nav.mobile {
+  background:#888;
+  width:300px;
+  height: 100%;
+  position: fixed;
+  z-index:200;
+  top:0;
+  left:0;
+  -webkit-transform: translate(-300px, 0);
+  -transform: translate(-150px, 0);
+  transition: transform 0.3s ease;
+}
+
+nav.mobile.open {
+  transform: translate(0, 0);
+}
+
+nav.mobile li {
+  list-style-type: none;
+  text-align: left; 
+}
+
+nav.mobile a { 
+  color:#fff;
+}
+
+#NavClose {
+  position: absolute;
+  right:10px;
+  top:5px;
+  font-size:.8em;
+  color:#ccc;
+}
+
+
+
+/* --  General --  */
+
+
+
+/* --  Media Queries --  */
+
+@media only screen and (max-width: 40em) { 
+  #Home {
+    margin-top:13px;  /* extra space in Mobile view to account for Mobile Nav */
+  }
+  section {
+    padding-top:25px!important;  /* extra space in Mobile view to account for Mobile Nav */
+  }
+
+
+} /* max-width 640px, mobile-only styles, use when QAing mobile issues */
+
+
+
+
+
+
