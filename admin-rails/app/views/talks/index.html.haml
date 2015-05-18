@@ -1,0 +1,10 @@
+%h2 All Talks
+
+- @talks.each do | talk|
+
+  %li
+    = talk.title
+    by
+    = talk.speaker.name
+    / %a{:href => "#{talk.id}/profile"} Show
+    / %a{:href => "#{talk.id}/edit"} Edit

@@ -1,0 +1,12 @@
+%h1 Add Talk
+.form
+  = form_for :talk, :action => talk_add_path  do |f|
+    = render :partial => "form", :locals => {:f => f}
+    = f.submit "Add Talk"
+
+
+
+
+
+
+
