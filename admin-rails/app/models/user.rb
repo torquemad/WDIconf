@@ -26,7 +26,7 @@ class User < ActiveRecord::Base
 
 
   def encrypt_password
-    binding.pry
+
     if password.present?
       self.password_salt   = BCrypt::Engine.generate_salt
       self.password_digest = BCrypt::Engine.hash_secret(password, password_salt)
