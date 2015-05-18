@@ -1,0 +1,11 @@
+%h1 Speakers#edit
+
+%div.speaker_form
+  = form_for @speaker do |f|
+    = render :partial => "form", :locals => {:f => f}
+
+- if !@errors.nil?
+  %ul.Signup_Errors
+  - for message_error in @errors
+    %li
+      * #{message_error}

@@ -19,6 +19,10 @@ Rails.application.routes.draw do
     #delete '/user/delete/:id'     => 'user#destroy',  :as=> 'user_delete'
   # --------------------------
 
+  # ------ Speakers routes ------
+    resources :speakers
+  # -----------------------------
+
   # ------ Authentication routes ------
     get   '/login'                => 'session#new',       :as => 'login'
     post  '/login'                => 'session#create'
