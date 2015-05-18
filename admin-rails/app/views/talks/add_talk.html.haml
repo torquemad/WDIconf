@@ -13,22 +13,31 @@
       = f.text_area :description
 
     %p
+      = label_tag :speaker, "Speaker"
+      = f.select("speaker_id", Speaker.all.collect {|sp| [sp.name.capitalize, sp.id]})
+
+    %p
       = label_tag :date, "Talk Date: "
-      = f.date_field :talk_date, :value => "2015-05-29"
+      = f.date_field :date, :value => "2015-05-29", :disabled =>"true"
 
-    %p
-      = label_tag :time, "Talk Time: "
-      = f.time_field :talk_time, :min => "10:00:00"
+    %p#duration
+      = label_tag :duration, "Talk Duration: "
+      %span
+        %em 15
+        mins
+      = f.range_field :time, :step =>5, :value => 15, :min =>5, :max=>60
 
-    %p
-      = label_tag :speaker, "Speaker: "
-      = f.select("speaker_id", Speaker.all.collect {|a| [a.name.capitalize, a.id]})
+    = f.hidden_field :limit, :value =>30
 
-    f.hidden_field :limit, :value =>30
-    f.hidden_field :duration, :value =>60
 
     = f.submit "Add Talk"
 
+:javascript
+  $('#duration input[type="range"').on('change', function() {
+    $parent = $(this).parent();
+    $parent.find('em').html($(this).val());
+    console.log($(this).val())
+  });
 
 
 
