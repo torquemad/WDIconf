@@ -1,12 +1,5 @@
 Rails.application.routes.draw do
 
-
-  get 'talks/index'
-
-  get 'talks/add_talk'
-
-  get 'talks/edit_talk'
-
   # ------ Users routes ------
     # resources :users
     get   '/users/'               => 'users#index',   :as=>'users_home'
@@ -26,9 +19,10 @@ Rails.application.routes.draw do
   # --------------------------
 
   # ------ Talks routes ------
-    get '/talks/'                 => 'talks#index',   :as=>'talks'
-    get 'talks/add_talk'          => 'talks#add',   :as=>'talk_add'
-    get 'talks/edit_talk'         => 'talks#edit',   :as=>'talk_edit'
+    get '/talks/'                 => 'talks#index',     :as=>'talks'
+    get 'talks/add_talk'          => 'talks#add_talk',       :as=>'talk_add'
+    #post 'talk/add_talk'          => 'talks#create',
+    #get 'talks/edit_talk'         => 'talks#edit',   :as=>'talk_edit'
   # --------------------------
 
   get 'pages/index'
