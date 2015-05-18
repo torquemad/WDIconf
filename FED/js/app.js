@@ -5,7 +5,7 @@ $(document).foundation();
 
 
 function initialize() {
-  var mapCanvas = document.getElementById('map-canvas');
+  var mapCanvas = document.getElementById('Map-canvas');
   var myLatlng = new google.maps.LatLng(-37.818266, 144.962388);
 
   var mapOptions = {
