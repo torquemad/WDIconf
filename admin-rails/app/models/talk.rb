@@ -1,3 +1,3 @@
 class Talk < ActiveRecord::Base
-  has_one :speaker
+  belongs_to :speaker
 end
