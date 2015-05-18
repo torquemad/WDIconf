@@ -1,43 +1,10 @@
 %h1 Add Talk
 .form
-  = form_for :talk, :action => user_signup_path  do |f|
-    %p
-      = label_tag :title, "Talk Title: "
-      = f.text_field :title
-    %p
-      = label_tag :blurb, "Talk Blurb: "
-      = f.text_field :blurb
-
-    %p
-      = label_tag :description, "Talk Description: "
-      = f.text_area :description
-
-    %p
-      = label_tag :speaker, "Speaker"
-      = f.select("speaker_id", Speaker.all.collect {|sp| [sp.name.capitalize, sp.id]})
-
-    %p
-      = label_tag :date, "Talk Date: "
-      = f.date_field :date, :value => "2015-05-29", :disabled =>"true"
-
-    %p#duration
-      = label_tag :duration, "Talk Duration: "
-      %span
-        %em 15
-        mins
-      = f.range_field :time, :step =>5, :value => 15, :min =>5, :max=>60
-
-    = f.hidden_field :limit, :value =>30
-
-
+  = form_for :talk, :action => talk_add_path  do |f|
+    = render :partial => "form", :locals => {:f => f}
     = f.submit "Add Talk"
 
-:javascript
-  $('#duration input[type="range"').on('change', function() {
-    $parent = $(this).parent();
-    $parent.find('em').html($(this).val());
-    console.log($(this).val())
-  });
+
 
 
 

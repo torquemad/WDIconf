@@ -13,16 +13,16 @@ Rails.application.routes.draw do
   # --------------------------
 
   # ------ Authentication routes ------
-    get   '/login'                => 'session#new',       :as => 'login'
-    post  '/login'                => 'session#create'
-    delete   '/logout'            => 'session#destroy',   :as => 'logout'
+    get     '/login'              => 'session#new',       :as => 'login'
+    post    '/login'              => 'session#create'
+    delete  '/logout'             => 'session#destroy',   :as => 'logout'
   # --------------------------
 
   # ------ Talks routes ------
-    get '/talks/'                 => 'talks#index',     :as=>'talks'
-    get 'talks/add_talk'          => 'talks#add_talk',       :as=>'talk_add'
-    #post 'talk/add_talk'          => 'talks#create',
-    #get 'talks/edit_talk'         => 'talks#edit',   :as=>'talk_edit'
+    get     '/talks/'             => 'talks#index',     :as=>'talks'
+    get     'talks/add_talk'      => 'talks#add_talk',  :as=>'talk_add'
+    post    'talks/add_talk'      => 'talks#create'
+    #get    'talks/edit_talk'     => 'talks#edit',   :as=>'talk_edit'
   # --------------------------
 
   get 'pages/index'
