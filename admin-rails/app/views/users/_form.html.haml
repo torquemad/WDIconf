@@ -1,0 +1,22 @@
+%p
+  = label_tag :email, "Email: "
+  = f.text_field :email
+
+%p
+  = label_tag :user_type, "Type: "
+  = f.select("access_level_id", AccessLevel.all.collect {|a| [a.access_type.capitalize, a.id]}, :selected=>@user.access_level_id)
+
+%p
+  = label_tag :password, "Password: "
+  = f.password_field :password
+
+  = label_tag :password_conf, "Password Confirmation: "
+  = f.password_field :password_confirmation
+
+= f.hidden_field :login_type, :value =>@user.login_type||=1
+
+
+
+
+
+

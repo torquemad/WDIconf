@@ -1,0 +1,9 @@
+%h2 All Users
+
+- @users.each do | user|
+
+  %li
+    = user.email
+    %a{:href => "#{user.id}/profile"} Show
+    %a{:href => "#{user.id}/edit"} Edit
+

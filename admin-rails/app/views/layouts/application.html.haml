@@ -7,5 +7,17 @@
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
   %body
-    %h1 hello world
+    %p
+      = link_to 'User Index', users_home_path
+      = link_to 'SIGNUP', user_signup_path
+      = link_to 'Show all users', users_all_path
+    %p
+      - if logged_in?
+        logged in as #{current_user.email}
+        = form_tag '/logout', method: :delete do
+          %button logout
+      - else
+        = link_to 'Login', login_path
+
+
     = yield
