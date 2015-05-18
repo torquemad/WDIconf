@@ -1,2 +1,37 @@
 <h1>Pages#about</h1>
 <p>Find me in app/views/pages/about.html.erb</p>
+
+<div class="form">
+  <%= form_tag %>
+    <p>
+      <label for="talk_title">Talk Title</label>
+      <input type="text" name="talk_title">
+    </p>
+    <p>
+      <label for="talk_blurb">Talk Blurb</label>
+      <input type="text" name="talk_blurb">
+    </p>
+    <p>
+      <label for="talk_desc">Talk Description</label>
+      <textarea name="talk_desc"></textarea>
+    </p>
+    <p>
+      <label for="talk_desc">date</label>
+      <input type="date" name="talk_date" value="2015-05-29" disabled>
+    </p>
+    <p>
+      <label for="talk_desc">time</label>
+      <input type="time" name="talk_time" min="10:00:00" max="16:30:00">
+    </p>
+    <p>
+      <label for="talk_desc">Speaker</label>
+      <select name="speaker_name" id="speaker_name">
+        <option value="100">Daniel Tsui</option>
+      </select>
+    </p>
+    <input type="hidden" name="limit" value="30">
+    <input type="hidden" name="duration" value="60">
+
+    <input type="submit">
+  <%= end %>
+</div>

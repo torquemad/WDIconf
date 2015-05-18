@@ -9,7 +9,8 @@
 
 #  Users
 # id:serial, access_level: int, email: str, login_type:int
-User.create([{ access_level: 1, email: 'admin@uxb.com', login_type:1 }]);
+User.create([{ access_level_id: 1, email: 'admin@uxb.com', login_type:1 }]);
+User.create([{ access_level_id: 3, email: 'dt@uxb.com', login_type:1 }]);
 
 
 #  Users Access Level
@@ -21,7 +22,7 @@ AccessLevel.create([{access_type:'sponsor'}]);
 
 # Talks
 # id: serial, title: str, blurb: str, description: text, timedate: datetime, limit: int, duration: int (mins)
-
+Talk.create([{ title: 'Flipping Hair', blurb: 'How to flip your hair', description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem quam sint ea debitis natus quos iusto earum corporis excepturi inventore pariatur ipsum non est itaque repellat, ratione aliquam accusantium placeat.', date: '', limit: 30, duration: 60 }]);
 
 
 # Tickets
@@ -31,3 +32,4 @@ AccessLevel.create([{access_type:'sponsor'}]);
 
 # Speakers
 # id: serial, user_id: int, talk_id: int, name: str, blurb: str
+Speaker.create([{ user_id: 2, talk_id: 1, name: 'Daniel Tsui', blurb: 'Lead Instructor, Web Development Immersive, General Assembly'}]);
