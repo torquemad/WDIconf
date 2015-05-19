@@ -6,6 +6,7 @@ class SpeakersController < ApplicationController
 
   def create
     @speaker = Speaker.new(speaker_params)
+
     if @speaker.save
       redirect_to "/speakers/#{@speaker.id}"
     else
@@ -23,6 +24,7 @@ class SpeakersController < ApplicationController
 
   def show
     @speaker = Speaker.find(params[:id])
+    @talks = Talk.where(speaker_id: params[:id])
   end
 
   def update
@@ -41,6 +43,7 @@ class SpeakersController < ApplicationController
   end
 
   def speaker_params
+    binding.pry
     params.require(:speaker).permit(:name, :blurb, :image_url)
   end
 
