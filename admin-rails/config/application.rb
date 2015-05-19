@@ -14,6 +14,9 @@ require "sprockets/railtie"
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
+# custom config in rails
+# http://guides.rubyonrails.org/configuring.html#custom-configuration
+
 module Wdiconf
   class Application < Rails::Application
     # Settings in config/environments/* take precedence over those specified here.
@@ -32,5 +35,8 @@ module Wdiconf
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
+  
+    # mail sending config
+    config.x.mail_on_user_signup = true
   end
 end
