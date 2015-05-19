@@ -1,0 +1,11 @@
+%h1 Speakers#all
+
+- @speakers.each do |speaker|
+  %p= speaker.name
+  %p= speaker.blurb
+  %p
+    =link_to 'Edit', "/speakers/#{speaker.id}/edit"
+  %p
+    / =link_to 'Delete', :url => { :action => "speakers_path", :id => "#{speaker.id}", :method => "destroy"}
+    =link_to 'Delete', "/speakers/#{speaker.id}", :method => "delete"
+  %br/
