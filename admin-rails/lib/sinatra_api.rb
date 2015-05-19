@@ -26,6 +26,11 @@ class SinatraApi < Sinatra::Base
     Talk.find(params[:id]).to_json
   end
 
+  patch '/talks/time/:id' do
+    talk      = Talk.find(params[:id])
+    talk_time = Time.new(2015,5,23, params[:hour], params[:minutes], 0, "+10:00") 
+    talk.update(:date => talk_time)
+  end
 
   # ---------------
 
