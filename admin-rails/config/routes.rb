@@ -23,10 +23,19 @@ Rails.application.routes.draw do
   # --------------------------
 
   # ------ Talks routes ------
-    get '/talks/'                 => 'talks#index',     :as=>'talks'
-    get 'talks/add_talk'          => 'talks#add_talk',       :as=>'talk_add'
-    #post 'talk/add_talk'          => 'talks#create',
-    #get 'talks/edit_talk'         => 'talks#edit',   :as=>'talk_edit'
+    resources :talks
+  # --------------------------
+
+
+  # ------ Talks routes ------
+    # get 'talks/'                  => 'talks#index',     :as=>'talks'
+    # get 'talks/add_talk'          => 'talks#add_talk',  :as=>'talk_add'
+    # post 'talks/add_talk'         => 'talks#create'
+    # get 'talks/:id/edit_talk'     => 'talks#edit_talk'
+    # get 'talks/:id'               => 'talks#show'
+    # patch 'talks/:id'             => 'talks#update'
+    # put 'talks/:id'               => 'talks#update'
+    # delete 'talks/:id'            => 'talks#delete_talk'
   # --------------------------
 
   get 'pages/index'
