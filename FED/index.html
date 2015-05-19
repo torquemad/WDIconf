@@ -24,6 +24,7 @@
     <link rel="stylesheet" href="stylesheets/jared.css" />
     <link rel="stylesheet" href="stylesheets/jaya.css" />
     <link rel="stylesheet" href="stylesheets/louis-contact.css" />
+    <link rel="stylesheet" href="stylesheets/payment.css">
     <link rel="stylesheet" href="stylesheets/louis-getthere.css" />
     <link rel="stylesheet" href="stylesheets/slide.css">
     <link rel="stylesheet" href="stylesheets/faq-accordian.css">
@@ -74,18 +75,88 @@
       </div>
     </div>
 
-    <!-- payment page -->
-    <div class='payment-wrapper'>
-      <div class="payment-cover slider-toggle" data-slider-page=".payment-wrapper"></div>
+  <!-- payment page -->
+  <div class="payment-wrapper">
+
+    <div class="payment-cover slider-toggle" data-slider-page=".payment-wrapper"></div>
+
       <div class="payment">
-        <h3>Payment</h3>
-        <p>$100</p>
-        <p>$100</p>
-        <p>$100</p>
-        <p>$100</p>
-        <p>$100</p>
+        <div class="row">
+          <div class="large-10 medium-10 columns">
+            <img class="main-logo" src="images/tmp-Banner.png" alt="WDI2015">
+            <h5>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem in, modi maiores, molestiae commodi fugiat velit dolor expedita sunt.</h5>
+            
+            <ul class="steps-bar">
+              <li>SELECT TALK</li>
+              <li>PAYMENT</li>
+              <li>CONFIRM ACTION</li>
+            </ul>
+
+            <h3>Ticket #19248</h3>
+            
+            <form id="myForm" method="post" data-abide>
+              <div class="row">
+                <div class="large-6 medium-6 columns">
+                  <small class="error">Your first name is required.</small>
+                  <input type="text" placeholder="First Name" required>
+                </div>
+                <div class="large-6 medium-6 columns end">
+                  <small class="error">Your surname name is required.</small>
+                  <input type="text" placeholder="Surname" required>
+                </div>
+              </div>
+              <div class="row">
+                <div class="large-12 medium-12 columns">
+                  <h4>PLEASE ENTER YOUR CARD DETAILS:</h4>
+                </div>
+
+                <div class="large-6 medium-6 columns">
+                  <small class="error">Your full name is required.</small>
+                  <input type="text" placeholder="Name on card" required>
+                </div>
+                <div class="large-6 medium-6 columns">
+                  <small class="error">A valid card number is required.</small>
+                  <input type="text" placeholder="Card number" required>
+                </div>
+              </div>
+              
+              <div class="row">
+                <div class="large-2 medium-2 columns">
+                  <small class="error">Please select a month.</small>
+                  <input type="text" placeholder="Month" required>
+                </div>
+                <div class="large-2 medium-2 columns">
+                  <small class="error">A valid CCV code is required.</small>
+                  <input type="text" placeholder="CCV" required>
+                </div>
+                <div class="large-8 medium-8 columns end">
+                  <h4 class="payment-heading">You are using:</h4>
+                  <ul class="payment-type">
+                    <li class="Visa"></li>
+                    <li class="MasterCard"></li>
+                  </ul>
+                </div>
+
+              </div>
+              
+              <div class="row">
+                <div class="medium-7 medium-push-5 columns">
+
+                  <div class="row">
+                    <div class="medium-4 medium-push-2 columns">
+                      <input type="submit" class="nice blue radius button" value="Cancel">
+                    </div>
+                    <div class="medium-6 medium-push-2 columns end">      
+                      <input type="submit" class="payment-btn" value="Make Payment">
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </form>
+          </div>
+        </div>
       </div>
-    </div>
+  </div>
 
   <!-- :::::::::: TEMPORARY END :::::::::: -->
 
@@ -536,7 +607,8 @@
 
         </div>
       </div>
-    </section> 
+
+    </section>
 
   </main>
 
