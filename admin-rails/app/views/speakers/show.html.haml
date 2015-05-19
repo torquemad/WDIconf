@@ -1,7 +1,29 @@
-%div.content
+%div.content.row
   %h1 Speakers#show
+  %div.row
+    %div.speaker-info.medium-9.column
+      %p= @speaker.name
+      %p= @speaker.blurb
+      =link_to 'Edit', edit_speaker_path
+    %div.speaker_avatar.medium-3.column
+      /= image_tag @speaker.image_url
+      %image{:src=>"http://placehold.it/200x200"}
 
-  %p= @speaker.name
-  %p= @speaker.blurb
+  %div.row
+    %section.speaker_talks.medium-9.column
+      - @talks.each do |talk|
+        %article.talk
+          %p
+            =talk.title
+          %p
+            =talk.blurb
+    %aside.medium-3.column
+      %button#add_talk Add Talk
 
-  =link_to 'Edit', edit_speaker_path
+  %div.row
+    %section.talk_form
+
+/ :javascript
+/   $('#add_talk').on('click', function() {
+/     //$('.talk_form').html(#{render 'form'});
+/   });

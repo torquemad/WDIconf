@@ -35,4 +35,9 @@
     <input type="submit">
   <%= end %>
 </div>
+<script>
+  $('#add_talk').on('click', function() {
+    $('.talk_form').html(<%= render 'form' %>);
+  });
+</script>
 

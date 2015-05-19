@@ -1,12 +1,13 @@
-%div.content
+%div.content.speakers
   %h1 Speakers#all
 
   - @speakers.each do |speaker|
-    %p= speaker.name
-    %p= speaker.blurb
-    %p
-      =link_to 'Edit', "/speakers/#{speaker.id}/edit"
-    %p
-      / =link_to 'Delete', :url => { :action => "speakers_path", :id => "#{speaker.id}", :method => "destroy"}
-      =link_to 'Delete', "/speakers/#{speaker.id}", :method => "delete"
-    %br/
+    %a{:href=>"/speakers/#{speaker.id}"}
+      %article.speaker
+        %p
+          %image{:src=>"http://placehold.it/200x200"}
+        %h1= speaker.name
+        %p= speaker.blurb
+        %p.speaker_operation
+          =link_to 'Edit', "/speakers/#{speaker.id}/edit"
+          =link_to 'Delete', "/speakers/#{speaker.id}", :method => "delete"
