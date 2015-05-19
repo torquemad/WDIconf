@@ -1,0 +1,31 @@
+.speakers {
+  article{
+    display:inline-block;
+    width: 33%;
+    padding: 0 30px;
+    vertical-align:top;
+  }
+  a {
+    text-decoration: none;
+    color: #222;
+  }
+  .speaker_operation a{
+    text-decoration: underline;
+  }
+}
+
+
+.speaker_avatar{
+  img {
+    width: 200px;
+  }
+}
+
+.speaker_talks {
+  .talk {
+    padding: 10px 20px;
+    background-color: tomato;
+    display:inline-block;
+    margin: 10px;
+  }
+}

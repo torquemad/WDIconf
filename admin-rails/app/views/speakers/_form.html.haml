@@ -1,15 +1,19 @@
 
 %p
-  = label_tag :name, "Name: "
+  = f.label :name, "Name: "
   = f.text_field :name
 
 %p
-  = label_tag :blurb, "Blurb: "
+  = f.label :blurb, "Blurb: "
   = f.text_field :blurb
 
 %p
-  = label_tag :image_url, "Avatar: "
-  = f.text_field :image_url
+  = f.label :image_url, "Avatar: "
+  = f.file_field :image_url
+
+
+  / = f.label :remote_image_url, "or image URL"
+  / = f.text_field :remote_image_url
 
 %p
   should probs put in connection to user account password here?
