@@ -20,9 +20,9 @@
 %p#duration
   = label_tag :duration, "Talk Duration: "
   %span
-    %em 15
+    %em 20
     mins
-  = f.range_field :time, :step =>5, :value => 15, :min =>5, :max=>60
+  = f.range_field :time, :step =>20, :value => 20, :min =>20, :max=>60
 
 = f.hidden_field :limit, :value =>30
 
