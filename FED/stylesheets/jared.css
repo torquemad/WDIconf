@@ -35,7 +35,6 @@
 
 /* --  Desktop Navigation --  */
 
-
 .main-nav {
   position: absolute;
   bottom: 0px;
@@ -52,12 +51,12 @@
 
 #nav-home,
 #nav-tickets {
-  visibility: hidden; /* elements still occupy space but are unseen */
+  display: none;
 }
 
 .main-nav.fixed #nav-home,
 .main-nav.fixed #nav-tickets {
-  visibility: visible;
+  display: block;
 }
 
 .main-nav ul {

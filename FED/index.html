@@ -1,10 +1,24 @@
-<!doctype html>
+<!DOCTYPE html>
 <html class="no-js" lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
     <title>WDI CONF 2015</title>
+
+    <!-- Meta -->
+    <meta name="description" content="A General Assembly's Project">
+    <meta name="keywords" content="HTML,CSS,XML,JavaScript">
+    <meta name="author" content="Team UXB">
+
+    <!-- Google Font -->
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+
+    <!-- FavIco -->
+    <link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     
     <link rel="stylesheet" href="stylesheets/app.css" />
     <link rel="stylesheet" href="stylesheets/jared.css" />
@@ -12,42 +26,68 @@
     <link rel="stylesheet" href="stylesheets/louis-contact.css" />
     <link rel="stylesheet" href="stylesheets/louis-getthere.css" />
     <link rel="stylesheet" href="stylesheets/slide.css">
+    <link rel="stylesheet" href="stylesheets/faq-accordian.css">
+    <link rel="stylesheet" href="stylesheets/speaker-hover.css">
+
+    <script src="js/modernizr.js"></script>
 
   </head>
+
   <body>
 
-<!-- :::::::::: TEMPORARY START :::::::::: -->
+    <!-- 
+      General Assembly's
+      Web Development Immersive 2015
 
-    <!-- schedule page -->
-  <div class='schedule-wrapper'>
-    <div class="schedule-cover slider-toggle" data-slider-page=".schedule-wrapper"></div>
-    <div class="schedule">
-      <h3>WDICONF 15</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime impedit aliquid laborum ipsa ratione aut fugiat quis magni nihil quam officiis quibusdam porro, velit saepe amet ipsum repellat sed vero.</p>
-      <p>Chris</p>
-      <p>Chris</p>
-      <p>Chris</p>
-      <p>Chris</p>
-      <p>Chris</p>
-      <button class="">Next</button>
-      <button class="slider-toggle" data-slider-page=".payment-wrapper">Checkout</button>
+      TEAM UXB
+      Project Manager: Philip Castiglione
+      Lead Rail's MVC and Rails's Infrastructure: JC Lee
+      Lead Backbone's MVC: Jaya Wijono
+      Sinatra API: Louis Moore
+      Information Architecture and Content: Luke Shillabeer
+      Lead UX, UI, Design and Front End Developer: Beta Ngadiman
+      UX and Front End Development Team:
+      - Senior Front End Developer: Jared O'Loughlin and Philip Castiglione
+      - UX and Front End Developer: Jaya Wijono and Louis Moore
+      Testing: Jaya Wijono
+      Deployment: Philip Castiglione
+      Git Manager and Database Migration: Luke Shillabeer
+
+      Git address: https://github.com/TeamUXB
+    -->
+
+  <!-- :::::::::: TEMPORARY START :::::::::: -->
+
+      <!-- schedule page -->
+    <div class='schedule-wrapper'>
+      <div class="schedule-cover slider-toggle" data-slider-page=".schedule-wrapper"></div>
+      <div class="schedule">
+        <h3>WDICONF 15</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime impedit aliquid laborum ipsa ratione aut fugiat quis magni nihil quam officiis quibusdam porro, velit saepe amet ipsum repellat sed vero.</p>
+        <p>Chris</p>
+        <p>Chris</p>
+        <p>Chris</p>
+        <p>Chris</p>
+        <p>Chris</p>
+        <button class="">Next</button>
+        <button class="slider-toggle" data-slider-page=".payment-wrapper">Checkout</button>
+      </div>
     </div>
-  </div>
 
-  <!-- payment page -->
-  <div class='payment-wrapper'>
-    <div class="payment-cover slider-toggle" data-slider-page=".payment-wrapper"></div>
-    <div class="payment">
-      <h3>Payment</h3>
-      <p>$100</p>
-      <p>$100</p>
-      <p>$100</p>
-      <p>$100</p>
-      <p>$100</p>
+    <!-- payment page -->
+    <div class='payment-wrapper'>
+      <div class="payment-cover slider-toggle" data-slider-page=".payment-wrapper"></div>
+      <div class="payment">
+        <h3>Payment</h3>
+        <p>$100</p>
+        <p>$100</p>
+        <p>$100</p>
+        <p>$100</p>
+        <p>$100</p>
+      </div>
     </div>
-  </div>
 
-<!-- :::::::::: TEMPORARY END :::::::::: -->
+  <!-- :::::::::: TEMPORARY END :::::::::: -->
 
   <!-- ::::: HEADER SECTION HTML and UX by Jared O'Loughlin ::::: -->
 
@@ -111,9 +151,9 @@
       </section>
       
       <section class="row hide-for-small-only" id="Speakers-details">
-        <div class="medium-4 columns container_200">
+        <figure class="medium-4 columns container_200">
           <img id="Speakers-details-highlightedImage" src="http://placehold.it/300x200" alt="photo">
-        </div>
+        </figure>
         <div class="medium-4 columns container_200">
           <h3>ANIMATING IN YOUR BROWSER WITH JAVASCRIPT</h3>
           <ul class="inline-list" id ="Speakers-details-badges">
@@ -122,25 +162,90 @@
           </ul>
         </div>
         <div class="medium-4 columns container_200">
-          <h4>By: Chris Lambert</h4>
-          <p>10:00PM - 11.30PM</p>
+          <h4 itemprop="name">By: Chris Lambert</h4>
+          <h5>10:00PM - 11.30PM</h5>
           <button id="Speakers-details-CTA-btn">Book Now</button>
         </div>
       </section>
 
       <section class="row" id="Speakers-list">
-        <ul class="medium-block-grid-4 hide-for-small-only">
-          <li><img class="th" src="http://placehold.it/230x180" alt="speaker"></li>
-          <li><img class="th" src="http://placehold.it/230x180" alt="speaker"></li>
-          <li><img class="th" src="http://placehold.it/230x180" alt="speaker"></li>
-          <li><img class="th" src="http://placehold.it/230x180" alt="speaker"></li>
-          <li><img class="th" src="http://placehold.it/230x180" alt="speaker"></li>
-          <li><img class="th" src="http://placehold.it/230x180" alt="speaker"></li>
-          <li><img class="th" src="http://placehold.it/230x180" alt="speaker"></li>
-          <li><img class="th" src="http://placehold.it/230x180" alt="speaker"></li>
-          <li><img class="th" src="http://placehold.it/230x180" alt="speaker"></li>
-          <li><img class="th" src="http://placehold.it/230x180" alt="speaker"></li>
-          <li><img class="th" src="http://placehold.it/230x180" alt="speaker"></li>
+        <ul id="thumbs" class="thumbs medium-block-grid-4 hide-for-small-only">
+          <li>
+            <a href="" alt="" title=""><img class="th" src="http://placehold.it/230x180" alt="speaker">
+              <div><span>Louis - Top Tips on Improving Your Productivity</span></div>
+            </a>
+          </li>
+          <li>
+            <a href="" alt="" title=""><img class="th" src="http://placehold.it/230x180" alt="speaker">
+              <div><span>Louis - Top Tips on Improving Your Productivity</span></div>
+            </a>
+          </li>
+          <li>
+            <a href="" alt="" title=""><img class="th" src="http://placehold.it/230x180" alt="speaker">
+              <div><span>Louis - Top Tips on Improving Your Productivity</span></div>
+            </a>
+          </li>
+          <li>
+            <a href="" alt="" title=""><img class="th" src="http://placehold.it/230x180" alt="speaker">
+              <div><span>Louis - Top Tips on Improving Your Productivity</span></div>
+            </a>
+          </li>
+          <li>
+            <a href="" alt="" title=""><img class="th" src="http://placehold.it/230x180" alt="speaker">
+              <div><span>Louis - Top Tips on Improving Your Productivity</span></div>
+            </a>
+          </li>
+          <li>
+            <a href="#Speakers-head" alt="" title="" ><img class="th" src="http://placehold.it/230x180" alt="speaker">
+              <div><span>Louis - Top Tips on Improving Your Productivity</span></div>
+            </a>
+          </li>
+          <li>
+            <a href="#Speakers-head" alt="" title=""><img class="th" src="http://placehold.it/230x180" alt="speaker">
+              <div><span>Louis - Top Tips on Improving Your Productivity</span></div>
+            </a>
+          </li>
+          <li>
+            <a href="#Speakers-head" alt="" title=""><img class="th" src="http://placehold.it/230x180" alt="speaker">
+              <div><span>Louis - Top Tips on Improving Your Productivity</span></div>
+            </a>
+          </li>
+          <li>
+            <a href="#Speakers-head" alt="" title=""><img class="th" src="http://placehold.it/230x180" alt="speaker">
+              <div><span>Louis - Top Tips on Improving Your Productivity</span></div>
+            </a>
+          </li>
+          <li>
+            <a href="#Speakers-head" alt="" title=""><img class="th" src="http://placehold.it/230x180" alt="speaker">
+              <div><span>Louis - Top Tips on Improving Your Productivity</span></div>
+            </a>
+          </li>
+          <li>
+            <a href="#Speakers-head" alt="" title=""><img class="th" src="http://placehold.it/230x180" alt="speaker">
+              <div><span>Louis - Top Tips on Improving Your Productivity</span></div>
+            </a>
+          </li>
+          <li>
+            <a href="#Speakers-head" alt="" title=""><img class="th" src="http://placehold.it/230x180" alt="speaker">
+              <div><span>Louis - Top Tips on Improving Your Productivity</span></div>
+            </a>
+          </li>
+          <li>
+            <a href="#Speakers-head" alt="" title=""><img class="th" src="http://placehold.it/230x180" alt="speaker">
+              <div><span>Louis - Top Tips on Improving Your Productivity</span></div>
+            </a>
+          </li>
+          <li>
+            <a href="#Speakers-head" alt="" title=""><img class="th" src="http://placehold.it/230x180" alt="speaker">
+              <div><span>Louis - Top Tips on Improving Your Productivity</span></div>
+            </a>
+          </li>
+          <li>
+            <a href="#Speakers-head" alt="" title=""><img class="th" src="http://placehold.it/230x180" alt="speaker">
+              <div><span>Louis - Top Tips on Improving Your Productivity</span></div>
+            </a>
+          </li>
+   
         </ul>
 
         <ul class="show-for-small-only">
@@ -148,11 +253,11 @@
             <div class="row">
               <div class="small-5 columns container_150">
                 <img id="Speakers-list-image" src="http://placehold.it/250x150" alt="photo">
-                <h4 id="Speakers-list-name">Chris Lambert</h4>
+                <h4 id="Speakers-list-name" itemprop="name">Chris Lambert</h4>
               </div>
               <div class="small-7 columns container_150">
                 <h3>ANIMATING IN YOUR BROWSER WITH JAVASCRIPT</h3>
-                <p id="Speakers-list-time">10:00PM - 11.30PM</p>
+                <h5 id="Speakers-list-time">10:00PM - 11.30PM</h5>
               </div>
             </div>
             <div class="row">
@@ -172,11 +277,11 @@
             <div class="row">
               <div class="small-5 columns container_150">
                 <img id="Speakers-list-image" src="http://placehold.it/250x150" alt="photo">
-                <h4 id="Speakers-list-name">Chris Lambert</h4>
+                <h4 id="Speakers-list-name" itemprop="name">Chris Lambert</h4>
               </div>
               <div class="small-7 columns container_150">
                 <h3>ANIMATING IN YOUR BROWSER WITH JAVASCRIPT</h3>
-                <p id="Speakers-list-time">10:00PM - 11.30PM</p>
+                <h5 id="Speakers-list-time">10:00PM - 11.30PM</h5>
               </div>
             </div>
             <div class="row">
@@ -196,11 +301,11 @@
             <div class="row">
               <div class="small-5 columns container_150">
                 <img id="Speakers-list-image" src="http://placehold.it/250x150" alt="photo">
-                <h4 id="Speakers-list-name">Chris Lambert</h4>
+                <h4 id="Speakers-list-name" itemprop="name" >Chris Lambert</h4>
               </div>
               <div class="small-7 columns container_150">
                 <h3>ANIMATING IN YOUR BROWSER WITH JAVASCRIPT</h3>
-                <p id="Speakers-list-time">10:00PM - 11.30PM</p>
+                <h5 id="Speakers-list-time">10:00PM - 11.30PM</h5>
               </div>
             </div>
             <div class="row">
@@ -227,14 +332,23 @@
         <div class="small-12 medium-6 columns">
           <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis tempore.</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex est quasi impedit quidem amet quibusdam culpa maxime. Eum nobis praesentium ipsa ab nam. Quas temporibus rem delectus consectetur, veniam modi.</p>
-          <a href="">BUTTON LINK TEXT</a>
+          <button id="Speakers-list-CTA-btn">BUTTON LINK TEXT</button>
         </div>
         <div class="small-12 medium-5 medium-offset-1 columns">
           <h3>Frequently Asked Questions</h3>
-          <p class="boxed">Where is the location of the WDI Conf?</p>
-          <p class="boxed">General Assembly, Melbourne</p>
-          <p class="boxed">How to get there?</p>
-          <p class="boxed">Fly your way there</p>
+
+          <dl class="accordion">
+            <dt class="accordion-trigger closed">Where is the Conference?</dt>
+            <dd class="accordion-content">20 Queen Streeet, CBD</dd>
+            <dt class="accordion-trigger closed">Is there parking?</dt>
+            <dd class="accordion-content">No, sorry</dd>
+            <dt class="accordion-trigger closed">Will alcohol be provided?</dt>
+            <dd class="accordion-content">Yes, but only for the speakers.</dd>
+            <dt class="accordion-trigger closed">How many kilometres are in a mile?</dt>
+            <dd class="accordion-content">1.609344</dd>
+          </dl>
+
+          
         </div>
       </section>
 
@@ -247,7 +361,7 @@
     <section id="Location" class="container">
       <div class="row">
         
-        <div class="large-6 medium-6 columns">
+        <section class="large-6 medium-6 columns">
           
           <div class="location-details">
             <h2>FIND US AT:</h2>
@@ -270,11 +384,11 @@
           
           </div>
 
-        </div>
+        </section>
 
-        <div class="large-6 medium-6 columns">
+        <section class="large-6 medium-6 columns">
           <div id="Map-canvas"></div>
-        </div>
+        </section>
 
       </div> 
     </section> 
@@ -369,9 +483,9 @@
         <div id="eventOrganisers" class="medium-6 large-6 columns">
           <h2>Organizers</h2>
           <section class="individual-contact">
-            <div class="individual-img">
+            <figure class="individual-img">
               <img src="http://www.bu.edu/ece/files/2011/09/tsui.jpg" alt="">
-            </div>
+            </figure>
 
             <div class="individual-details">
               <h3>DT</h3>
@@ -384,9 +498,9 @@
           </section>
 
           <section class="individual-contact">
-            <div class="individual-img">
+            <figure class="individual-img">
               <img width="200" src="http://www.niutoday.info/wp-content/uploads/2012/04/Swan-Matt-12.jpg" alt="">
-            </div>
+            </figure>
             <div class="individual-details">
               <h3>Matt</h3>
               <p>Organizer of Chicken</p>
@@ -417,7 +531,7 @@
             <small class="error">Your message is required.</small>
             <textarea placeholder="Enter your message here" required></textarea>
             
-            <input type="submit" class="nice blue radius button" value="Send Message"></button></a>
+            <input type="submit" class="nice blue radius button" value="Send Message"></button>
           </form>
 
         </div>
@@ -435,11 +549,9 @@
     <script src="js/ScrollMagic.min.js"></script>
     <script src="js/ScrollToPlugin.min.js"></script>
     <script src="js/TweenMax.min.js"></script>
-
-
+    <script src="js/jquery.hoverdir.js"></script>
     <script src="js/nav.js"></script>
 
-  
     
 
   </body>
