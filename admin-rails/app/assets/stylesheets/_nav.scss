@@ -1,0 +1,23 @@
+@import "foundation/components/top-bar";
+
+.logged_in {
+  color: white;
+  font-size: 0.8125rem;
+  margin-right: 10px;
+  form {
+    display:inline-block;
+  }
+}
+
+.top-bar button{
+  top: 0;
+}
+
+.side-nav {
+  width: 20%;
+  padding-top:10px;
+  padding-left: 20px;
+  background-color: #eee;
+  margin-top: -20px;
+  height: 600px;
+}

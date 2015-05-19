@@ -8,13 +8,19 @@
     = csrf_meta_tags
   %body
 
-    %p
-      - if logged_in?
-        logged in as #{current_user.email}
-        = form_tag '/logout', method: :delete do
-          %button logout
-      - else
-        = link_to 'Login', login_path
+    %nav.top-bar{"data-topbar" => "", :role => "navigation"}
+      %ul.title-area
+        / Title Area
+        %li.name
+          %h1
+            %a{:href => root_path} Admin Rails
+        / Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone
+        %li.toggle-topbar.menu-icon
+          %a{:href => ""}
+            %span Menu
+      %section.top-bar-section
+        = render '/layouts/navbar'
+        = render '/layouts/login_form'
 
 
     = yield

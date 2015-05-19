@@ -85,8 +85,17 @@ group :development, :test do
   # helpers guide for leveraging regular Ruby classes and object oriented design patterns to build a simple, robust & scaleable authorization system.
   gem "pundit"
 
-# pry for testing
-gem 'pry-rails', :group => :development
+  # pry for testing
+  gem 'pry-rails', :group => :development
+
+  # Sprockets is a Rack-based asset packaging system that concatenates and serves JavaScript, CoffeeScript, CSS, LESS, Sass, and SCSS.
+  gem 'sprockets', '< 2.13'
+
+  # foundation framework
+  gem 'foundation-rails'
+
+  #compass
+  gem "compass-rails", github: "Compass/compass-rails", branch: "master"
 
 end
 

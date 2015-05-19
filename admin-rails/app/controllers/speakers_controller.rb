@@ -40,8 +40,8 @@ class SpeakersController < ApplicationController
     redirect_to speakers_path
   end
 
-  def speaker_params 
-    params.require(:speaker).permit(:name, :blurb)
+  def speaker_params
+    params.require(:speaker).permit(:name, :blurb, :image_url)
   end
 
 end

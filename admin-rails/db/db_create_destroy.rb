@@ -14,6 +14,7 @@ rails g migration rename_users_access_level_to_access_level_id
 rails g migration add_password_digest_to_users password_digest:string
 rails g migration add_password_salt_to_users password_salt:string
 rails g migration add_speaker_id_to_talks speaker_id:int
+rails g migration add_image_url_to_speakers image_url:string
 
 rails g migration remove_talk_id_to_speaker
 
