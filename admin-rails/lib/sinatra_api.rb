@@ -9,12 +9,11 @@ class SinatraApi < Sinatra::Base
   end
 
   get '/tickets/:id' do  
-    Ticket.find(params[:id]).to_json
+    Ticket.where(params[:registra]).to_json
   end
 
   post '/tickets' do
-    new_ticket = Ticket.new(:registra => params[:firstname] + params[:surname], :talk_id => "1")
-    new_user = User.new(:access_level_id => 1, :email => params[:email], :login_type => 1)
+    new_ticket = Ticket.new(:registra => params[:email], :talk_id => params[:talk_id])
   end
 
   # ---------------
