@@ -85,8 +85,8 @@ group :development, :test do
   # helpers guide for leveraging regular Ruby classes and object oriented design patterns to build a simple, robust & scaleable authorization system.
   gem "pundit"
 
-  # pry for testing
-  gem "pry"
+# pry for testing
+gem 'pry-rails', :group => :development
 
 end
 
