@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <title>WDI CONF 2015</title>
+
+    <!-- Meta -->
+    <meta name="description" content="A General Assembly's Project">
+    <meta name="keywords" content="HTML,CSS,XML,JavaScript">
+    <meta name="author" content="Team UXB">
+
+    <!-- Google Font -->
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+
+    <!-- FavIco -->
+    <link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    
+    <link rel="stylesheet" href="stylesheets/app.css" />
+    <link rel="stylesheet" href="stylesheets/jared.css" />
+    <link rel="stylesheet" href="stylesheets/jaya.css" />
+    <link rel="stylesheet" href="stylesheets/louis-contact.css" />
+    <link rel="stylesheet" href="stylesheets/louis-getthere.css" />
+    <link rel="stylesheet" href="stylesheets/slide.css">
+    <link rel="stylesheet" href="stylesheets/faq-accordian.css">
+    <link rel="stylesheet" href="stylesheets/speaker-hover.css">
+
+    <script src="js/modernizr.js"></script>
+
+  </head>
+
+  <body>
+
+    <!-- 
+      General Assembly's
+      Web Development Immersive 2015
+
+      TEAM UXB
+      Project Manager: Philip Castiglione
+      Lead Rail's MVC and Rails's Infrastructure: JC Lee
+      Lead Backbone's MVC: Jaya Wijono
+      Sinatra API: Louis Moore
+      Information Architecture and Content: Luke Shillabeer
+      Lead UX, UI, Design and Front End Developer: Beta Ngadiman
+      UX and Front End Development Team:
+      - Senior Front End Developer: Jared O'Loughlin and Philip Castiglione
+      - UX and Front End Developer: Jaya Wijono and Louis Moore
+      Testing: Jaya Wijono
+      Deployment: Philip Castiglione
+      Git Manager and Database Migration: Luke Shillabeer
+
+      Git address: https://github.com/TeamUXB
+    -->
+
+  <!-- :::::::::: TEMPORARY START :::::::::: -->
+
+      <!-- schedule page -->
+    <div class='schedule-wrapper'>
+      <div class="schedule-cover slider-toggle" data-slider-page=".schedule-wrapper"></div>
+      <div class="schedule">
+        <h3>WDICONF 15</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime impedit aliquid laborum ipsa ratione aut fugiat quis magni nihil quam officiis quibusdam porro, velit saepe amet ipsum repellat sed vero.</p>
+        <p>Chris</p>
+        <p>Chris</p>
+        <p>Chris</p>
+        <p>Chris</p>
+        <p>Chris</p>
+        <button class="">Next</button>
+        <button class="slider-toggle" data-slider-page=".payment-wrapper">Checkout</button>
+      </div>
+    </div>
+
+    <!-- payment page -->
+    <div class='payment-wrapper'>
+      <div class="payment-cover slider-toggle" data-slider-page=".payment-wrapper"></div>
+      <div class="payment">
+        <h3>Payment</h3>
+        <p>$100</p>
+        <p>$100</p>
+        <p>$100</p>
+        <p>$100</p>
+        <p>$100</p>
+      </div>
+    </div>
+
+  <!-- :::::::::: TEMPORARY END :::::::::: -->
+
+  <!-- ::::: HEADER SECTION HTML and UX by Jared O'Loughlin ::::: -->
+
+  <div class="header-fixed">
+    <!-- empty container for fix bg-image -->  
+  </div>
+
+
+  <header id="Home" class="row header-inner">
+      
+    <p class="show-nav show-for-small-down" >Menu</p>
+      
+    <img class="main-logo" src="images/tmp-Banner.png" alt="WDI2015">
+    <p class="welcome-msg">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid quidem fugit vero alias dolorem quo aut, hic quos rerum dolore veniam fugiat harum consequuntur reiciendis quas nam, neque voluptate dolor.</p>
+
+    <button class="button slider-toggle" data-slider-page=".schedule-wrapper">Book now</button>
+ 
+    <nav class="main-nav hide-for-small-down show-for-medium-up">
+      <ul>
+        <li><a id="nav-home" href="#Home">HOME</a></li>
+        <li><a href="#Speakers">Speakers</a></li>
+        <li><a href="#About">About</a></li>
+        <li><a href="#Location">Location</a></li>
+        <li><a href="#Sponsors">Sponsors</a></li>
+        <li><a href="#Contact">Contact</a></li>
+        <li><a class="button tiny" id="nav-tickets" href="#Tickets">BUY TICKETS</a></li>
+      </ul>
+    </nav>
+
+    <!-- Mobile Nav -->
+    <nav class="mobile">
+      
+      <p id="NavClose">Close</p>
+      <h3>WDICONF 15<br>MELBOURNE<br>22 MAY</h3>
+      <ul>
+          <li><a id="nav-home" href="#Home">HOME</a></li>
+          <li><a href="#Speakers-head">Speakers</a></li>
+          <li><a href="#About">About</a></li>
+          <li><a href="#Location">Location</a></li>
+          <li><a href="#Sponsors">Sponsors</a></li>
+          <li><a href="#Contact">Contact</a></li>
+          <li><a class="button tiny" id="nav-tickets" href="#Tickets">BUY TICKETS</a></li>
+        </ul>
+
+    </nav>
+
+  </header>
+
+  <main role="main" class="main" id="main">
+
+  <!-- ::::: SPEAKER SECTION HTML and UX by Jaya Wijono and Jared O'Loughlin ::::: -->
+    <section id="Speakers">
+      <section class="row" id="Speakers-head">
+        <h2 class="small-12 medium-6 columns small-only-text-center text-right">SPEAKERS</h2>
+        <ul class="inline-list small-12 medium-6 columns small-only-text-center" id ="Speakers-head-badges">
+          <li><img src="http://placehold.it/40x40" alt="badge 1"></li>
+          <li><img src="http://placehold.it/40x40" alt="badge 2"></li>
+          <li><img src="http://placehold.it/40x40" alt="badge 3"></li>
+          <li><img src="http://placehold.it/40x40" alt="badge 4"></li>
+        </ul>
+      </section>
+      
+      <section class="row hide-for-small-only" id="Speakers-details">
+        <figure class="medium-4 columns container_200">
+          <img id="Speakers-details-highlightedImage" src="http://placehold.it/300x200" alt="photo">
+        </figure>
+        <div class="medium-4 columns container_200">
+          <h3>ANIMATING IN YOUR BROWSER WITH JAVASCRIPT</h3>
+          <ul class="inline-list" id ="Speakers-details-badges">
+            <li><img src="http://placehold.it/40x40" alt="badge 1"> </li>
+            <li><img src="http://placehold.it/40x40" alt="badge 2"> </li>
+          </ul>
+        </div>
+        <div class="medium-4 columns container_200">
+          <h4 itemprop="name">By: Chris Lambert</h4>
+          <h5>10:00PM - 11.30PM</h5>
+          <button id="Speakers-details-CTA-btn">Book Now</button>
+        </div>
+      </section>
+
+      <section class="row" id="Speakers-list">
+        <ul id="thumbs" class="thumbs medium-block-grid-4 hide-for-small-only">
+          
+        </ul>
+
+        <ul id="thumbs-mobile" class="show-for-small-only">          
+          
+        </ul>
+        <button id="Speakers-list-showMore">VIEW MORE</button>
+      </section>
+    </section>
+
+  <!-- ::::: ABOUT SECTION HTML by Jaya Wijono and Jared O'Loughlin, UX by Beta Ngadiman ::::: -->
+    <section id="About">
+      <section class="row">
+        <div class="small-12 medium-6 columns">
+          <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis tempore.</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex est quasi impedit quidem amet quibusdam culpa maxime. Eum nobis praesentium ipsa ab nam. Quas temporibus rem delectus consectetur, veniam modi.</p>
+          <button id="Speakers-list-CTA-btn">BUTTON LINK TEXT</button>
+        </div>
+        <div class="small-12 medium-5 medium-offset-1 columns">
+          <h3>Frequently Asked Questions</h3>
+
+          <dl class="accordion">
+            <dt class="accordion-trigger closed">Where is the Conference?</dt>
+            <dd class="accordion-content">20 Queen Streeet, CBD</dd>
+            <dt class="accordion-trigger closed">Is there parking?</dt>
+            <dd class="accordion-content">No, sorry</dd>
+            <dt class="accordion-trigger closed">Will alcohol be provided?</dt>
+            <dd class="accordion-content">Yes, but only for the speakers.</dd>
+            <dt class="accordion-trigger closed">How many kilometres are in a mile?</dt>
+            <dd class="accordion-content">1.609344</dd>
+          </dl>
+
+          
+        </div>
+      </section>
+
+      <section class="row">
+        <h3 class = "center">CURRENT ATTENDANCE <strong>37,000 AWESOME PEOPLE</strong></h3>
+      </section>
+    </section>
+
+  <!-- ::::: LOCATION SECTION HTML and UX by Louis Moore ::::: -->
+    <section id="Location" class="container">
+      <div class="row">
+        
+        <section class="large-6 medium-6 columns">
+          
+          <div class="location-details">
+            <h2>FIND US AT:</h2>
+            <p>123 address street some place</p>
+            
+            <ul class="location-ul">
+              <li class="title-details">
+                <h3>Title</h3>
+                <p>Some extra details about some stuff and things</p>
+              </li>
+              <li class="title-details">
+                <h3>Title</h3>
+                <p>Some extra details about some stuff and things</p>
+              </li>
+              <li class="title-details">
+                <h3>Title</h3>
+                <p>Some extra details about some stuff and things</p>
+              </li>
+            </ul>
+          
+          </div>
+
+        </section>
+
+        <section class="large-6 medium-6 columns">
+          <div id="Map-canvas"></div>
+        </section>
+
+      </div> 
+    </section> 
+
+  <!-- ::::: SPONSORS SECTION HTML and UX by Luke Shillabeer ::::: -->    
+    <section id="Sponsors">
+      <div class="row">
+        <h2 class="small-12 medium-12 columns text-center">Thank You!</h2>
+          <ul class="medium-block-grid-2 hide-for-small-only">
+            <li>
+              <div>
+                <img src="http://placehold.it/500x200" alt="big-sponsor">
+                <div class="medium-8 columns">
+                  Tumblr kogi sriracha fanny pack kale chips. Flexitarian 3 wolf moon small batch leggings, YOLO tofu farm-to-table plaid seitan mlkshk cardigan kogi Austin.
+                </div>
+                <div class="medium-4 columns">
+                  <img src="http://placehold.it/160x50" alt="sponsor-btn">
+                  <img src="http://placehold.it/50x50" alt="sponsor-social">
+                  <img src="http://placehold.it/50x50" alt="sponsor-social">
+                </div>
+              </div>
+            </li>
+            <li>
+              <div>
+                <img src="http://placehold.it/500x200" alt="big-sponsor">
+                <div class="medium-8 columns">
+                  Tumblr kogi sriracha fanny pack kale chips. Flexitarian 3 wolf moon small batch leggings, YOLO tofu farm-to-table plaid seitan mlkshk cardigan kogi Austin.
+                </div>
+                <div class="medium-4 columns">
+                  <img src="http://placehold.it/160x50" alt="sponsor-btn">
+                  <img src="http://placehold.it/50x50" alt="sponsor-social">
+                  <img src="http://placehold.it/50x50" alt="sponsor-social">
+                </div>
+              </div>
+            </li>
+          </ul>
+
+         <!-- second ul will likely be removed and replaced with a media
+              query but for now is in so that the site is "responsive!" -->
+          <ul class="medium-block-grid-2 show-for-small-only">
+            <li>
+              <div>
+                <img src="http://placehold.it/180x100" alt="big-sponsor">
+                <div class="medium-6 text-center">
+                  <img src="http://placehold.it/160x50" alt="sponsor-btn">
+                </div>
+                <div class="medium-6 text-center">
+                  <img src="http://placehold.it/50x50" alt="sponsor-social">
+                  <img src="http://placehold.it/50x50" alt="sponsor-social">
+                </div>
+              </div>
+            </li>
+            <li>
+              <div>
+                <img src="http://placehold.it/180x100" alt="big-sponsor">
+                <div class="medium-6 text-center">
+                  <img src="http://placehold.it/160x50" alt="sponsor-btn">
+                </div>
+                <div class="medium-6 text-center">
+                  <img src="http://placehold.it/50x50" alt="sponsor-social">
+                  <img src="http://placehold.it/50x50" alt="sponsor-social">
+                </div>
+              </div>
+            </li>
+          </ul>
+      </div>
+
+      <div class="row">
+        <ul class="medium-block-grid-5 hide-for-small-only">
+          <li><img src="http://placehold.it/180x180" alt="small-sponsor"></li>
+          <li><img src="http://placehold.it/180x180" alt="small-sponsor"></li>
+          <li><img src="http://placehold.it/180x180" alt="small-sponsor"></li>
+          <li><img src="http://placehold.it/180x180" alt="small-sponsor"></li>
+          <li><img src="http://placehold.it/180x180" alt="small-sponsor"></li>
+        </ul>
+       <!-- second ul will likely be removed and replaced with a media
+            query but for now is in so that the site is "responsive!" -->
+        <ul class="medium-block-grid-5 show-for-small-only">
+          <li><img src="http://placehold.it/60x60" alt="small-sponsor"></li>
+          <li><img src="http://placehold.it/60x60" alt="small-sponsor"></li>
+          <li><img src="http://placehold.it/60x60" alt="small-sponsor"></li>
+          <li><img src="http://placehold.it/60x60" alt="small-sponsor"></li>
+          <li><img src="http://placehold.it/60x60" alt="small-sponsor"></li>
+        </ul>
+      </div>
+    </section> <!-- end Sponsors section -->
+
+  <!-- ::::: CONTACT SECTION HTML by Louis Moore, UX by Beta Ngadiman ::::: -->
+
+    <section id="Contact">
+      <div class="row">
+        <div id="eventOrganisers" class="medium-6 large-6 columns">
+          <h2>Organizers</h2>
+          <section class="individual-contact">
+            <figure class="individual-img">
+              <img src="http://www.bu.edu/ece/files/2011/09/tsui.jpg" alt="">
+            </figure>
+
+            <div class="individual-details">
+              <h3>DT</h3>
+              <p>Head Honcho</p>
+              <ul>
+                <li>number</li>
+                <li>email</li>
+              </ul>
+            </div>
+          </section>
+
+          <section class="individual-contact">
+            <figure class="individual-img">
+              <img width="200" src="http://www.niutoday.info/wp-content/uploads/2012/04/Swan-Matt-12.jpg" alt="">
+            </figure>
+            <div class="individual-details">
+              <h3>Matt</h3>
+              <p>Organizer of Chicken</p>
+              <ul>
+                <li>number</li>
+                <li>email</li>
+              </ul>
+            </div>
+          </section>
+        </div>
+        
+        <div id="contactForm" class="medium-6 large-6 columns">
+          <form id="myForm" method="post" data-abide>
+            <h5>Contact Us</h5>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum temporibus soluta vitae consectetur neque cupiditate hic voluptas consequatur quo omnis.</p>
+            <label>Name</label>
+            <small class="error">Your full name is required.</small>
+            <input type="text" placeholder="Full Name" required>
+            
+            <label>Email</label>
+            <small class="error">An email address is required.</small>
+            <input type="email" placeholder="username@address.com" required>
+            
+            <label>Web Address</label>
+            <input type="url" placeholder="http://www.url.com">
+            
+            <label>Your Message</label>
+            <small class="error">Your message is required.</small>
+            <textarea placeholder="Enter your message here" required></textarea>
+            
+            <input type="submit" class="nice blue radius button" value="Send Message"></button>
+          </form>
+
+        </div>
+      </div>
+    </section> 
+
+  </main>
+
+    <script type="text/x-underscore-template" id="speaker-desktop-template">
+      <a href="" alt="" title=""><img class="th" src="http://placehold.it/230x180" alt="speaker">
+        <div><span>{{name}} - {{title}}</span></div>
+      </a>
+    </script>
+
+    <script type="text/x-underscore-template" id="speaker-mobile-template">
+      <div class="row">
+        <div class="small-5 columns container_150">
+          <img id="Speakers-list-image" src="http://placehold.it/250x150" alt="photo">
+          <h4 id="Speakers-list-name" itemprop="name">{{name}}</h4>
+        </div>
+        <div class="small-7 columns container_150">
+          <h3>{{title}}</h3>
+          <h5 id="Speakers-list-time">10:00PM - 11.30PM</h5>
+        </div>
+      </div>
+      <div class="row">
+        <div class="small-5 columns container_100">
+          <h4>SUBJECTS</h4>
+          <ul class="inline-list" id ="Speakers-list-badges">
+            <li><img src="http://placehold.it/40x40" alt="badge 1"> </li>
+            <li><img src="http://placehold.it/40x40" alt="badge 2"> </li>
+          </ul>
+        </div>
+        <div class="small-7 columns container_100">
+          <button id="Speakers-list-CTA-btn">Book Now</button>
+        </div>
+      </div>
+    </script>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/foundation.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/ScrollMagic.min.js"></script>
+    <script src="js/ScrollToPlugin.min.js"></script>
+    <script src="js/TweenMax.min.js"></script>
+    <script src="js/jquery.hoverdir.js"></script>
+    <script src="js/nav.js"></script>
+    <script src="js/backboneApp/underscore-min.js"></script>
+    <script src="js/backboneApp/backbone-min.js"></script>
+    <script src="js/backboneApp/speaker.js"></script>
+    <script src="js/backboneApp/speakers.js"></script>
+    <script src="js/backboneApp/speakerDesktopView.js"></script>
+    <script src="js/backboneApp/speakerMobileView.js"></script>
+    <script src="js/backboneApp/speakersView.js"></script>
+    <script src="js/backboneApp/backboneMain.js"></script>
+
+    
+
+  </body>
+</html>
