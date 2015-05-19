@@ -1,5 +1,6 @@
 class User < ActiveRecord::Base
 
+  has_one :speaker
   belongs_to :access_level
   #has_secure_password
 

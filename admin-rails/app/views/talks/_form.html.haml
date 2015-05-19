@@ -10,12 +10,12 @@
   = f.text_area :description
 
 %p
-  = label_tag :speaker, "Speaker"
+  = label_tag :speaker_id, "Speaker"
   = f.select("speaker_id", Speaker.all.collect {|sp| [sp.name.capitalize, sp.id]})
 
 %p
   = label_tag :date, "Talk Date: "
-  = f.date_field :date, :value => "2015-05-29", :readonly =>"true"
+  = f.date_field :date, :value => "2015-05-29", :disabled =>"true"
 
 %p#duration
   = label_tag :duration, "Talk Duration: "
@@ -26,9 +26,4 @@
 
 = f.hidden_field :limit, :value =>30
 
-:javascript
-  $('#duration input[type="range"').on('change', function() {
-    $parent = $(this).parent();
-    $parent.find('em').html($(this).val());
-    console.log($(this).val())
-  });
+= f.submit

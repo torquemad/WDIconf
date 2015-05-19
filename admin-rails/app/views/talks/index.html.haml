@@ -2,9 +2,11 @@
 
 - @talks.each do | talk|
 
-  %li
-    = talk.title
-    by
-    = talk.speaker.name
+  %p= talk.title
+  %p= talk.blurb
+  %p
+    =link_to 'Edit', "/talks/#{talk.id}/edit"
+    / by
+    / = talk.speaker.name
     / %a{:href => "#{talk.id}/profile"} Show
     / %a{:href => "#{talk.id}/edit"} Edit
