@@ -3,6 +3,7 @@ require 'sinatra/base'
 
 class SinatraApi < Sinatra::Base
 
+
   get '/tickets' do  
     Ticket.all.to_json
   end
