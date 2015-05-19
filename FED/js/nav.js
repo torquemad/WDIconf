@@ -1,12 +1,11 @@
-// Script to implement 'ticky Nav'
-
+// Script to implement 'sticky Nav'
 
 $(document).ready(function(){
 
   //$('.main-nav').addClass('fixed');
 
  $(window).bind('scroll', function() {
- var navHeight = $( window ).height() - 410;
+ var navHeight = $( window ).height() - 275;
    if ($(window).scrollTop() > navHeight) {
      $('nav').addClass('fixed');
    }
@@ -63,7 +62,6 @@ $(document).on("click", "a[href^=#]", function(e) {
 
     // trigger scroll
     controller.scrollTo(id);
-    console.log("hi");
     $('nav.mobile').removeClass('open');
 
     // If supported by the browser we can also update the URL

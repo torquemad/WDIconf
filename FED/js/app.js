@@ -38,3 +38,37 @@ $(document).ready(function(){
   $('.slider-toggle').on('click', sliderToggle);
 
 });
+
+
+
+// hover effect in Speaker section
+
+$(function() {
+
+  $(' #thumbs > li ').each( function() { $(this).hoverdir({
+    hoverDelay : 75
+  }); } );
+
+});
+
+
+// FAQ accordian
+
+$('.accordion-trigger').on('click', function() {
+    $('.accordion-content').removeClass('content-open');
+    // cache the link so you don't have to keep getting a jQuery object
+    var triggerDOM = $(this);
+    // if closed
+    if(triggerDOM.hasClass('closed')) {
+      triggerDOM.removeClass('closed').addClass('open');
+      triggerDOM.next().addClass('content-open');
+    // if open
+    } else if(triggerDOM.hasClass('open')) {
+      triggerDOM.removeClass('open').addClass('closed');
+      triggerDOM.next().removeClass('content-open');
+      console.log("closed now");
+    }
+
+    
+});
+
