@@ -1,7 +1,8 @@
 var SpeakersView = Backbone.View.extend({
   
   initialize: function(){
-    
+    var firstImg = this.model.models[0].get('image_url');
+    $('#Speakers-details-highlightedImage').attr('src', firstImg);
   },
 
   events:{
