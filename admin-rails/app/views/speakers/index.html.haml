@@ -5,7 +5,6 @@
     %a{:href=>"/speakers/#{speaker.id}"}
       %article.speaker
         %p.speaker_avatar
-
           -if speaker[:image].nil?
             %image{:src=>"http://placehold.it/200x200"}
           -else
