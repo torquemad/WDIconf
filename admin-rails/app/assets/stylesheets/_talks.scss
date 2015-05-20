@@ -1,9 +1,25 @@
 .single-talk {
+  position: relative;
+  vertical-align: top;
   border: 1px solid black;
   padding-left: 10px;
   height: 130px;
   width:  180px;
   margin: 0;
+}
+
+.larger-talk-box {
+  height: 150px;
+}
+
+.talk-box-close {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  color: black;
+  top: 2px;
+  right: 2px;
+  display: none;
 }
 
 .inline-block {
