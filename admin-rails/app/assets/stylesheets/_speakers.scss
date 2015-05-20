@@ -16,9 +16,9 @@
 
 
 .speaker_avatar{
-  width:200px;
   height: 200px;
-  border: 1px solid $gray;
+  display:table-cell;
+  vertical-align:middle;
   img {
     height: 200px;
   }
