@@ -8,12 +8,14 @@
   = f.text_field :blurb
 
 %p
-  = f.label :image_url, "Avatar: "
+  = f.label :image_url, "Local Avatar Upload : "
+
+  -if @speaker.image?
+    = image_tag(speaker.image_url) if speaker.image?
   = f.file_field :image_url
 
-
-  / = f.label :remote_image_url, "or image URL"
-  / = f.text_field :remote_image_url
+  = f.label :image_url, "Remote Avatar Upload : "
+  = f.text_field :remote_image_url
 
 %p
   should probs put in connection to user account password here?

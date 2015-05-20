@@ -1,27 +1,34 @@
 %ul.left
-  %li.has-dropdown.not-click
-    %a{:href => users_all_path } Users
-    %ul.dropdown
-      %li
-        = link_to 'User Index', users_home_path
-      %li
-        = link_to 'Sign Up', user_signup_path
-      %li
-        = link_to 'Show all users', users_all_path
+  - if logged_in?
+    - if is_admin?
+      %li.has-dropdown.not-click
 
-  %li.has-dropdown.not-click
-    %a{:href => speakers_path } Speakers
-    %ul.dropdown
-      %li
-        =link_to 'Add Speaker', new_speaker_path
-      %li
-        =link_to 'All Speakers', speakers_path
+        %a{:href => users_all_path } Users
+        %ul.dropdown
 
-  %li.has-dropdown.not-click
-    %a{:href => talks_path } Talks
-    %ul.dropdown
-      %li
-        =link_to 'Add Talk', new_talk_path
-      %li
-        =link_to 'All Talks', talks_path
+          %li
+            = link_to 'User Index', users_home_path
+          %li
+            = link_to 'Sign Up', user_signup_path
+          %li
+            = link_to 'Show all users', users_all_path
 
+    %li.has-dropdown.not-click
+      %a{:href => speakers_path } Speakers
+      %ul.dropdown
+        - if is_admin?
+          %li
+            =link_to 'Add Speaker', new_speaker_path
+          %li
+            =link_to 'All Speakers', speakers_path
+        %li
+          =link_to 'My Profile', "/speakers/#{current_user.speaker.id}"
+
+    %li.has-dropdown.not-click
+      %a{:href => talks_path } Talks
+      %ul.dropdown
+        %li
+          =link_to 'Add Talk', new_talk_path
+        - if is_admin?
+          %li
+            =link_to 'All Talks', talks_path
