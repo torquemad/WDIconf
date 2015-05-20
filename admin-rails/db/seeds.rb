@@ -23,9 +23,9 @@ AccessLevel.create([{access_type:'sponsor'}]);
 
 # Talks
 # id: serial, title: str, blurb: str, description: text, timedate: datetime, limit: int, duration: int (mins), speaker_id: int
-Talk.create([{ title: 'Flipping Hair', blurb: 'How to flip your hair', description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem quam sint ea debitis natus quos iusto earum corporis excepturi inventore pariatur ipsum non est itaque repellat, ratione aliquam accusantium placeat.', date: '', limit: 30, duration: 60, speaker_id: 1 }]);
-Talk.create([{ title: 'Flipping Hair 2', blurb: 'How to flip your hair', description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem quam sint ea debitis natus quos iusto earum corporis excepturi inventore pariatur ipsum non est itaque repellat, ratione aliquam accusantium placeat.', date: '', limit: 30, duration: 60, speaker_id: 1 }]);
-
+Talk.create([{ title: 'Flipping Hair', blurb: 'How to flip your hair', description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem quam sint ea debitis natus quos iusto earum corporis excepturi inventore pariatur ipsum non est itaque repellat, ratione aliquam accusantium placeat.', date: '', limit: 30, duration: 20, speaker_id: 1 }]);
+Talk.create([{ title: 'Advance Hair Flipping', blurb: 'How to flip your hair', description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem quam sint ea debitis natus quos iusto earum corporis excepturi inventore pariatur ipsum non est itaque repellat, ratione aliquam accusantium placeat.', date: '', limit: 30, duration: 20, speaker_id: 1 }]);
+Talk.create([{ title: 'Mastering all slaves', blurb: 'How the real master turns everyone to slaves', description: 'a man who has people working for him, especially servants or slaves.', date: '', limit: 30, duration: 60, speaker_id: 1 }]);
 
 # Tickets
 # id: serial, registra: str, talk_id: int
@@ -34,5 +34,5 @@ Talk.create([{ title: 'Flipping Hair 2', blurb: 'How to flip your hair', descrip
 
 # Speakers
 # id: serial, user_id: int, name: str, blurb: str, image_url: str
-Speaker.create([{ user_id: 2, name: 'Daniel Tsui', image_url: 'https://ga-core.s3.amazonaws.com/production/uploads/instructor/image/1700/thumb_HEADSHOTS__2001_.jpg', blurb: 'Lead Instructor, Web Development Immersive, General Assembly'}]);
-Speaker.create([{ user_id: 3, name: 'Beta', blurb: 'Master of all UXB', image_url: 'http://m.c.lnkd.licdn.com/media/p/8/005/06d/30d/2881546.jpg'}]);
+Speaker.create([{ user_id: 2, name: 'Daniel Tsui', remote_image_url: 'https://ga-core.s3.amazonaws.com/production/uploads/instructor/image/1700/thumb_HEADSHOTS__2001_.jpg', blurb: 'Lead Instructor, Web Development Immersive, General Assembly'}]);
+Speaker.create([{ user_id: 3, name: 'Beta', blurb: 'Master of all UXB', remote_image_url: 'http://m.c.lnkd.licdn.com/media/p/8/005/06d/30d/2881546.jpg'}]);

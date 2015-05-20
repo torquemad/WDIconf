@@ -5,7 +5,12 @@
     %a{:href=>"/speakers/#{speaker.id}"}
       %article.speaker
         %p
-          %image{:src=>"http://placehold.it/200x200"}
+          - binding.pry
+          -if speaker[:image].nil?
+            %image{:src=>"http://placehold.it/200x200"}
+          -else
+            = image_tag speaker.image
+
         %h1= speaker.name
         %p= speaker.blurb
         %p.speaker_operation
