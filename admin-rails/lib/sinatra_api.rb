@@ -15,7 +15,13 @@ class SinatraApi < Sinatra::Base
   end
 
   post '/tickets' do
-    new_ticket = Ticket.new(:registra => params[:email], :talk_id => params[:talk_id])
+
+    params = JSON.parse(request.body.read.to_s)
+
+    new_ticket = Ticket.new(:registra => params['registra'], :talk_id => params['talk_id'])
+
+    new_ticket.save
+
   end
 
   # ---------------

@@ -15,3 +15,11 @@ _.templateSettings = {
 
 var speakers = new Speakers();
 speakers.fetch();
+
+// var chosenTalks = new ChosenTalks([
+//   new Talk({talk_id: 1, title: "DT talk"}),
+//   new Talk({talk_id: 2, title: "DT talasdsafsagk"}),
+//   new Talk({talk_id: 3, title: "DT talasdsafsagqwfwqfwqfwqfk"}),
+// ]);
+
+var tickets = new Tickets();
