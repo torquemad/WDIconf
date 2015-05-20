@@ -4,44 +4,38 @@
   padding: 0;
 }
 
-/* wrappers for slide out pages */
-.schedule-wrapper, .payment-wrapper {
-  display: none;
-  position: fixed;
-  right: 0;
-  width: 100vw;
-  min-height: 100vh;
-  background-color: rgba(155,155,155,.5);
-  z-index: 15;
-}
-
 /* 'cover' left side for toggle click event */
 .schedule-cover, .payment-cover {
-  float: left;
+  position: fixed;
+  background-color: rgba(155,155,155,.5);
+  display: none;
   height: 100vh;
-}
-
-.schedule-cover {
-  width: 14vw;
+  width: 100vw;
+  z-index: 998;
 }
 
 .payment-cover {
-  width: 29vw;
+  z-index: 1000;
 }
+
 
 /* slide out pages */
 .schedule, .payment {
-  float: right;
+  display: none;
+  position: fixed;
+  right: 0;
   background: white;
-  display: inline-block;
   height: 100vh;
   vertical-align: top;
 }
 
 .schedule {
-  width: 85vw;
+  z-index: 999;
+  width: 93vw;
+
 }
 
 .payment {
-  width: 70vw;
+  width: 86vw;
+  z-index: 1001;
 }
