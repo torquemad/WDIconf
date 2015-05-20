@@ -31,6 +31,29 @@ h4 {
 	  font-size: 24px;
 }
 
+::-webkit-input-placeholder {
+   color: #ccc;
+   font-size: 18px;
+   font-family: 'Montserrat', sans-serif;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: #ccc;  
+   font-size: 18px;
+   font-family: 'Montserrat', sans-serif;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: #ccc;  
+   font-size: 18px;
+   font-family: 'Montserrat', sans-serif;
+}
+
+:-ms-input-placeholder {  
+   color: #ccc;  
+   font-size: 18px;
+   font-family: 'Montserrat', sans-serif;
+}
 
 input[type="text"], input[type="password"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="month"], input[type="week"], input[type="email"], input[type="number"], input[type="search"], input[type="tel"], input[type="time"], input[type="url"], input[type="color"], textarea {
 	  background: #252525;
@@ -389,7 +412,57 @@ border-bottom: 1px solid #aaa;
   color: #999;
 }
 
+/***** SCHED *****/
+#Sched {
+	list-style: none;
+	margin: 0;
+	padding: 15px;
+	background: #fdfdfd;
+}
 
+.sched-row {
+	border: 1px solid #aaa;
 
+}
 
+.sched-row-time {
+	padding: 10px 16px !important;
+}
+.sched-row-time h3 {
+  font-size: 21px;
+  margin: 0;
 
+}
+
+.sched-row-Details {
+	padding: 10px 16px !important;
+}
+.sched-row-Details h4 {
+	text-transform: uppercase;
+	  margin: 0;
+  font-size: 26px;
+}
+
+.sched-row-Ticket {
+	padding: 10px 16px !important;
+}
+
+.sched-row-Ticket h3 {
+	text-transform: uppercase;
+	  margin: 0 0 5px 0;
+}
+
+input[type="number"].sched-row-TicketInput {
+
+	  background: #fdfdfd;
+	  border: 4px solid #333;
+	  padding: .75em;
+
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button {  
+
+   opacity: 1;
+
+}
