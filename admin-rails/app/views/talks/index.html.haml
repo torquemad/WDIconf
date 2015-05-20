@@ -12,7 +12,7 @@
   - @talks.each do |talk|
     %div.single-talk.draggable
       %div
-        %p= talk.title
+        %h1= talk.title
         %p= talk.blurb
         %p
           =link_to 'Edit', "/talks/#{talk.id}/edit"

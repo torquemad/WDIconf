@@ -1,5 +1,5 @@
 class TalksController < ApplicationController
-  
+
   def index
     @talks = Talk.all
   end
@@ -15,6 +15,12 @@ class TalksController < ApplicationController
 
   def new
     @talk = Talk.new
+  end
+
+  def new_by_speaker
+    binding.pry
+    @talk = Talk.new
+    @speaker = Speaker.find(params[:id])
   end
 
   def show

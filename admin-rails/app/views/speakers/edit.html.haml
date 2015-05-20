@@ -3,7 +3,8 @@
 
   %div.speaker_form
     = form_for @speaker, html: { multipart: true } do |f|
-      = render :partial => "form", :locals => {:f => f}
+      = render :partial => "form", :locals => {:f => f, :speaker => @speaker}
+
 
   - if !@errors.nil?
     %ul.Signup_Errors
