@@ -29,7 +29,10 @@ Talk.create([{ title: 'Mastering all slaves', blurb: 'How the real master turns 
 
 # Tickets
 # id: serial, registra: str, talk_id: int
-
+Ticket.create([{registra: 'my@ga.com', talk_id:1}]);
+Ticket.create([{registra: 'my@ga.com', talk_id:2}]);
+Ticket.create([{registra: 'louis@ga.com', talk_id:1}]);
+Ticket.create([{registra: 'jared@ga.com', talk_id:1}]);
 
 
 # Speakers

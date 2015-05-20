@@ -1,5 +1,13 @@
 @import "foundation/components/top-bar";
 
+nav * {
+  background-color: $red !important;
+  color: $yellow !important;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
 .logged_in {
   color: white;
   font-size: 0.8125rem;

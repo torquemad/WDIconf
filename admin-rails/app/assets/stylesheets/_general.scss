@@ -1,3 +1,7 @@
+* {
+  font-family: 'Georgia', serif;
+  color: $black;
+}
 .content{
   padding: 0 30px;
 }
@@ -5,3 +9,9 @@
 .row{
   padding: 10px 0 ;
 }
+
+.top-bar{
+  background-color: $red !important;
+}
+
+
