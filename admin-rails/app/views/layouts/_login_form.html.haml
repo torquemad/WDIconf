@@ -1,0 +1,9 @@
+%ul.right
+  - if logged_in?
+    %li.logged_in
+      logged in as #{current_user.email}
+      = form_tag '/logout', method: :delete do
+        %button.logout logout
+  - else
+    %li
+      = link_to 'Login', login_path

@@ -1,0 +1,29 @@
+%p
+  = f.label :title, "Talk Title: "
+  = f.text_field :title
+%p
+  = f.label :blurb, "Talk Blurb: "
+  = f.text_field :blurb
+
+%p
+  = f.label :description, "Talk Description: "
+  = f.text_area :description
+
+%p
+  = f.label :speaker_id, "Speaker"
+  = f.select("speaker_id", Speaker.all.collect {|sp| [sp.name.capitalize, sp.id]})
+
+%p
+  = f.label :date, "Talk Date: "
+  = f.date_field :date, :value => "2015-05-29", :disabled =>"true"
+
+%p#duration
+  = f.label :duration, "Talk Duration: "
+  %span
+    %em 20
+    mins
+  = f.range_field :time, :step =>20, :value => 20, :min =>20, :max=>60
+
+= f.hidden_field :limit, :value =>30
+
+= f.submit

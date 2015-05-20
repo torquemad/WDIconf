@@ -6,6 +6,7 @@ class UsersController < ApplicationController
 
   def all
     @users = User.all
+    @access_type = AccessLevel.all
   end
 
   def new
@@ -19,6 +20,10 @@ class UsersController < ApplicationController
     @user.save
 
     if @user.save
+      # email user confirmation upon signup
+      if Rails.configuration.x.mail_on_user_signup == true
+        UserNotifier.send_signup_email(@user).deliver_now
+      end
       redirect_to users_all_path
     else
       @errors = @user.errors.full_messages

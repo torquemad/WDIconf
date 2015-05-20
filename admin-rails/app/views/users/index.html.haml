@@ -1,5 +1,6 @@
-%h1 Users index page
-%h2 All Users
+%div.content
+  %h1 Users index page
+  %h2 All Users
 
-- @users.each do | user|
-  %li #{user.email}
+  - @users.each do | user|
+    %li #{user.email}

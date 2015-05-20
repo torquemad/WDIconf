@@ -1,0 +1,29 @@
+* {
+  font-family: 'Georgia', serif;
+  color: $black;
+}
+
+.row{
+  padding: 10px 0 ;
+}
+
+.top-bar{
+  background-color: $red !important;
+}
+
+.content{
+  padding: 0 30px;
+}
+.list_table{
+  width: 90%;
+  border: 1px solid red;
+}
+.td {
+  display:inline-block;
+}
+.tr{
+  list-style: none;
+  padding: 10px 0 ;
+}
+
+

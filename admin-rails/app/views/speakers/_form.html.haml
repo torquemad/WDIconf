@@ -1,0 +1,22 @@
+
+%p
+  = f.label :name, "Name: "
+  = f.text_field :name
+
+%p
+  = f.label :blurb, "Blurb: "
+  = f.text_field :blurb
+
+%p
+  = f.label :image_url, "Avatar: "
+  = f.file_field :image_url
+
+
+  / = f.label :remote_image_url, "or image URL"
+  / = f.text_field :remote_image_url
+
+%p
+  should probs put in connection to user account password here?
+
+%p
+  = f.submit

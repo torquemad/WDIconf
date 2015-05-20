@@ -25,9 +25,7 @@
   %input{:name => "duration", :type => "hidden", :value => "60"}/
   %input{:type => "submit"}/
   = end
-%p
-  %label{:for => ""}
-    Talk Duration
-    %span
-      %em> 15
-      mins
+:javascript
+  $('#add_talk').on('click', function() {
+    $('.talk_form').html(#{render 'form'});
+  });
