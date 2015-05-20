@@ -31,7 +31,8 @@ $(document).ready(function(){
 
   // side animation toggle
   function sliderToggle() {
-    $($(this).attr('data-slider-page')).animate({width:'toggle'}, 300);
+    $($(this).attr('data-slider-page')).animate({width:'toggle'}, 3000);
+    $($(this).attr('data-slider-page')+'-cover').toggle();
   }
 
   // els w/ .slider-toggle draws slide target from data

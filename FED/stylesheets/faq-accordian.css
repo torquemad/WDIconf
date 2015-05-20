@@ -12,15 +12,14 @@
 .content-open {  /* this is the answer element */ 
     max-height: 500px;
     opacity: 1;
-    padding: .6em 1em;
-    text-indent: 1em;
-    background: #e7e7e7;
-    font-size:.9em;
+    padding: 1em;
+
 }
 
 .accordion-trigger {
     padding: .6em 1em;
-    background: #ccc;
+      border: 1px solid #333;
+  border-radius: 2px;
 }
 
 .accordion-trigger:hover {

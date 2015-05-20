@@ -5,7 +5,7 @@ $(document).ready(function(){
   //$('.main-nav').addClass('fixed');
 
  $(window).bind('scroll', function() {
- var navHeight = $( window ).height() - 275;
+ var navHeight = $( window ).height() - 400;
    if ($(window).scrollTop() > navHeight) {
      $('nav').addClass('fixed');
    }
