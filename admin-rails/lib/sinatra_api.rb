@@ -1,4 +1,5 @@
 require 'sinatra/base'
+require 'pry'
 
 
 class SinatraApi < Sinatra::Base
@@ -8,19 +9,33 @@ class SinatraApi < Sinatra::Base
     Ticket.all.to_json
   end
 
+
   get '/tickets/:id' do  
     Ticket.find(params[:id]).to_json
   end
 
   post '/tickets' do
-    new_ticket = Ticket.new(:registra => params[:firstname] + params[:surname], :talk_id => "1")
-    new_user = User.new(:access_level_id => 1, :email => params[:email], :login_type => 1)
+    new_ticket = Ticket.create_ticket(:registra => params[:email], :talk_id => "1")
   end
 
   # ---------------
 
   get '/talks' do  
-    Talk.all.to_json
+  # Talk.all.select(to_json
+    Talk.all.select(:speaker_id, :title).to_json(:include => :speaker)
+  # talk time 
+  #badges
+
+
+  end
+
+  get '/talks/remaining/:id' do
+    talk_id = params[:id]
+    ticket_taken   = Ticket.where(talk_id: params[:id]).count
+    talk_max_count = Talk.where(id: params[:id]).select(:limit)
+
+    (talk_max_count[0].limit - ticket_taken).to_json
+    
   end
 
   get '/talks/:id' do  
@@ -31,7 +46,9 @@ class SinatraApi < Sinatra::Base
   # ---------------
 
   get '/speakers' do  
-    Speaker.all.to_json
+    Speaker.all.select(:id, :name, :blurb).to_json(:include => :talks)
+    # image url
+    # badges
   end
 
   get '/speakers/:id' do  
