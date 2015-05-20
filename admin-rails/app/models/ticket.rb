@@ -5,7 +5,7 @@ class Ticket < ActiveRecord::Base
   def create_ticket(email, talk)
     binding.pry
     if Talk.find(talk).limit <= 0
-      puts "ERROR"
+     "ERROR"
     else  
       Ticket.create(:registra=>email, :talk_id=>talk)
     end
