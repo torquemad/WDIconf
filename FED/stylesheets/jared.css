@@ -1,46 +1,16 @@
 /* ------  SPLASH 'PAGE' ------  */
 
-.header-fixed {
-  height:400px;
-  width: 100%;
-  position: fixed;
-  background: url('http://placehold.it/1200x300');
-  z-index: -1;
-  top:0;
-  opacity:0.3;  /* temporary rule */
-}
 
-.header-inner {
-  margin:0 auto;
-  height:400px;
-  position: relative;
-  text-align: center;
-}
 
-.main-logo {
-  margin:1.7em 0 1.3em 0; 
-}
 
-.welcome-msg {
-  width: 60%;
-  margin:0 auto 1em auto;
-}
 
 /* temporary rules (to be deleted ) */
-#Speakers { background:#fff; }
-#About { background:white; }
+
+
 #Location { background:#ddd; }
 #Sponsors { background:white; min-height: 600px; }
 #Contact { background:#ddd; }
 
-/* --  Desktop Navigation --  */
-
-.main-nav {
-  position: absolute;
-  bottom: 0px;
-  width: 100%;
-  height:40px;
-}
 
 /* This class is added on scroll */
 .main-nav.fixed {
@@ -63,17 +33,6 @@
   margin:0;
   padding:0;
 }
-
-.main-nav li {
-  display:inline-block;
-  text-align: center;
-  list-style-type: none;
-  margin-right:1em;
-  text-transform: uppercase;
-  font-size: .9em;
-  margin-top:.5em;
-}
-
 
 /* --  Mobile Navigation --  */
 

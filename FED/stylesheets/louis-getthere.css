@@ -1,11 +1,11 @@
-#Location .location-details {
+/*#Location .location-details {
   top: 50%;
-}
+}*/
 
-.location-details h1 {
+/*.location-details h1 {
   font-size: 2.5em;
   background-color: #7e7e7e;
-}
+}*/
 
 #Location .title {
   font-size: 2em;
@@ -15,10 +15,10 @@
   font-size: 1.5em;
 }
 
-#Location .container {
+/*#Location .container {
   background-color: #7e7e7e;
   height: 100vh;
-}
+}*/
 
 #Location .large-12 {
   padding: 0;
@@ -34,15 +34,15 @@
   background-color: #aeaeae;
 }
 
-#Map-canvas {
+/*#Map-canvas {
   padding: 0;  
   width: 500px;
   height: 100vh;
-}
+}*/
 
-#Location .row {
+/*#Location .row {
   background-color: #949292;
-}
+}*/
 
 .location-ul {
   padding: 0;
