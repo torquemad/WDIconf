@@ -6,6 +6,7 @@ class UsersController < ApplicationController
 
   def all
     @users = User.all
+    @access_type = AccessLevel.all
   end
 
   def new
