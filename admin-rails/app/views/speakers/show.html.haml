@@ -10,6 +10,7 @@
       /%image{:src=>"http://placehold.it/200x200"}
 
   %div.row
+    %h1 My Talk
     %section.speaker_talks.medium-9.column
       - @talks.each do |talk|
         %article.talk
@@ -18,8 +19,8 @@
           %p
             =talk.blurb
     %aside.medium-3.column
-      %button#add_talk Add Talk
-
+      /%button#add_talk Add Talk
+      =link_to 'Add Talk', "/talks/speaker/#{current_user.speaker.id}"
   %div.row
     %section.talk_form
 

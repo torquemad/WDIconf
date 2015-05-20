@@ -9,7 +9,7 @@
   - @talks.each do |talk|
     %div.single-talk.draggable#right-menu
       %div
-        %p= talk.title
+        %h1= talk.title
         %p= talk.blurb
         %p
           =link_to 'Edit', "/talks/#{talk.id}/edit"
@@ -31,7 +31,7 @@
         $(this)
           .html( $(this).text().trim() + ($(ui.draggable).html()) )
           .attr("class", "single-talk larger-talk-box inline-block");
-        
+
         // this is debug code to help with AJAX call
         console.log($(ui.draggable).find('a').attr('href'));
 
