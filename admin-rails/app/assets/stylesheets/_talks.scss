@@ -1,5 +1,6 @@
 .single-talk {
   position: relative;
+  display: inline-block;
   vertical-align: top;
   border: 1px solid black;
   padding-left: 10px;
@@ -24,4 +25,10 @@
 
 .inline-block {
   display: inline-block;
+}
+
+.cell-content {
+  height: 130px;
+  width:  180px;
+  margin: 0;
 }
