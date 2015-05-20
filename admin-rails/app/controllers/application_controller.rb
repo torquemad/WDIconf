@@ -10,9 +10,14 @@ class ApplicationController < ActionController::Base
   def current_user
     @current_user ||= User.find_by(:id => session[:user_id]) if session[:user_id]
   end
-  # def current_user
-  #   User.find_by(id: session[:user_id])
-  # end
 
-  helper_method :current_user, :logged_in?
+  def is_admin?
+    current_user.access_level_id == 1
+  end
+
+  def is_speaker?
+
+  end
+
+  helper_method :current_user, :logged_in?, :is_admin?
 end

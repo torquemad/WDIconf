@@ -11,7 +11,7 @@
 
 %p
   = f.label :speaker_id, "Speaker"
-  = f.select("speaker_id", Speaker.all.collect {|sp| [sp.name.capitalize, sp.id]})
+  = f.select("speaker_id", Speaker.all.collect {|sp| [sp.name.capitalize, sp.id]}, :selected=>params[:id])
 
 %p
   = f.label :date, "Talk Date: "
