@@ -49,6 +49,13 @@
   list-style-type: none;
 }
 
+#bodyContent {
+  text-align: center;
+}
+
+#bodyContent > span {
+  padding-left: 27px;
+}
 
 @media all and (max-width: 420px) { 
   #Map-canvas{
