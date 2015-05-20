@@ -17,7 +17,7 @@
 
 /* slide out pages */
 .schedule-slider, .payment-slider {
-  display: none;
+  /*display: none;*/
   position: fixed;
   top: 0;
   right: 0;
@@ -26,6 +26,9 @@
   min-height: 100vh;
   vertical-align: top;
   overflow-y: auto;
+  -webkit-transform: translate(100vw, 0);
+  -transform: translate(100vw, 0);
+  transition: transform 0.3s ease;
 }
 
 .schedule-slider {
@@ -36,4 +39,8 @@
 .payment-slider {
   width: 86vw;
   z-index: 53;
+}
+
+.slider-open {
+  transform: translate(0, 0);
 }

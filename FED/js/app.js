@@ -58,8 +58,7 @@ $(document).ready(function(){
       $('#content').css('height', '100vh');
     }
     // animate slider and toggle cover grey out
-    $($(this).attr('data-slider-page')+'-slider').animate({ width:['toggle','linear'] }, 300);
-    // $($(this).attr('data-slider-page')+'-slider').toggle();
+    $($(this).attr('data-slider-page')+'-slider').toggleClass('slider-open');
     $($(this).attr('data-slider-page')+'-slider-cover').toggle();
   }
 
