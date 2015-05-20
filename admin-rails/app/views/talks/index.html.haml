@@ -2,38 +2,51 @@
   - (9..16).each do |row|
     %ul.small-block-grid-4
       - ["00","15","30","45"].each do |col|
-        %li.single-talk.inline-block.dropTarget= "#{row}:#{col}"
+        %li.single-talk.larger-talk-box.inline-block.dropTarget= "#{row}:#{col}"
+
 %div.small-3.columns.content
   %h2 All Talks
   - @talks.each do |talk|
-    %div.single-talk.draggable
-      %p= talk.title
-      %p= talk.blurb
-      %p
-        =link_to 'Edit', "/talks/#{talk.id}/edit"
-        / by
-        / = talk.speaker.name
-        / %a{:href => "#{talk.id}/profile"} Show
-        / %a{:href => "#{talk.id}/edit"} Edit
+    %div.single-talk.draggable#right-menu
+      %div
+        %p= talk.title
+        %p= talk.blurb
+        %p
+          =link_to 'Edit', "/talks/#{talk.id}/edit"
+          / by
+          / = talk.speaker.name
+          / %a{:href => "#{talk.id}/profile"} Show
+          / %a{:href => "#{talk.id}/edit"} Edit
+          %div.talk-box-close x
 
 :javascript
   $(function() {
-    $( ".draggable" ).draggable();
+    $( ".draggable" ).draggable({
+      containment: "body"
+    });
   });
 
   $('.dropTarget').droppable({
     drop: function(ev, ui) {
-        $(ui.draggable).detach();
         $(this)
-          .html( ($(ui.draggable).html()) )
-          .attr("class", "single-talk inline-block draggable");
+          .html( $(this).text().trim() + ($(ui.draggable).html()) )
+          .attr("class", "single-talk larger-talk-box inline-block");
+        
+        // this is debug code to help with AJAX call
         console.log($(ui.draggable).find('a').attr('href'));
+
         $(ui.draggable).remove();
+        $(this).find('div')
+          .css("display","block");
+        $(this).find('div').click(function(){
+          $(this).append().fadeIn("slow");
+          $(this).fadeOut("slow",function(){
+            $(this).remove();
+          });
+        });
       }
   });
-  
-  console.log("testing");
-  
+
   $(function(){
     $( ".click-test" ).click(function(){
       console.log($(this).html());
