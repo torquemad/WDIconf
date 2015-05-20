@@ -9,7 +9,7 @@
   float: left;
 }
 
-.steps-bar ul, li {
+.steps-bar ul, .steps-bar li {
   display: inline;
   float: left;
 }
