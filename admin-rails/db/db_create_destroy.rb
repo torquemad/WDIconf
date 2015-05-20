@@ -17,6 +17,8 @@ rails g migration add_speaker_id_to_talks speaker_id:int
 rails g migration add_image_url_to_speakers image_url:string
 
 rails g migration remove_talk_id_to_speaker
+rails migrate add_badge_to_talk badge:string
+
 
 # Destroy models
 rails destroy model Talk
