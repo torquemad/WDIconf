@@ -164,6 +164,7 @@ GEM
     pundit (1.0.0)
       activesupport (>= 3.0.0)
     rack (1.6.1)
+    rack-cors (0.4.0)
     rack-protection (1.5.3)
       rack
     rack-test (0.6.3)
@@ -289,6 +290,7 @@ DEPENDENCIES
   phantomjs (~> 1.9.8.0)
   pry-rails
   pundit
+  rack-cors
   rails (= 4.2.0)
   rspec-rails (~> 3.0)
   sass-rails (~> 5.0)

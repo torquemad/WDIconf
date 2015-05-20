@@ -38,5 +38,13 @@ module Wdiconf
   
     # mail sending config
     config.x.mail_on_user_signup = true
+
+    config.middleware.insert_before 0, "Rack::Cors" do
+      allow do
+        origins '*'
+        resource '*', :headers => :any, :methods => [:get, :post, :options]
+      end
+    end
+    
   end
 end
