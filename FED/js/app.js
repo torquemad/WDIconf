@@ -46,18 +46,27 @@ setTimeout(function(){
 
 $(document).ready(function(){
 
-  // side animation toggle
+  // slide animation toggle
   function sliderToggle() {
-    $($(this).attr('data-slider-page')).animate({width:'toggle'}, 3000);
-    $($(this).attr('data-slider-page')+'-cover').toggle();
+    // disable background scrolling while schedule open
+    if ($('.schedule-slider-cover:hidden').length == 0 &&
+        $(this).attr('data-slider-page') == '.schedule') {
+      $('#content').css('overflow', '');
+      $('#content').css('height', '');
+    } else {
+      $('#content').css('overflow', 'hidden');
+      $('#content').css('height', '100vh');
+    }
+    // animate slider and toggle cover grey out
+    $($(this).attr('data-slider-page')+'-slider').animate({ width:['toggle','linear'] }, 300);
+    // $($(this).attr('data-slider-page')+'-slider').toggle();
+    $($(this).attr('data-slider-page')+'-slider-cover').toggle();
   }
 
-  // els w/ .slider-toggle draws slide target from data
+  // elements w/ .slider-toggle draws slide target from data
   $('.slider-toggle').on('click', sliderToggle);
 
 });
-
-
 
 // hover effect in Speaker section
 
