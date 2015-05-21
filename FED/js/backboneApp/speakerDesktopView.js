@@ -28,7 +28,7 @@ var SpeakerDesktopView = Backbone.View.extend({
     event.preventDefault();
     var name = this.model.attributes['name'];
     var title = this.model.get('talks')[0]['title'];
-    var image_url = "http://localhost:3000" + this.model.get('image')['url'];
+    var image_url = "http://localhost:3000" + this.model.get('image');
     var start_time = this.model.timePlusMinutes(this.model.get('talks')[0]['start_time']);
     var end_time = this.model.timePlusMinutes(start_time,15);
     var blurb = this.model.get('talks')[0]['blurb'];
@@ -61,7 +61,7 @@ var SpeakerDesktopView = Backbone.View.extend({
     var model = this.model.toJSON();
     var name = model['name'];
     var title = model['talks'][0]['title'];
-    var image_url =  model['image']['url'];
+    var image_url =  "http://localhost:3000" +  model['image'];
     this.$el.html(desktopTemplate({name: name, title: title, image_url: image_url} ));
 
     return this;
