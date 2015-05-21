@@ -547,7 +547,6 @@ margin-bottom: 0;
   cursor: pointer;
 }
 
-
 .main-nav li.buyTicketLI:hover {
   background: none;
 }
@@ -555,3 +554,28 @@ margin-bottom: 0;
 .main-nav li.logoNavLI:hover {
   background: none;
 }
+
+.platinum-sponsors-img img{
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.platinum-sponsors-img img:hover {
+  opacity: 1;
+}
+
+.inactive {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.inactive:hover {
+  opacity: 1;
+}
+
+.active {
+  opacity: 1;
+}
+
+
+
