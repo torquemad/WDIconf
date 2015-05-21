@@ -117,6 +117,7 @@ $(document).ready(function(){
 
 // Filtering for Speakers (using Isotope)
   var $thumbs = $('#thumbs');
+  var $thumbs_mobile = $('#thumbs-mobile');
   //$thumbs.isotope({ filter: '.cat-frontend' });
 
   var $BtnShowAll = $('#BtnShowAll');
@@ -140,6 +141,9 @@ $(document).ready(function(){
     $thumbs.isotope({ 
       filter: '*'
     });
+    $thumbs_mobile.isotope({ 
+      filter: '*'
+    });
   });
 
   $('#BtnFilterFrontend').on('click', function(){
@@ -149,6 +153,7 @@ $(document).ready(function(){
     $(this).toggleClass('inactive');
     $BtnShowAll.removeClass('active').addClass('inactive');
     $thumbs.isotope({ filter: '.cat-frontend' });
+    $thumbs_mobile.isotope({ filter: '.cat-frontend' });
   });
 
 
@@ -159,6 +164,7 @@ $(document).ready(function(){
     $(this).toggleClass('inactive');
     $BtnShowAll.removeClass('active').addClass('inactive');
     $thumbs.isotope({ filter: '.cat-backend' });
+    $thumbs_mobile.isotope({ filter: '.cat-backend' });
   });
 
   $('#BtnFilterTech').on('click', function(){
@@ -167,6 +173,7 @@ $(document).ready(function(){
     $(this).toggleClass('inactive');
     $BtnShowAll.removeClass('active').addClass('inactive');
     $thumbs.isotope({ filter: '.cat-tech' });
+    $thumbs_mobile.isotope({ filter: '.cat-tech' });
   });
 
 

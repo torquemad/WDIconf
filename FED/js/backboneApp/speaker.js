@@ -15,6 +15,34 @@ var Speaker = Backbone.Model.extend({
     } else {
       return date.getHours() + ":" + date.getMinutes();
     }
+  },
+
+  badgeUrl: function(badge){
+    switch(badge) {
+      case "FE":
+        return 'img/badge_fed.svg';
+        break;
+      case "BE":
+        return 'img/badge_bed.svg';
+        break;
+      case "Tech":
+        return 'img/badge_tech.svg';
+        break;
+    };
+  },
+
+  badgeClassName: function(badge){
+    switch(badge) {
+      case "FE":
+        return "cat-frontend";
+        break;
+      case "BE":
+        return "cat-backend";
+        break;
+      case "Tech":
+        return "cat-tech";
+        break;
+    };
   }
 
 });
