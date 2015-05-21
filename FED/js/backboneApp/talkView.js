@@ -39,24 +39,13 @@ var TalkView = Backbone.View.extend({
     console.log(chosenTalks);
   },
 
-  endTime: function(startTime){
-    var array = startTime.split(':');
-    var hours = parseInt(array[0]);
-    var minutes = parseInt(array[1]);
-    var date = new Date();
-    date.setHours(hours);
-    date.setMinutes(minutes);
-    date.setMinutes(date.getMinutes() + 15);
-    return date.getHours() + ":" + date.getMinutes();
-  },
-
   render: function(){
     var talksTemplate = _.template( $('#talk-template').html());
     var model = this.model.toJSON();
     var title = model['title'];
     var speaker = model['speaker']['name'];
-    var startTime = model['start_time'];
-    var endTime = this.endTime(startTime);
+    var startTime = this.model.timePlusMinutes(model['start_time']);
+    var endTime = this.model.timePlusMinutes(startTime, 15);
     this.$el.html(talksTemplate({title: title, speaker: speaker, startTime: startTime, endTime: endTime}));
     return this;
   }
