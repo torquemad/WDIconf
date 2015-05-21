@@ -2,6 +2,7 @@
   - if logged_in?
     %li.logged_in
       logged in as #{current_user.email}
+    %li
       = form_tag '/logout', method: :delete do
         %button.logout logout
   - else
