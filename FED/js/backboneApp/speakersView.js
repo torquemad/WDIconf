@@ -1,7 +1,8 @@
 var SpeakersView = Backbone.View.extend({
   
   initialize: function(){
-    var firstImg = this.model.models[0].get('image_url');
+    var firstImgUrl = this.model.at(0).get('image')['url'];
+    var firstImg = "http://localhost:3000" + firstImgUrl;
     $('#Speakers-details-highlightedImage').attr('src', firstImg);
   },
 
@@ -18,17 +19,17 @@ var SpeakersView = Backbone.View.extend({
     this.model.each(this.addOneDesktop, this);
   },
 
-  addOneMobile: function(speaker){
-    var view = new SpeakerMobileView({model: speaker});
-    $("#thumbs-mobile").append(view.render().el);
-  },
+  // addOneMobile: function(speaker){
+  //   var view = new SpeakerMobileView({model: speaker});
+  //   $("#thumbs-mobile").append(view.render().el);
+  // },
 
-  addAllMobile: function(){
-    this.model.each(this.addOneMobile, this);
-  },
+  // addAllMobile: function(){
+  //   this.model.each(this.addOneMobile, this);
+  // },
 
   render: function(){
     this.addAllDesktop();
-    this.addAllMobile();
+    // this.addAllMobile();
   }
 });

@@ -70,7 +70,7 @@
   <!-- schedule page -->
   <div class="schedule-slider-cover slider-toggle" data-slider-page=".schedule"></div>
   <div class="schedule-slider">
-    <h3>WDICONF 15</h3>
+    <!-- <h3>WDICONF 15</h3>
       <ul id="Sched" class="medium-9 columns end">
         <li class="sched-row row medium-collapse">
           <section class="sched-row-time medium-2 columns">
@@ -88,7 +88,7 @@
         </li>
       </ul>
     <button class="">Next</button>
-    <button class="slider-toggle" data-slider-page=".payment">Checkout</button>
+    <button class="slider-toggle" data-slider-page=".payment">Checkout</button> -->
   </div>
   <!-- schedule page END -->
 
@@ -537,7 +537,7 @@
 </div>
 <!-- NEW CHANGE END-->
   <script type="text/x-underscore-template" id="speaker-desktop-template">
-    <a href="" alt="" title=""><img class="th" src="{{image_url}}}" alt="speaker">
+    <a href="" alt="" title=""><img class="th" src={{image_url}} alt="speaker">
       <div><span>{{name}} - {{title}}</span></div>
     </a>
   </script>
@@ -545,11 +545,11 @@
   <script type="text/x-underscore-template" id="speaker-mobile-template">
     <div class="row">
       <div class="small-5 columns container_150">
-        <img id="Speakers-list-image" src="{{image_url}}" alt="photo">
+        <img id="Speakers-list-image" src="img/james.jpg" alt="photo">
         <h4 id="Speakers-list-name" itemprop="name">{{name}}</h4>
       </div>
       <div class="small-7 columns container_150">
-        <h3>{{title}}</h3>
+        <h3>SUPER AWESOME TITLE TALK</h3>
         <h5 id="Speakers-list-time">10:00PM - 11.30PM</h5>
       </div>
     </div>
@@ -567,6 +567,23 @@
     </div>
   </script>
 
+  <script type="text/x-underscore-template" id="talk-template">
+    <section class="sched-row-time medium-2 columns">
+      <h3>10:00am &ndash; </h3>
+      <h3>11:30am</h3>
+    </section>
+    <section class="sched-row-Details medium-7 columns">
+      <h4>Animating in your browser with JavaScript</h4>
+      <h5>By: Louis Moore</h5>
+    </section>
+    <section class="sched-row-Ticket medium-3 columns">
+      <h3>Free</h3>
+      <input class="sched-row-TicketInput" type="number" placeholder="0">
+      <button id="add-qty">+</button>
+      <button id="minus-qty">-</button>
+    </section>
+  </script>
+
   <script type="text/x-underscore-template" id="talks-template">
     <h3>WDICONF 15</h3>
     <ul class="inline-list">
@@ -576,10 +593,12 @@
       <li id="Tech">Tech</li>
     </ul>
     <p>Page <span id="current_page">{{currentPage}}</span> of <span id="max_page">{{maxPage}}</span>.</p>
-    <ul id="talks_list"></ul>
+    <ul id="Sched" class="medium-9 columns end">
+    
+    </ul>
     <button id="talks-previous">Previous</button>
     <button id="talks-next">Next</button>
-    <button class="slider-toggle" data-slider-page=".payment-wrapper">Checkout</button>
+    <button class="slider-toggle" data-slider-page=".payment">Checkout</button>
   </script>
 
   <script src="js/jquery.min.js"></script>
@@ -595,8 +614,6 @@
   <script src="js/backboneApp/backbone-min.js"></script>
   <script src="js/backboneApp/ticket.js"></script>
   <script src="js/backboneApp/tickets.js"></script>
-  <script src="js/backboneApp/talk.js"></script>
-  <script src="js/backboneApp/chosenTalks.js"></script>
   <script src="js/backboneApp/speaker.js"></script>
   <script src="js/backboneApp/speakers.js"></script>
   <script src="js/backboneApp/speakerDesktopView.js"></script>
@@ -604,8 +621,8 @@
   <script src="js/backboneApp/speakersView.js"></script>
   <script src="js/backboneApp/talk.js"></script>
   <script src="js/backboneApp/talks.js"></script>
-  <script src="js/backboneApp/talkDesktopView.js"></script>
-  <script src="js/backboneApp/talkMobileView.js"></script>
+  <script src="js/backboneApp/chosenTalks.js"></script>
+  <script src="js/backboneApp/talkView.js"></script>
   <script src="js/backboneApp/talksView.js"></script>
   <script src="js/backboneApp/backboneMain.js"></script>
 

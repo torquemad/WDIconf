@@ -3,8 +3,8 @@ var SpeakerDesktopView = Backbone.View.extend({
   tagName: 'li',
   
   initialize: function(){
-    console.log("ss");
-    console.log(this.model);
+    // console.log("ss");
+    // console.log(this.model);
     //$('#Speakers-details-highlightedImage').attr('src', 'http://www.fillmurray.com/g/300/200' alt="badge 1');
     //$('#Speakers-details-highlightedImage').attr('src', this.model.attributes['image_url'];)
   },
@@ -18,7 +18,7 @@ var SpeakerDesktopView = Backbone.View.extend({
     console.log(this.model);
     var name = this.model.attributes['name'];
     var title = this.model.attributes['title'];
-    var image_url = this.model.attributes['image_url'];
+    var image_url = this.model.get('image')['url'];
     var time = this.model.attributes['time'];
     // var talk_id = this.model.attributes['talk_id'];
 
@@ -36,7 +36,15 @@ var SpeakerDesktopView = Backbone.View.extend({
 
   render: function(){
     var desktopTemplate = _.template( $('#speaker-desktop-template').html());
-    this.$el.html(desktopTemplate(this.model.toJSON()));
+    var model = this.model.toJSON();
+    var name = model['name'];
+    var title = model['talks'][0]['title'];
+    var image_url = "http://localhost:3000" + model['image']['url'];
+    console.log(name);
+    console.log(title);
+    console.log(image_url);
+
+    this.$el.html(desktopTemplate({name: name, title: title, image_url: image_url}));
     return this;
   }
 });
