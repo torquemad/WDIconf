@@ -429,14 +429,14 @@
             <!-- NEW CHANGE START-->
             <h4><i class="fa fa-paper-plane"></i> Contact Us</h4>
             <!-- NEW CHANGE END-->
-            <form id="myForm" method="post" data-abide>
+            <form id="myForm" method="post" action="http://localhost:3000/api/mailer/contact" data-abide>
               
               <p>Question? Issue? Query? Rash? See a doctor about one of those. For the other three, we&#39;d love to hear from you. Just use this conveniently located form to send us an email.</p>
-              <input type="text" placeholder="Full Name" required>
+              <input type="text" name="name" placeholder="Full Name" required>
               
-              <input type="email" placeholder="Address@email.com" required>
+              <input type="email" name="email" placeholder="Address@email.com" required>
               
-              <textarea placeholder="Enter your message here" required></textarea>
+              <textarea name="message" placeholder="Enter your message here" required></textarea>
               
               <input type="submit" class="main-button button" value="Send Message"></button>
             </form>
