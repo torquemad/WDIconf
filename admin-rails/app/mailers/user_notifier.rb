@@ -22,13 +22,13 @@ class UserNotifier < ApplicationMailer
   def send_payment_email(params)
     @params = params
 
-    @first_name = params["payment-firstName"]
-    @surname = params["payment-surname"]
-    @email = params["payment-email"]
-    @full_name = params["payment-fullName"]
-    @card_number = params["payment-cardNumber"]
-    @card_month = params["payment-month"]
-    @card_ccv = params["payment-ccv"]
+    @first_name = params["first_name"]
+    @surname = params["surname"]
+    @email = params["email"]
+    @full_name = params["full_name"]
+    @card_number = params["card_number"]
+    @card_month = params["card_month"]
+    @card_ccv = params["card_ccv"]
 
     mail( :to      => @email,
           :subject => 'WDIConf: Payment Confirmation')
