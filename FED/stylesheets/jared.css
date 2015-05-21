@@ -44,7 +44,7 @@
   height:40px;
   width:100%;
   text-align-left;
-  z-index:100;
+  z-index: 30;
   padding-top:.4em;
   color:#ccc;
 }
@@ -54,7 +54,7 @@ nav.mobile {
   width:300px;
   height: 100%;
   position: fixed;
-  z-index:200;
+  z-index: 31;
   top:0;
   left:0;
   -webkit-transform: translate(-300px, 0);
