@@ -9,7 +9,7 @@ var Talks = Backbone.Collection.extend({
       return this;
     } else {
       return this.filter(function(talk) {
-        return talk.get("tag") === tag;
+        return talk.get("badge") === tag;
       });
     };
   },

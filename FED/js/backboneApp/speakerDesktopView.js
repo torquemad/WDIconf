@@ -17,9 +17,9 @@ var SpeakerDesktopView = Backbone.View.extend({
     event.preventDefault();
     console.log(this.model);
     var name = this.model.attributes['name'];
-    var title = this.model.attributes['title'];
-    var image_url = this.model.get('image')['url'];
-    var time = this.model.attributes['time'];
+    var title = this.model.get('talks')[0]['title'];
+    var image_url = "http://localhost:3000" + this.model.get('image')['url'];
+    var time = this.model.get('talks')[0]['start_time'];
     // var talk_id = this.model.attributes['talk_id'];
 
     this.renderSpeakersDetails(name, title, image_url, time);
@@ -39,12 +39,9 @@ var SpeakerDesktopView = Backbone.View.extend({
     var model = this.model.toJSON();
     var name = model['name'];
     var title = model['talks'][0]['title'];
-    var image_url = "http://localhost:3000" + model['image']['url'];
-    console.log(name);
-    console.log(title);
-    console.log(image_url);
+    var image_url =  model['image']['url'];
+    this.$el.html(desktopTemplate({name: name, title: title, image_url: image_url} ));
 
-    this.$el.html(desktopTemplate({name: name, title: title, image_url: image_url}));
     return this;
   }
 });

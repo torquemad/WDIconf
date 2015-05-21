@@ -11,12 +11,18 @@ var TalksView = Backbone.View.extend({
     "click #Tech" : "filterCollection",
     "click #All" : "filterCollection",
     "click #talks-next" : "displayNextCollection",
-    "click #previous-next" : "displayPreviousCollection"
+    "click #talks-previous" : "displayPreviousCollection",
   },
 
   displayNextCollection: function(){
     this.model.currentPage += 1;
+    this.render();
     console.log(this.model.displayFilteredPagination(this.model.currentSelectedTag, this.model.currentPage));
+  },
+
+  displayPreviousCollection: function(){
+    this.model.currentPage -= 1;
+    this.render();
   },
 
   filterCollection: function(e){
@@ -27,17 +33,20 @@ var TalksView = Backbone.View.extend({
 
   addOne: function(talk){
     var view = new TalkView({model: talk});
-    $("#Sched").append(view.render().el);
+    $($(this.el).find("#Sched")).append(view.render().el);
   },
 
   addAll: function(){
-    this.model.each(this.addOne, this);
+    var tag = this.model.currentSelectedTag;
+    var currentPage = this.model.currentPage;
+    var filteredPagination = this.model.displayFilteredPagination(tag, currentPage);
+    _.each(filteredPagination,this.addOne, this);
   },
 
   render: function(){
     var talksTemplate = _.template( $('#talks-template').html());
     this.$el.html(talksTemplate({currentPage: this.model.currentPage,maxPage: this.model.maxPage()}));
-    this.addAll;
+    this.addAll();
     return this;
   }
 });

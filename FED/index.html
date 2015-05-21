@@ -71,25 +71,8 @@
   <div class="schedule-slider-cover slider-toggle" data-slider-page=".schedule"></div>
   <div class="schedule-slider">
     <div class="slider-cross slider-toggle" data-slider-page=".schedule">X</div>
-    <h3>WDICONF 15</h3>
-      <ul id="Sched" class="medium-9 columns end">
-        <li class="sched-row row medium-collapse">
-          <section class="sched-row-time medium-2 columns">
-            <h3>10:00am &ndash; </h3>
-            <h3>11:30am</h3>
-          </section>
-          <section class="sched-row-Details medium-7 columns">
-            <h4>Animating in your browser with JavaScript</h4>
-            <h5>By: Louis Moore</h5>
-          </section>
-          <section class="sched-row-Ticket medium-3 columns">
-            <h3>Free</h3>
-            <input class="sched-row-TicketInput" type="number" placeholder="0">
-          </section>
-        </li>
-      </ul>
-    <button class="">Next</button>
-    <button class="slider-toggle" data-slider-page=".payment">Checkout</button> -->
+    <div class="schedule-container"></div>
+    <button class="slider-toggle" data-slider-page=".payment">Checkout</button>
   </div>
   <!-- schedule page END -->
 
@@ -509,8 +492,9 @@
 </div>
 <!-- NEW CHANGE END-->
   <script type="text/x-underscore-template" id="speaker-desktop-template">
-    <a href="" alt="" title=""><img class="th" src={{image_url}} alt="speaker">
-      <div><span>{{name}} - {{title}}</span></div>
+
+    <a href="" alt="" title=""><img class="th" src="img/james.jpg" alt="speaker">
+    <div><span>{{name}} - {{title}}</span></div>
     </a>
   </script>
 
@@ -541,16 +525,16 @@
 
   <script type="text/x-underscore-template" id="talk-template">
     <section class="sched-row-time medium-2 columns">
-      <h3>10:00am &ndash; </h3>
-      <h3>11:30am</h3>
+      <h3>{{startTime}} &ndash; </h3>
+      <h3>{{endTime}}</h3>
     </section>
     <section class="sched-row-Details medium-7 columns">
-      <h4>Animating in your browser with JavaScript</h4>
-      <h5>By: Louis Moore</h5>
+      <h4>{{title}}</h4>
+      <h5>By: {{speaker}}</h5>
     </section>
     <section class="sched-row-Ticket medium-3 columns">
       <h3>Free</h3>
-      <input class="sched-row-TicketInput" type="number" placeholder="0">
+      <input id="qty-input" class="sched-row-TicketInput" type="number" placeholder="0" value="0">
       <button id="add-qty">+</button>
       <button id="minus-qty">-</button>
     </section>
@@ -558,6 +542,7 @@
 
   <script type="text/x-underscore-template" id="talks-template">
     <h3>WDICONF 15</h3>
+    <p>Total tickets: <span id="ticketsQty">0</span></p>
     <ul class="inline-list">
       <li id="All">All </li>
       <li id="FE">FE </li>
@@ -570,7 +555,6 @@
     </ul>
     <button id="talks-previous">Previous</button>
     <button id="talks-next">Next</button>
-    <button class="slider-toggle" data-slider-page=".payment">Checkout</button>
   </script>
 
   <script src="js/jquery.min.js"></script>
