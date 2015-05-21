@@ -39,9 +39,9 @@ AccessLevel.create([{access_type:'sponsor'}]);
 
 # Talks
 # id: serial, title: str, blurb: str, description: text, timedate: datetime, limit: int, duration: int (mins), speaker_id: int
-Talk.create([{ title: 'Flipping Hair', blurb: 'How to flip your hair', description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem quam sint ea debitis natus quos iusto earum corporis excepturi inventore pariatur ipsum non est itaque repellat, ratione aliquam accusantium placeat.', date: '', limit: 30, duration: 20, speaker_id: 1 }]);
-Talk.create([{ title: 'Advance Hair Flipping', blurb: 'How to flip your hair', description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem quam sint ea debitis natus quos iusto earum corporis excepturi inventore pariatur ipsum non est itaque repellat, ratione aliquam accusantium placeat.', date: '', limit: 30, duration: 20, speaker_id: 1 }]);
-Talk.create([{ title: 'Mastering all slaves', blurb: 'How the real master turns everyone to slaves', description: 'a man who has people working for him, especially servants or slaves.', date: '', limit: 30, duration: 60, speaker_id: 2 }]);
+Talk.create([{ title: 'Flipping Hair', blurb: 'How to flip your hair', description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem quam sint ea debitis natus quos iusto earum corporis excepturi inventore pariatur ipsum non est itaque repellat, ratione aliquam accusantium placeat.', date: Time.new(2015), limit: 30, duration: 20, speaker_id: 1 }]);
+Talk.create([{ title: 'Advance Hair Flipping', blurb: 'How to flip your hair', description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem quam sint ea debitis natus quos iusto earum corporis excepturi inventore pariatur ipsum non est itaque repellat, ratione aliquam accusantium placeat.', date: Time.new(2015), limit: 30, duration: 20, speaker_id: 1 }]);
+Talk.create([{ title: 'Mastering all slaves', blurb: 'How the real master turns everyone to slaves', description: 'a man who has people working for him, especially servants or slaves.', date: Time.new(2015), limit: 30, duration: 60, speaker_id: 2 }]);
 
 
 # Tickets
