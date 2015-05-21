@@ -1,46 +1,41 @@
+/* PLACEHOLDER STUFF for making slider; assume ther*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
 /* 'cover' left side for toggle click event */
-.schedule-slider-cover, .payment-slider-cover {
+.schedule-cover, .payment-cover {
   position: fixed;
   background-color: rgba(155,155,155,.5);
   display: none;
   height: 100vh;
   width: 100vw;
+  z-index: 998;
 }
 
-.schedule-slider-cover {
-  z-index: 50;
+.payment-cover {
+  z-index: 1000;
 }
 
-.payment-slider-cover {
-  z-index: 52;
-}
 
 /* slide out pages */
-.schedule-slider, .payment-slider {
-  /*display: none;*/
+.schedule, .payment {
+  display: none;
   position: fixed;
-  top: 0;
   right: 0;
-  bottom: 0;
   background: white;
-  min-height: 100vh;
+  height: 100vh;
   vertical-align: top;
-  overflow-y: auto;
-  -webkit-transform: translate(100vw, 0);
-  -transform: translate(100vw, 0);
-  transition: transform 0.3s ease;
 }
 
-.schedule-slider {
+.schedule {
+  z-index: 999;
   width: 93vw;
-  z-index: 51;
+
 }
 
-.payment-slider {
+.payment {
   width: 86vw;
-  z-index: 53;
-}
-
-.slider-open {
-  transform: translate(0, 0);
+  z-index: 1001;
 }
