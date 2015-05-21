@@ -1,4 +1,9 @@
 <!DOCTYPE html>
+<!-- ::::: NOTE CHANGES APART FROM HTML
+  1. Update SVG LOGOs
+  2. Update SVG BADGEs
+  ::::: -->
+
 <html class="no-js" lang="en">
   <head>
     <meta charset="utf-8" />
@@ -24,7 +29,6 @@
     <link rel="stylesheet" href="stylesheets/jared.css" />
     <link rel="stylesheet" href="stylesheets/jaya.css" />
     <link rel="stylesheet" href="stylesheets/louis-contact.css" />
-    <link rel="stylesheet" href="stylesheets/payment.css">
     <link rel="stylesheet" href="stylesheets/louis-getthere.css" />
     <link rel="stylesheet" href="stylesheets/slide.css">
     <link rel="stylesheet" href="stylesheets/faq-accordian.css">
@@ -88,436 +92,554 @@
   <!-- schedule page END -->
 
   <!-- payment page -->
-
-  <div class="payment-slider-cover slider-toggle" data-slider-page=".payment"></div>
-  <div class="payment-slider">
-    <div class="row">
-      <div class="large-10 medium-10 columns">
-        <img class="main-logo" src="images/tmp-Banner.png" alt="WDI2015">
-        <h5>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem in, modi maiores, molestiae commodi fugiat velit dolor expedita sunt.</h5>
-        <ul class="steps-bar">
-          <li>SELECT TALK</li>
-          <li>PAYMENT</li>
-          <li>CONFIRM ACTION</li>
-        </ul>
-        <h3>Ticket #19248</h3>
-        <form id="myForm" method="post" data-abide>
-          <div class="row">
-            <div class="large-6 medium-6 columns">
-              <small class="error">Your first name is required.</small>
-              <input type="text" placeholder="First Name" required>
-            </div>
-            <div class="large-6 medium-6 columns end">
-              <small class="error">Your surname name is required.</small>
-              <input type="text" placeholder="Surname" required>
-            </div>
-          </div>
-          <div class="row">
-            <div class="large-12 medium-12 columns">
-              <h4>PLEASE ENTER YOUR CARD DETAILS:</h4>
-            </div>
-            <div class="large-6 medium-6 columns">
-              <small class="error">Your full name is required.</small>
-              <input type="text" placeholder="Name on card" required>
-            </div>
-            <div class="large-6 medium-6 columns">
-              <small class="error">A valid card number is required.</small>
-              <input type="text" placeholder="Card number" required>
-            </div>
-          </div>
-          <div class="row">
-            <div class="large-2 medium-2 columns">
-              <small class="error">Please select a month.</small>
-              <input type="text" placeholder="Month" required>
-            </div>
-            <div class="large-2 medium-2 columns">
-              <small class="error">A valid CCV code is required.</small>
-              <input type="text" placeholder="CCV" required>
-            </div>
-            <div class="large-8 medium-8 columns end">
-              <h4 class="payment-heading">You are using:</h4>
-              <ul class="payment-type">
-                <li class="Visa"></li>
-                <li class="MasterCard"></li>
-              </ul>
-            </div>
-          </div>
-          <div class="row">
-            <div class="medium-7 medium-push-5 columns">
-              <div class="row">
-                <div class="medium-4 medium-push-2 columns">
-                  <input type="submit" class="nice blue radius button" value="Cancel">
-                </div>
-                <div class="medium-6 medium-push-2 columns end">      
-                  <input type="submit" class="payment-btn" value="Make Payment">
-                </div>
-              </div>
-            </div>
-          </div>
-        </form>
-      </div>
-    </div>
+  <div class="payment-cover slider-toggle" data-slider-page=".payment"></div>
+  <div class="payment">
+    <h3>Payment</h3>
+    <p>$100</p>
+    <p>$100</p>
+    <p>$100</p>
+    <p>$100</p>
+    <p>$100</p>
   </div>
 
   <!-- :::::::::: TEMPORARY END :::::::::: -->
 
   <!-- ::::: HEADER SECTION HTML and UX by Jared O'Loughlin ::::: -->
-  <div id="content">
 
-    <div class="header-fixed">
-      <!-- empty container for fix bg-image -->  
-    </div>
+  <div class="header-fixed">
+    <!-- empty container for fix bg-image -->  
+  </div>
 
 
-    <header id="Home" class="row header-inner">
-        
-      <p class="show-nav show-for-small-down" >Menu</p>
+  <header id="Home" class="row header-inner">
       
-      <div class="row">  
-        <img class="main-logo medium-5 medium-centered columns" src="img/wdiconf_logo.svg" alt="WDI2015">
-      </div>
-      <h2 class="welcome-msg">General Assembly's Web Development Immersive Conference. Get Educated.</h2>
+    <p class="show-nav show-for-small-down" >Menu</p>
+    
+    <section class="row"> 
+      <!-- NEW CHANGE START-->
+      <section class="medium-7 medium-centered columns">
+        <div class="row">
+          <img class="main-logo medium-8 columns" src="img/wdiconf_logo.svg" alt="WDI2015">
+          <img class="main-logo medium-4 columns" src="img/wdi_logo_ga.svg" alt="WDI2015">
+        </div>
+      </section>
+      <!-- NEW CHANGE END -->
+    </section>
 
-      <button class="main-button button large slider-toggle" data-slider-page=".schedule">Buy ticket</button>
-   
-      <nav class="main-nav hide-for-small-down show-for-medium-up">
-        <ul>
+    <h2 class="welcome-msg">General Assembly&#39;s Web Development Immersive Conference. Get Educated.</h2>
+
+    <button class="main-button button large slider-toggle" data-slider-page=".schedule">Buy ticket</button>
+ 
+    <nav class="main-nav hide-for-small-down show-for-medium-up">
+      <ul>
+        <!-- NEW CHANGE START-->
+        <li><a id="nav-home" class="main-nav-bar" href="#Home"><img src="img/wdiconf_logo_menuBar.svg" alt="WDI2015"></a></li>
+        <!-- NEW CHANGE END -->
+        <li><a href="#Speakers">Speakers</a></li>
+        <li><a href="#About">About</a></li>
+        <li><a href="#Location">Location</a></li>
+        <li><a href="#Sponsors">Sponsors</a></li>
+        <li><a href="#Contact">Contact</a></li>
+        <li><button id="nav-tickets" data-slider-page=".schedule-wrapper">Buy tickets</button></li>
+      </ul>
+    </nav>
+
+    <!-- Mobile Nav -->
+    <nav class="mobile">
+      
+      <p id="NavClose">Close</p>
+      <h3>WDICONF 15<br>MELBOURNE<br>22 MAY</h3>
+      <ul>
           <li><a id="nav-home" href="#Home">HOME</a></li>
-          <li><a href="#Speakers">Speakers</a></li>
+          <li><a href="#Speakers-head">Speakers</a></li>
           <li><a href="#About">About</a></li>
           <li><a href="#Location">Location</a></li>
           <li><a href="#Sponsors">Sponsors</a></li>
           <li><a href="#Contact">Contact</a></li>
-          <li><button id="nav-tickets" data-slider-page=".schedule-wrapper">Buy tickets</button></li>
+          <li><a class="button tiny" id="nav-tickets" href="#Tickets">BUY TICKETS</a></li>
         </ul>
-      </nav>
 
-      <!-- Mobile Nav -->
-      <nav class="mobile">
-        
-        <p id="NavClose">Close</p>
-        <h3>WDICONF 15<br>MELBOURNE<br>22 MAY</h3>
-        <ul>
-            <li><a id="nav-home" href="#Home">HOME</a></li>
-            <li><a href="#Speakers-head">Speakers</a></li>
-            <li><a href="#About">About</a></li>
-            <li><a href="#Location">Location</a></li>
-            <li><a href="#Sponsors">Sponsors</a></li>
-            <li><a href="#Contact">Contact</a></li>
-            <li><a class="button tiny" id="nav-tickets" href="#Tickets">BUY TICKETS</a></li>
-          </ul>
+    </nav>
 
-      </nav>
+  </header>
 
-    </header>
+  <main role="main" class="main" id="main">
 
-    <main role="main" class="main" id="main">
-
-    <!-- ::::: SPEAKER SECTION HTML and UX by Jaya Wijono and Jared O'Loughlin ::::: -->
-      <section id="Speakers">
-        <section class="row" id="Speakers-head">
-          <h2 class="small-12 medium-6 columns small-only-text-center text-right">SPEAKERS</h2>
-          <ul class="inline-list small-12 medium-6 columns small-only-text-center" id ="Speakers-head-badges">
-            <li><img src="http://placehold.it/40x40" alt="badge 1"></li>
-            <li><img src="http://placehold.it/40x40" alt="badge 2"></li>
-            <li><img src="http://placehold.it/40x40" alt="badge 3"></li>
-            <li><img src="http://placehold.it/40x40" alt="badge 4"></li>
-          </ul>
-        </section>
-        
-        <section class="row hide-for-small-only" id="Speakers-details">
-          <figure class="main-figure medium-4 columns container_200">
-            <img id="Speakers-details-highlightedImage" src="img/james.jpg" alt="photo">
-          </figure>
-          <div class="medium-5 columns container_200">
-            <h3>ANIMATING IN YOUR BROWSER WITH JAVASCRIPT</h3>
-            <ul class="inline-list" id ="Speakers-details-badges">
-              <li><img src="http://placehold.it/40x40" alt="badge 1"> </li>
-              <li><img src="http://placehold.it/40x40" alt="badge 2"> </li>
-            </ul>
-          </div>
-          <div class="talk-details medium-3 columns container_200">
-            <h4 itemprop="name">James Gallichio</h4>
-            <h5>10:00PM - 11.30PM</h5>
-            <button id="Speakers-details-CTA-btn">Book Now</button>
-          </div>
-        </section>
-
-        <section class="row" id="Speakers-list">
-          <ul id="thumbs" class="thumbs medium-block-grid-4 hide-for-small-only">
-          </ul>
-
-          <ul id="thumbs-mobile" class="show-for-small-only">          
-          </ul>
-          <button id="Speakers-list-showMore">VIEW MORE</button>
-        </section>
+  <!-- ::::: SPEAKER SECTION HTML and UX by Jaya Wijono and Jared O'Loughlin ::::: -->
+    <section id="Speakers">
+      <section class="row" id="Speakers-head">
+        <h2 class="small-12 medium-6 columns small-only-text-center text-right">SPEAKERS</h2>
+        <ul class="inline-list small-12 medium-6 columns small-only-text-center" id ="Speakers-head-badges">
+          <!-- NEW CHANGE START-->
+          <li class="badge"><img src="img/badge_fed.svg" data-tooltip aria-haspopup="true" class="has-tip" title="Front End Development" alt="Front End Development"></li> 
+          <li class="badge"><img src="img/badge_bed.svg" data-tooltip aria-haspopup="true" class="has-tip" title="Back End Development" alt="Back End Development"></li> 
+          <li class="badge"><img src="img/badge_tech.svg" data-tooltip aria-haspopup="true" class="has-tip" title="Technology" alt="Technology"></li> 
+          <li class="badge"><img src="img/badge_all.svg" data-tooltip aria-haspopup="true" class="has-tip" title="All categories" alt="All categories"></li> 
+          <!-- NEW CHANGE END-->
+        </ul>
       </section>
-
-    <!-- ::::: ABOUT SECTION HTML by Jaya Wijono and Jared O'Loughlin, UX by Beta Ngadiman ::::: -->
-      <section id="About">
-        <section class="row">
-          <div class="small-12 medium-6 columns">
-            <h3>Emerging technologies for the web. From the inside.</h3>
-            <p>Today's bleeding edge, life changing tool is tomorrow's defunct framework. Development for the web environment has exploded in complexity and opportunity over the last decade. With so much progress occurring every day how do we keep pace?</p>
-            <p>We gather the brightest minds and immerse them in web development 24 hours a day, 7 days a week for 3 months.</p>
-            <p>Then, we let them talk.</p>
-            <a id="Speakers-list-CTA-btn" data-slider-page=".schedule-wrapper">View available talks</a>
-          </div>
-          <div class="small-12 medium-5 medium-offset-1 columns">
-            <h4>Frequently Asked Questions</h4>
-
-            <dl class="accordion">
-              <dt class="accordion-trigger closed">Where is the Conference?</dt>
-              <dd class="accordion-content">Level 1, 20 Queen Street, CBD</dd>
-              <dt class="accordion-trigger closed">Is there parking?</dt>
-              <dd class="accordion-content">No, sorry.</dd>
-              <dt class="accordion-trigger closed">Will alcohol be provided?</dt>
-              <dd class="accordion-content">Yes, but only for the speakers.</dd>
-              <dt class="accordion-trigger closed">How many kilometres are in a mile?</dt>
-              <dd class="accordion-content">1.609344</dd>
-            </dl>
-
-            
-          </div>
-        </section>
-
-        <section class="row">
-          <h3 class="center awesome-people"><span>CURRENT ATTENDANCE</span> 678 AWESOME PEOPLE</h3>
-        </section>
-      </section>
-
-    <!-- ::::: LOCATION SECTION HTML and UX by Louis Moore ::::: -->
-      <section id="Location" class="container">
-        <div class="row">
-          
-          <section class="large-6 medium-6 columns">
-            
-            <div class="location-details">
-              <h2>FIND US AT</h2>
-              <h3>20 Queen Street, Level 1, Melbourne VIC 3000</h3>
-              
-              <ul class="location-ul">
-                <li class="title-details">
-                  <h4>Using Public Transport</h4>
-                  <p>WDIconf is held at Queen's Collective, walking distance from Flinders Street Railway Station and close to arterial tram routes through the CBD.</p>
-                </li>
-                <li class="title-details">
-                  <h4>Using Personal Transport</h4>
-                  <p>Parking in the city is limited so bicycle or taxi is recommended. Alternatively there are multilevel car parks throughout the CBD and on St Kilda Road.</p>
-                </li>
-              </ul>
-            
-            </div>
-
-          </section>
-
-          <section class="large-6 medium-6 columns">
-            <div id="Map-canvas"></div>
-          </section>
-
-        </div> 
-      </section> 
-
-    <!-- ::::: SPONSORS SECTION HTML and UX by Luke Shillabeer ::::: -->    
-      <section id="Sponsors">
-        <div class="row">
-          <h2 class="small-12 medium-12 columns text-center">Thank You!</h2>
-          <h3 class="small-12 medium-12 columns text-center">No conference would happen without its sponsors. Well maybe some would. But not this one! Seriously, sign up to a course or check out the awesome coworking spaces in Queen's Collective.</h3>
-            <ul class="medium-block-grid-2 hide-for-small-only">
-              <li>
-                <div class="platinum-sponsors">
-                  <img src="img/ga_logo.jpg" alt="big-sponsor">
-                  <div class="medium-8 columns">
-                    <p>WORKING KNOWLEDGE. Learn technology, design, and business skills from industry professionals in our global community.</p>
-                  </div>
-                  <div class="medium-4 columns sponsors-right">
-                    <a href="" class="button cta-button-sponsor">Visit website</a>
-                    <ul class="sponsors-sosmed">
-                      <li><a href="" alt="" title=""><i class="fa fa-facebook-square"></i></a></li>
-                      <li><a href="" alt="" title=""><i class="fa fa-twitter-square"></i></a></li>
-                      <li><a href="" alt="" title=""><i class="fa fa-google-plus-square"></i></a></li>
-                    </ul>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div class="platinum-sponsors">
-                  <img src="img/qc.jpg" alt="big-sponsor">
-                  <div class="medium-8 columns">
-                    <p>Queens Collective is Melbourne's home to world class startups. We're more than just an office, with amazing startup support, community and events.</p>
-                  </div>
-                  <div class="medium-4 columns sponsors-right">
-                    <a href="" class="button cta-button-sponsor">Visit website</a>
-                    <ul class="sponsors-sosmed">
-                      <li><a href="" alt="" title=""><i class="fa fa-facebook-square"></i></a></li>
-                      <li><a href="" alt="" title=""><i class="fa fa-twitter-square"></i></a></li>
-                      <li><a href="" alt="" title=""><i class="fa fa-google-plus-square"></i></a></li>
-                    </ul>
-                  </div>
-                </div>
-              </li>
-            </ul>
-
-           <!-- second ul will likely be removed and replaced with a media
-                query but for now is in so that the site is "responsive!" -->
-            <ul class="medium-block-grid-2 show-for-small-only">
-              <li>
-                <div>
-                  <img src="http://placehold.it/180x100" alt="big-sponsor">
-                  <div class="medium-6 text-center">
-                    <img src="http://placehold.it/160x50" alt="sponsor-btn">
-                  </div>
-                  <div class="medium-6 text-center">
-                    <img src="http://placehold.it/50x50" alt="sponsor-social">
-                    <img src="http://placehold.it/50x50" alt="sponsor-social">
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div>
-                  <img src="http://placehold.it/180x100" alt="big-sponsor">
-                  <div class="medium-6 text-center">
-                    <img src="http://placehold.it/160x50" alt="sponsor-btn">
-                  </div>
-                  <div class="medium-6 text-center">
-                    <img src="http://placehold.it/50x50" alt="sponsor-social">
-                    <img src="http://placehold.it/50x50" alt="sponsor-social">
-                  </div>
-                </div>
-              </li>
-            </ul>
+      
+      <section class="row hide-for-small-only" id="Speakers-details">
+        <figure class="main-figure medium-4 columns container_200">
+          <img id="Speakers-details-highlightedImage" src="img/james.jpg" alt="photo">
+        </figure>
+        <div class="medium-5 columns container_200">
+          <h3>ANIMATING IN YOUR BROWSER WITH JAVASCRIPT</h3>
+          <ul class="inline-list" id ="Speakers-details-badges">
+            <!-- NEW CHANGE START-->
+            <li class="badge"><img src="img/badge_fed.svg" data-tooltip aria-haspopup="true" class="has-tip" title="Front End Development" alt="Front End Development"></li>
+            <!-- NEW CHANGE END--> 
+          </ul>
         </div>
+        <div class="talk-details medium-3 columns container_200">
+          <h4 itemprop="name">James Gallichio</h4>
+          <h5>10:00PM - 11.30PM</h5>
+          <button id="Speakers-details-CTA-btn">Book Now</button>
+        </div>
+      </section>
 
-        <div class="row">
-          <ul class="medium-block-grid-5 hide-for-small-only">
-            <li><img src="http://placehold.it/180x180" alt="small-sponsor"></li>
-            <li><img src="http://placehold.it/180x180" alt="small-sponsor"></li>
-            <li><img src="http://placehold.it/180x180" alt="small-sponsor"></li>
-            <li><img src="http://placehold.it/180x180" alt="small-sponsor"></li>
-            <li><img src="http://placehold.it/180x180" alt="small-sponsor"></li>
+      <section class="row" id="Speakers-list">
+        <ul id="thumbs" class="thumbs medium-block-grid-4 hide-for-small-only">
+          <li>
+            <a href="" alt="" title=""><img  src="img/james.jpg" alt="speaker">
+              <div><span>Top Tips on Improving Your Productivity</span></div>
+            </a>
+          </li>
+          <li>
+            <a href="" alt="" title=""><img  src="img/james.jpg" alt="speaker">
+              <div><span>Top Tips on Improving Your Productivity</span></div>
+            </a>
+          </li>
+          <li>
+            <a href="" alt="" title=""><img  src="img/james.jpg" alt="speaker">
+              <div><span>Top Tips on Improving Your Productivity</span></div>
+            </a>
+          </li>
+          <li>
+            <a href="" alt="" title=""><img  src="img/james.jpg" alt="speaker">
+              <div><span>Top Tips on Improving Your Productivity</span></div>
+            </a>
+          </li>
+          <li>
+            <a href="" alt="" title=""><img  src="img/james.jpg" alt="speaker">
+              <div><span>Top Tips on Improving Your Productivity</span></div>
+            </a>
+          </li>
+          <li>
+            <a href="#Speakers-head" alt="" title="" ><img  src="img/james.jpg" alt="speaker">
+              <div><span>Top Tips on Improving Your Productivity</span></div>
+            </a>
+          </li>
+          <li>
+            <a href="#Speakers-head" alt="" title=""><img  src="img/james.jpg" alt="speaker">
+              <div><span>Top Tips on Improving Your Productivity</span></div>
+            </a>
+          </li>
+          <li>
+            <a href="#Speakers-head" alt="" title=""><img  src="img/james.jpg" alt="speaker">
+              <div><span>Top Tips on Improving Your Productivity</span></div>
+            </a>
+          </li>
+          <li>
+            <a href="#Speakers-head" alt="" title=""><img  src="img/james.jpg" alt="speaker">
+              <div><span>Top Tips on Improving Your Productivity</span></div>
+            </a>
+          </li>
+          <li>
+            <a href="#Speakers-head" alt="" title=""><img  src="img/james.jpg" alt="speaker">
+              <div><span>Top Tips on Improving Your Productivity</span></div>
+            </a>
+          </li>
+          <li>
+            <a href="#Speakers-head" alt="" title=""><img  src="img/james.jpg" alt="speaker">
+              <div><span>Top Tips on Improving Your Productivity</span></div>
+            </a>
+          </li>
+          <li>
+            <a href="#Speakers-head" alt="" title=""><img  src="img/james.jpg" alt="speaker">
+              <div><span>Top Tips on Improving Your Productivity</span></div>
+            </a>
+          </li>
+          <li>
+            <a href="#Speakers-head" alt="" title=""><img  src="img/james.jpg" alt="speaker">
+              <div><span>Top Tips on Improving Your Productivity</span></div>
+            </a>
+          </li>
+          <li>
+            <a href="#Speakers-head" alt="" title=""><img  src="img/james.jpg" alt="speaker">
+              <div><span>Top Tips on Improving Your Productivity</span></div>
+            </a>
+          </li>
+          <li>
+            <a href="#Speakers-head" alt="" title=""><img  src="img/james.jpg" alt="speaker">
+              <div><span>Top Tips on Improving Your Productivity</span></div>
+            </a>
+          </li>
+   
+        </ul>
+
+        <ul class="show-for-small-only">
+          <li class="Speakers-item">
+            <div class="row">
+              <div class="small-5 columns container_150">
+                <img id="Speakers-list-image" src="http://placehold.it/250x150" alt="photo">
+                <h4 id="Speakers-list-name" itemprop="name">Chris Lambert</h4>
+              </div>
+              <div class="small-7 columns container_150">
+                <h3>ANIMATING IN YOUR BROWSER WITH JAVASCRIPT</h3>
+                <h5 id="Speakers-list-time">10:00PM - 11.30PM</h5>
+              </div>
+            </div>
+            <div class="row">
+              <div class="small-5 columns container_100">
+                <h4>SUBJECTS</h4>
+                <ul class="inline-list" id ="Speakers-list-badges">
+                  <li><img src="http://placehold.it/40x40" alt="badge 1"> </li>
+                  <li><img src="http://placehold.it/40x40" alt="badge 2"> </li>
+                </ul>
+              </div>
+              <div class="small-7 columns container_100">
+                <button id="Speakers-list-CTA-btn">Book Now</button>
+              </div>
+            </div>
+          </li>
+          <li class="Speakers-item">
+            <div class="row">
+              <div class="small-5 columns container_150">
+                <img id="Speakers-list-image" src="http://placehold.it/250x150" alt="photo">
+                <h4 id="Speakers-list-name" itemprop="name">Chris Lambert</h4>
+              </div>
+              <div class="small-7 columns container_150">
+                <h3>ANIMATING IN YOUR BROWSER WITH JAVASCRIPT</h3>
+                <h5 id="Speakers-list-time">10:00PM - 11.30PM</h5>
+              </div>
+            </div>
+            <div class="row">
+              <div class="small-5 columns container_100">
+                <h4>SUBJECTS</h4>
+                <ul class="inline-list" id ="Speakers-list-badges">
+                  <li><img src="http://placehold.it/40x40" alt="badge 1"> </li>
+                  <li><img src="http://placehold.it/40x40" alt="badge 2"> </li>
+                </ul>
+              </div>
+              <div class="small-7 columns container_100">
+                <button id="Speakers-list-CTA-btn">Book Now</button>
+              </div>
+            </div>
+          </li>
+          <li class="Speakers-item">
+            <div class="row">
+              <div class="small-5 columns container_150">
+                <img id="Speakers-list-image" src="http://placehold.it/250x150" alt="photo">
+                <h4 id="Speakers-list-name" itemprop="name" >Chris Lambert</h4>
+              </div>
+              <div class="small-7 columns container_150">
+                <h3>ANIMATING IN YOUR BROWSER WITH JAVASCRIPT</h3>
+                <h5 id="Speakers-list-time">10:00PM - 11.30PM</h5>
+              </div>
+            </div>
+            <div class="row">
+              <div class="small-5 columns container_100">
+                <h4>SUBJECTS</h4>
+                <ul class="inline-list" id ="Speakers-list-badges">
+                  <li><img src="http://placehold.it/40x40" alt="badge 1"> </li>
+                  <li><img src="http://placehold.it/40x40" alt="badge 2"> </li>
+                </ul>
+              </div>
+              <div class="small-7 columns container_100">
+                <button id="Speakers-list-CTA-btn">Book Now</button>
+              </div>
+            </div>
+          </li>
+          <li><button id="Speakers-list-showMore">VIEW MORE</button></li>
+        </ul>
+      </section>
+    </section>
+
+  <!-- ::::: ABOUT SECTION HTML by Jaya Wijono and Jared O'Loughlin, UX by Beta Ngadiman ::::: -->
+    <section id="About">
+      <section class="row">
+        <div class="small-12 medium-6 columns">
+          <h3>Emerging technologies for the web. From the inside.</h3>
+          <p>Today's bleeding edge, life changing tool is tomorrow's defunct framework. Development for the web environment has exploded in complexity and opportunity over the last decade. With so much progress occurring every day how do we keep pace?</p>
+            <p>We gather the brightest minds and immerse them in web development 24 hours a day, 7 days a week for 3 months.</p>
+            <p>Then, we let them talk. <a id="Speakers-list-CTA-btn" data-slider-page=".schedule-wrapper">View available talks</a></p>
+          
+        </div>
+        <div class="small-12 medium-5 medium-offset-1 columns">
+          <!-- NEW CHANGE START-->
+          <h4><i class="fa fa-question-circle"></i> Frequently Asked Questions</h4>
+          <!-- NEW CHANGE END-->
+
+          <dl class="accordion">
+            <dt class="accordion-trigger closed">Where is the Conference?</dt>
+            <dd class="accordion-content">20 Queen Streeet, CBD</dd>
+            <dt class="accordion-trigger closed">Is there parking?</dt>
+            <dd class="accordion-content">No, sorry</dd>
+            <dt class="accordion-trigger closed">Will alcohol be provided?</dt>
+            <dd class="accordion-content">Yes, but only for the speakers.</dd>
+            <dt class="accordion-trigger closed">How many kilometres are in a mile?</dt>
+            <dd class="accordion-content">1.609344</dd>
+          </dl>
+
+          
+        </div>
+      </section>
+
+      <section class="row">
+        <h3 class="center awesome-people"><span>CURRENT ATTENDANCE</span> 678 AWESOME PEOPLE</h3>
+      </section>
+    </section>
+
+  <!-- ::::: LOCATION SECTION HTML and UX by Louis Moore ::::: -->
+    <section id="Location" class="container">
+      <div class="row">
+        
+        <section class="large-6 medium-6 columns">
+          
+          <div class="location-details">
+            <h2>FIND US AT</h2>
+            <h3>20 Queen Street, Level 1, Melbourne VIC 3000</h3>
+            
+            <ul class="location-ul">
+              <li class="title-details">
+                <h4><i class="fa fa-train"></i> Using Public Transport</h4>
+                <p>WDIconf is held at Queen&#39;s Collective, walking distance from Flinders Street Railway Station and close to arterial tram routes through the CBD.</p>
+              </li>
+              <li class="title-details">
+                <h4><i class="fa fa-bicycle"></i> Using Personal Transport</h4>
+                <p>Parking in the city is limited so bicycle or taxi is recommended. Alternatively there are multilevel car parks throughout the CBD and on St Kilda Road.</p>
+              </li>
+            </ul>
+          
+          </div>
+
+        </section>
+
+        <section class="large-6 medium-6 columns">
+          <div id="Map-canvas"></div>
+        </section>
+
+      </div> 
+    </section> 
+
+  <!-- ::::: SPONSORS SECTION HTML and UX by Luke Shillabeer ::::: -->    
+    <section id="Sponsors">
+      <div class="row">
+        <h2 class="small-12 medium-12 columns text-center">Thank You!</h2>
+        <h3 class="small-12 medium-12 columns text-center">No conference would happen without its sponsors. Well maybe some would. But not this one! Seriously, sign up to a course or check out the awesome coworking spaces in Queen&#39;s Collective.</h3>
+          <ul class="medium-block-grid-2 hide-for-small-only">
+            <li>
+              <div class="platinum-sponsors">
+                <img src="img/ga_logo.jpg" alt="big-sponsor">
+                <div class="medium-8 columns">
+                  <p>WORKING KNOWLEDGE. Learn technology, design, and business skills from industry professionals in our global community.</p>
+                </div>
+                <div class="medium-4 columns sponsors-right">
+                  <a href="" class="button cta-button-sponsor">Visit website</a>
+                  <ul class="sponsors-sosmed">
+                    <li><a href="" alt="" title=""><i class="fa fa-facebook-square"></i></a></li>
+                    <li><a href="" alt="" title=""><i class="fa fa-twitter-square"></i></a></li>
+                    <li><a href="" alt="" title=""><i class="fa fa-google-plus-square"></i></a></li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="platinum-sponsors">
+                <img src="img/qc.jpg" alt="big-sponsor">
+                <div class="medium-8 columns">
+                  <p>Queens Collective is Melbourne&#39;s home to world class startups. We&#39;re more than just an office, with amazing startup support, community and events.</p>
+                </div>
+                <div class="medium-4 columns sponsors-right">
+                  <a href="" class="button cta-button-sponsor">Visit website</a>
+                  <ul class="sponsors-sosmed">
+                    <li><a href="" alt="" title=""><i class="fa fa-facebook-square"></i></a></li>
+                    <li><a href="" alt="" title=""><i class="fa fa-twitter-square"></i></a></li>
+                    <li><a href="" alt="" title=""><i class="fa fa-google-plus-square"></i></a></li>
+                  </ul>
+                </div>
+              </div>
+            </li>
           </ul>
+
          <!-- second ul will likely be removed and replaced with a media
               query but for now is in so that the site is "responsive!" -->
-          <ul class="medium-block-grid-5 show-for-small-only">
-            <li><img src="http://placehold.it/60x60" alt="small-sponsor"></li>
-            <li><img src="http://placehold.it/60x60" alt="small-sponsor"></li>
-            <li><img src="http://placehold.it/60x60" alt="small-sponsor"></li>
-            <li><img src="http://placehold.it/60x60" alt="small-sponsor"></li>
-            <li><img src="http://placehold.it/60x60" alt="small-sponsor"></li>
+          <ul class="medium-block-grid-2 show-for-small-only">
+            <li>
+              <div>
+                <img src="http://placehold.it/180x100" alt="big-sponsor">
+                <div class="medium-6 text-center">
+                  <img src="http://placehold.it/160x50" alt="sponsor-btn">
+                </div>
+                <div class="medium-6 text-center">
+                  <img src="http://placehold.it/50x50" alt="sponsor-social">
+                  <img src="http://placehold.it/50x50" alt="sponsor-social">
+                </div>
+              </div>
+            </li>
+            <li>
+              <div>
+                <img src="http://placehold.it/180x100" alt="big-sponsor">
+                <div class="medium-6 text-center">
+                  <img src="http://placehold.it/160x50" alt="sponsor-btn">
+                </div>
+                <div class="medium-6 text-center">
+                  <img src="http://placehold.it/50x50" alt="sponsor-social">
+                  <img src="http://placehold.it/50x50" alt="sponsor-social">
+                </div>
+              </div>
+            </li>
           </ul>
-        </div>
-      </section> <!-- end Sponsors section -->
-
-    <!-- ::::: CONTACT SECTION HTML by Louis Moore, UX by Beta Ngadiman ::::: -->
-
-      <section id="Contact">
-        <div class="row">
-          <div id="eventOrganisers" class="medium-6 large-6 columns">
-            <h2>Organizers</h2>
-            <section class="individual-contact">
-              <figure class="individual-img-dt">
-              </figure>
-
-              <div class="individual-details">
-                <h4>Daniel Tsui</h4>
-                <h5>Head Honcho</h5>
-                <ul>
-                  <li><h6><i class="fa fa-phone"></i> +61 432 034 231</h6></li>
-                  <li><h6><i class="fa fa-envelope"></i> dt@wdiconf.com</h6></li>
-                </ul>
-              </div>
-            </section>
-
-            <section class="individual-contact">
-              <figure class="individual-img-msw">
-              </figure>
-              <div class="individual-details">
-                <h4>Matt Swann</h4>
-                <h5>Organizer of Chicken</h5>
-                <ul>
-                  <li><h6><i class="fa fa-phone"></i> +61 432 034 231</h6></li>
-                  <li><h6><i class="fa fa-envelope"></i> mswann@wdiconf.com</h6></li>
-                </ul>
-              </div>
-            </section>
-          </div>
-          
-          <div id="contactForm" class="medium-6 large-6 columns">
-            <h4>Contact Us</h4>
-            <form id="myForm" method="post" data-abide>
-              
-              <p>Question? Issue? Query? Rash? See a doctor about one of those. For the other three, we'd love to hear from you. Just use this conveniently located form to send us an email.</p>
-              <input type="text" placeholder="Full Name" required>
-              
-              <input type="email" placeholder="Address@email.com" required>
-              
-              <textarea placeholder="Enter your message here" required></textarea>
-              
-              <input type="submit" class="main-button button" value="Send Message"></button>
-            </form>
-
-          </div>
-        </div>
-
-      </section>
-
-    </main>
-
-  </div>
-
-  <script type="text/x-underscore-template" id="speaker-desktop-template">
-    <a href="" alt="" title=""><img class="th" src="{{image_url}}}" alt="speaker">
-      <div><span>{{name}} - {{title}}</span></div>
-    </a>
-  </script>
-
-  <script type="text/x-underscore-template" id="speaker-mobile-template">
-    <div class="row">
-      <div class="small-5 columns container_150">
-        <img id="Speakers-list-image" src="{{image_url}}" alt="photo">
-        <h4 id="Speakers-list-name" itemprop="name">{{name}}</h4>
       </div>
-      <div class="small-7 columns container_150">
-        <h3>{{title}}</h3>
-        <h5 id="Speakers-list-time">10:00PM - 11.30PM</h5>
-      </div>
-    </div>
-    <div class="row">
-      <div class="small-5 columns container_100">
-        <h4>SUBJECTS</h4>
-        <ul class="inline-list" id ="Speakers-list-badges">
-          <li><img src="http://placehold.it/40x40" alt="badge 1"> </li>
-          <li><img src="http://placehold.it/40x40" alt="badge 2"> </li>
+
+      <div class="row">
+        <ul class="medium-block-grid-5 hide-for-small-only">
+          <li><img src="http://placehold.it/180x180" alt="small-sponsor"></li>
+          <li><img src="http://placehold.it/180x180" alt="small-sponsor"></li>
+          <li><img src="http://placehold.it/180x180" alt="small-sponsor"></li>
+          <li><img src="http://placehold.it/180x180" alt="small-sponsor"></li>
+          <li><img src="http://placehold.it/180x180" alt="small-sponsor"></li>
+        </ul>
+       <!-- second ul will likely be removed and replaced with a media
+            query but for now is in so that the site is "responsive!" -->
+        <ul class="medium-block-grid-5 show-for-small-only">
+          <li><img src="http://placehold.it/60x60" alt="small-sponsor"></li>
+          <li><img src="http://placehold.it/60x60" alt="small-sponsor"></li>
+          <li><img src="http://placehold.it/60x60" alt="small-sponsor"></li>
+          <li><img src="http://placehold.it/60x60" alt="small-sponsor"></li>
+          <li><img src="http://placehold.it/60x60" alt="small-sponsor"></li>
         </ul>
       </div>
-      <div class="small-7 columns container_100">
-        <button id="Speakers-list-CTA-btn">Book Now</button>
+    </section> <!-- end Sponsors section -->
+
+  <!-- ::::: CONTACT SECTION HTML by Louis Moore, UX by Beta Ngadiman ::::: -->
+
+    <section id="Contact">
+      <div class="row">
+        <div id="eventOrganisers" class="medium-6 large-6 columns">
+          <h2>Organizers</h2>
+          <section class="individual-contact">
+            <figure class="individual-img-dt">
+            </figure>
+
+            <div class="individual-details">
+              <h4>Daniel Tsui</h4>
+              <h5>Head Honcho</h5>
+              <ul>
+                <li><h6><i class="fa fa-phone"></i> +61 432 034 231</h6></li>
+                <li><h6><i class="fa fa-envelope"></i> dt@wdiconf.com</h6></li>
+              </ul>
+            </div>
+          </section>
+
+          <section class="individual-contact">
+            <figure class="individual-img-msw">
+            </figure>
+            <div class="individual-details">
+              <h4>Matt Swann</h4>
+              <h5>Organizer of Chicken</h5>
+              <ul>
+                <li><h6><i class="fa fa-phone"></i> +61 432 034 231</h6></li>
+                <li><h6><i class="fa fa-envelope"></i> mswann@wdiconf.com</h6></li>
+              </ul>
+            </div>
+          </section>
+        </div>
+        
+        <div id="contactForm" class="medium-6 large-6 columns">
+          <!-- NEW CHANGE START-->
+          <h4><i class="fa fa-paper-plane"></i> Contact Us</h4>
+          <!-- NEW CHANGE END-->
+          <form id="myForm" method="post" data-abide>
+            
+            <p>Question? Issue? Query? Rash? See a doctor about one of those. For the other three, we&#39;d love to hear from you. Just use this conveniently located form to send us an email.</p>
+            <input type="text" placeholder="Full Name" required>
+            
+            <input type="email" placeholder="Address@email.com" required>
+            
+            <textarea placeholder="Enter your message here" required></textarea>
+            
+            <input type="submit" class="main-button button" value="Send Message"></button>
+          </form>
+
+        </div>
       </div>
-    </div>
-  </script>
+    </section> 
 
-  <script src="js/jquery.min.js"></script>
-  <script src="js/foundation.min.js"></script>
-  <script src="https://maps.googleapis.com/maps/api/js"></script>
-  <script src="js/app.js"></script>
-  <script src="js/ScrollMagic.min.js"></script>
-  <script src="js/ScrollToPlugin.min.js"></script>
-  <script src="js/TweenMax.min.js"></script>
-  <script src="js/jquery.hoverdir.js"></script>
-  <script src="js/nav.js"></script>
-  <script src="js/backboneApp/underscore-min.js"></script>
-  <script src="js/backboneApp/backbone-min.js"></script>
-  <script src="js/backboneApp/ticket.js"></script>
-  <script src="js/backboneApp/tickets.js"></script>
-  <script src="js/backboneApp/talk.js"></script>
-  <script src="js/backboneApp/chosenTalks.js"></script>
-  <script src="js/backboneApp/speaker.js"></script>
-  <script src="js/backboneApp/speakers.js"></script>
-  <script src="js/backboneApp/speakerDesktopView.js"></script>
-  <script src="js/backboneApp/speakerMobileView.js"></script>
-  <script src="js/backboneApp/speakersView.js"></script>
-  <script src="js/backboneApp/backboneMain.js"></script>
+  </main>
+  <!-- NEW CHANGE START-->
+  <footer>  
+    <a href="#" data-reveal-id="ConfirmationModal">Click Me For A Modal</a>
+  </footer>
 
+<div id="ConfirmationModal" class="reveal-modal medium" data-reveal aria-labelledby="confirmationModalTitle" aria-hidden="true" role="dialog">
+  <h2 id="confirmationModalTitle">Thank you, <span>Louis</span></h2>
+  <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dapibus tristique ante quis gravida. Ut vel egestas augue. contact us at <a href="">info@wdiconf.com</a>.</p>
+
+  <table>
+  <thead>
+    <tr class="confirmationModalStyle">
+      <th>Talk</th>
+      <th width="15%">Time</th>
+      <th width="10%">Price</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="confirmationModalStyle">
+      <td>
+        <h3>ANIMATING IN YOUR BROWSER WITH JAVASCRIPT</h3>
+        <h4 itemprop="name">by James Gallichio</h4>
+      </td>
+      <td>
+        <h5>10.30am - 11.00am</h5>
+      </td>
+      <td>
+        <p>Free</p>
+      </td>
+    </tr>
+    <tr class="confirmationModalStyle">
+      <td>
+        <h3>ANIMATING IN YOUR BROWSER WITH JAVASCRIPT</h3>
+        <h4 itemprop="name">by James Gallichio</h4>
+      </td>
+      <td>
+        <h5>10.30am - 11.00am</h5>
+      </td>
+      <td>
+        <p>Free</p>
+      </td>
+    </tr>
+    <tr class="confirmationModalStyle">
+      <td>
+        <h3>ANIMATING IN YOUR BROWSER WITH JAVASCRIPT</h3>
+        <h4 itemprop="name">by James Gallichio</h4>
+      </td>
+      <td>
+        <h5>10.30am - 11.00am</h5>
+      </td>
+      <td>
+        <p>Free</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+  <a class="close-reveal-modal" aria-label="Close">&#215;</a>
+</div>
+<!-- NEW CHANGE END-->
+
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/foundation.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/ScrollMagic.min.js"></script>
+    <script src="js/ScrollToPlugin.min.js"></script>
+    <script src="js/TweenMax.min.js"></script>
+    <script src="js/jquery.hoverdir.js"></script>
+    <script src="js/nav.js"></script>
+
+    
 
   </body>
 </html>

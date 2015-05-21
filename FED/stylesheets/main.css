@@ -155,7 +155,7 @@ input[type="text"], input[type="password"], input[type="date"], input[type="date
 	  background: #f6f6f6;
   border-top: 2px solid #908F8F;
   padding-top: 7px;
-  padding-bottom: 7px;
+  padding-bottom: 0;
 }
 #Speakers h2 {
   font-size: 3.25em;
@@ -178,13 +178,13 @@ input[type="text"], input[type="password"], input[type="date"], input[type="date
 }
 
 #Speakers-details-CTA-btn{
-/*  position: absolute;
-  margin: 0 auto;
-  bottom: 0;*/
+  position: absolute;
+  bottom: 0;
   background: #2176ff;
 text-transform: uppercase;
   margin-top: 10px;
   font-family: 'Montserrat', sans-serif;
+    margin-bottom: 10px;
 
 }
 
@@ -220,7 +220,9 @@ text-transform: uppercase;
 }
 
 .awesome-people {
-	margin-top: 2em;
+	margin-top: 1em;
+  color: #C2A72B;
+  font-size: 38px !important;
 }
 .awesome-people span{
 	font-weight: 400;
@@ -465,4 +467,57 @@ input[type=number]::-webkit-outer-spin-button {
 
    opacity: 1;
 
+}
+
+
+/*** NEW CSS ***/
+.main-nav-bar {
+  width: 150px;
+}
+
+.main-nav-bar img {
+    margin-bottom: 3px;
+}
+
+.badge {
+  width: 42px;
+}
+
+.has-tip, .has-tip:hover, .has-tip:focus {
+  border: none;
+}
+
+#confirmationModalTitle {
+      font-size: 2.125em;
+  text-transform: uppercase;
+}
+
+#confirmationModalTitle span {
+  color: #ea3939;
+}
+
+#ConfirmationModal .lead {
+  border-bottom: 2px solid #333;
+}
+.confirmationModalStyle th {
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+}
+.confirmationModalStyle h3 {
+  font-size: 16px;
+  margin-bottom: 0;
+}
+.confirmationModalStyle h4 {
+font-size: 14px;
+margin-bottom: 0;
+}
+
+.confirmationModalStyle h5 {
+  font-size: 14px;
+}
+
+.confirmationModalStyle p {
+  font-size: 14px;
+    text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
 }
