@@ -1,13 +1,75 @@
-%div.content
+%div.small-9.columns
+  - (9..16).each do |row|
+    %ul.small-block-grid-4
+      - ["00","15","30","45"].each do |col|
+        %div.single-talk.larger-talk-box
+          %span.cell-time
+            %li.inline-block= "#{row}:#{col}"
+          %div.cell-content.dropTarget
+
+%div.small-3.columns.content#talk-list
   %h2 All Talks
+  - @talks.each do |talk|
+    %div.single-talk.draggable
+      %div
+        %h1= talk.title
+        %p= talk.blurb
+        %p
+          =link_to 'Edit', "/talks/#{talk.id}/edit"
+          / by
+          / = talk.speaker.name
+          / %a{:href => "#{talk.id}/profile"} Show
+          / %a{:href => "#{talk.id}/edit"} Edit
+          %div.talk-box-close x
 
-  - @talks.each do | talk|
+:javascript
+  $(function() {
+    $( ".draggable" ).draggable({
+      containment: "body"
+    });
+  });
 
-    %p= talk.title
-    %p= talk.blurb
-    %p
-      =link_to 'Edit', "/talks/#{talk.id}/edit"
-      / by
-      / = talk.speaker.name
-      / %a{:href => "#{talk.id}/profile"} Show
-      / %a{:href => "#{talk.id}/edit"} Edit
+  $('.dropTarget').droppable({
+    drop: function(ev, ui) {
+        $(this)
+          .html( $(this).text().trim() + ($(ui.draggable).html()) )
+          .attr( "class", "inline-block" );
+        $(this).droppable('disable');
+
+        //
+        var cell = $( $(this).parent()[0] );
+        var cell_time = cell.find('.cell-time').text().trim().split(':');
+
+        // this is debug code to help with AJAX call
+        var url = ($(ui.draggable).find('a').attr('href')).split('/');
+
+        $.ajax({
+          url: "/api/talks/time/" + url[2],
+          method: "PATCH",
+          data: {
+            hour: cell_time[0],
+            minutes: cell_time[1],
+          }
+        });
+
+        $(ui.draggable).remove();
+        $(this).find('.talk-box-close').css("display","block");
+        
+        // remove the data from the cell via X in top-right
+        $(this).find('.talk-box-close').click(function(){
+
+          $(this)
+          .parent()
+          .clone()
+          .appendTo('#talk-list')
+          .draggable()
+          .addClass("single-talk");
+
+          $(this)
+          .parent()
+          .fadeOut("slow",function(){
+            $(this).remove();
+          });
+        });
+      }
+  });

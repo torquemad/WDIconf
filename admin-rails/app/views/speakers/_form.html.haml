@@ -1,15 +1,21 @@
 
 %p
-  = label_tag :name, "Name: "
+  = f.label :name, "Name: "
   = f.text_field :name
 
 %p
-  = label_tag :blurb, "Blurb: "
+  = f.label :blurb, "Blurb: "
   = f.text_field :blurb
 
 %p
-  = label_tag :image_url, "Avatar: "
-  = f.text_field :image_url
+  = f.label :image_url, "Local Avatar Upload : "
+
+  -if @speaker.image?
+    = image_tag(speaker.image_url) if speaker.image?
+  = f.file_field :image_url
+
+  = f.label :image_url, "Remote Avatar Upload : "
+  = f.text_field :remote_image_url
 
 %p
   should probs put in connection to user account password here?

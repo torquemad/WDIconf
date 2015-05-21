@@ -4,6 +4,7 @@ _.templateSettings = {
 
 //--------------------------------------
 
+
 var speakers = new Speakers([
   new Speaker({name: 'John Doe', title: 'ANIMATION WITH JAVASCRIPT'}),
   new Speaker({name: 'Chris Lambert', title: 'SUPER PROGRAMMING'}),
@@ -35,3 +36,15 @@ var talks = new Talks([
 
 var talksView = new TalksView({model: talks});
 $('.schedule-wrapper').append(talksView.render().el);
+
+var speakers = new Speakers();
+speakers.fetch();
+
+// var chosenTalks = new ChosenTalks([
+//   new Talk({talk_id: 1, title: "DT talk"}),
+//   new Talk({talk_id: 2, title: "DT talasdsafsagk"}),
+//   new Talk({talk_id: 3, title: "DT talasdsafsagqwfwqfwqfwqfk"}),
+// ]);
+
+var tickets = new Tickets();
+

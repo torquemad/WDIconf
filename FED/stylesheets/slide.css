@@ -1,47 +1,46 @@
-/* PLACEHOLDER STUFF for making slider; assume ther*/
-* {
-  margin: 0;
-  padding: 0;
-}
-
-/* wrappers for slide out pages */
-.schedule-wrapper, .payment-wrapper {
-  display: none;
-  position: fixed;
-  right: 0;
-  width: 100vw;
-  min-height: 100vh;
-  background-color: rgba(155,155,155,.5);
-  z-index: 15;
-}
-
 /* 'cover' left side for toggle click event */
-.schedule-cover, .payment-cover {
-  float: left;
+.schedule-slider-cover, .payment-slider-cover {
+  position: fixed;
+  background-color: rgba(155,155,155,.5);
+  display: none;
   height: 100vh;
+  width: 100vw;
 }
 
-.schedule-cover {
-  width: 14vw;
+.schedule-slider-cover {
+  z-index: 50;
 }
 
-.payment-cover {
-  width: 29vw;
+.payment-slider-cover {
+  z-index: 52;
 }
 
 /* slide out pages */
-.schedule, .payment {
-  float: right;
+.schedule-slider, .payment-slider {
+  /*display: none;*/
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
   background: white;
-  display: inline-block;
-  height: 100vh;
+  min-height: 100vh;
   vertical-align: top;
+  overflow-y: auto;
+  -webkit-transform: translate(100vw, 0);
+  -transform: translate(100vw, 0);
+  transition: transform 0.3s ease;
 }
 
-.schedule {
-  width: 85vw;
+.schedule-slider {
+  width: 93vw;
+  z-index: 51;
 }
 
-.payment {
-  width: 70vw;
+.payment-slider {
+  width: 86vw;
+  z-index: 53;
+}
+
+.slider-open {
+  transform: translate(0, 0);
 }

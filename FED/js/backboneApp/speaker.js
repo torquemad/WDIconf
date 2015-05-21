@@ -1,4 +1,4 @@
 var Speaker = Backbone.Model.extend({
-  urlRoot: ''
+  urlRoot: 'http://localhost:3000/api/speakers'
 
 });

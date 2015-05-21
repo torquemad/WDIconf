@@ -1,6 +1,4 @@
-#Speakers {
-  padding-top:2rem;
-}
+
 
 #Speakers-head {
   margin-top:40px;
@@ -12,19 +10,11 @@
   -webkit-margin-after: 0;
 }
 
-#Speakers h2 {
-  font-size: 2.25rem;
-}
 
-#Speakers h3 {
-  font-size: 1.25rem;
-  font-weight: bold;
-}
 
-#Speakers h4 {
-  font-size: 1rem;
-  font-weight: bold;
-}
+
+
+
 
 #Speakers li {
   list-style: none;
@@ -40,23 +30,13 @@
   padding-right: 0.2rem;
 }
 
-#Speakers-details{
-  margin-bottom: 2rem;
-  margin-top: 2rem;
-}
+
 
 .medium-4.columns.container_200 {
   padding-left:0;
 }
 
-#Speakers-details-highlightedImage{
-  width: 300px;
-  height: 200px;
-}
 
-.container_200{
-  height: 200px;
-}
 
 .container_150{
   height: 150px;
@@ -80,12 +60,7 @@
   padding-right: 0.3rem;
 }
 
-#Speakers-details-CTA-btn{
-  position: absolute;
-  padding: 0 auto;
-  margin: 0 auto;
-  bottom: 0;
-}
+
 
 .th {
   border: solid 4px #FFFFFF;
@@ -131,11 +106,7 @@
   margin-right: 0.5rem;
 }
 
-#Speakers-list-CTA-btn {
-  height: 100px;
-  width: 100%;
-  font-size: 1.5rem;
-}
+
 
 #Speakers-list-showMore {
   width: 100%;
