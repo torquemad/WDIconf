@@ -551,3 +551,7 @@ margin-bottom: 0;
 .main-nav li.buyTicketLI:hover {
   background: none;
 }
+
+.main-nav li.logoNavLI:hover {
+  background: none;
+}
