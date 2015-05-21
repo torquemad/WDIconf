@@ -66,10 +66,19 @@ class SinatraApi < Sinatra::Base
   # Mailer
 
   post '/mailer/contact' do
-    # email user confirmation upon signup
+    # email user confirmation upon send from contact form
     if Rails.configuration.x.mail_on_SPA_contact == true
       UserNotifier.send_contact_email(params).deliver_now
     end
   end
+
+  post '/mailer/payment' do
+    # email user confirmation upon purchasing ticket
+    if Rails.configuration.x.mail_on_user_payment == true
+      UserNotifier.send_payment_email(params).deliver_now
+    end
+  end
+
+  # -------------------------
 
 end
