@@ -65,96 +65,81 @@
       Git address: https://github.com/TeamUXB
     -->
 
-  <!-- :::::::::: TEMPORARY START :::::::::: -->
 
-  <!-- schedule page -->
+  <!-- :::::::::: MULTI LEVEL SLIDE PAGES JavaScript by Philip Castiglione, BackBone Helpers Philip Castiglione and Luke Shillabeer :::::::::: -->
+
+  <!-- :::::::::: SCHEDULE PAGE BackBone by Jaya Wijono, HTML and UX by Beta Ngadiman :::::::::: -->
+
   <div class="schedule-slider-cover slider-toggle" data-slider-page=".schedule"></div>
   <div class="schedule-slider">
-    <div class="slider-cross slider-toggle" data-slider-page=".schedule">X</div>
+    <div class="slider-cross slider-toggle" data-slider-page=".schedule"><i class="fa fa-times"></i> Close</div>
     <div class="schedule-container"></div>
-    <button class="slider-toggle" data-slider-page=".payment">Checkout</button>
+    <div class="row rowrowSlidePage rowrowSlidePagePage">
+      <button class="slider-toggle checkoutCheckoutBTN" data-slider-page=".payment">Checkout</button>
+    </div>
+    
   </div>
-  <!-- schedule page END -->
 
-  <!-- payment page -->
+  <!-- :::::::::: PAYMENT PAGE BackBone by Jaya Wijono, HTML by Louis Moore, UX by Beta Ngadiman :::::::::: -->
 
   <div class="payment-slider-cover slider-toggle" data-slider-page=".payment"></div>
   <div class="payment-slider">
-    <div class="slider-cross slider-toggle" data-slider-page=".payment">X</div>
-    <div class="row">
+    <div class="slider-cross slider-toggle closeSliderSpecial" data-slider-page=".payment"><i class="fa fa-times"></i> Close</div>
+    <div class="payment-container">
       <div class="large-10 medium-10 columns">
-        <img class="main-logo" src="images/tmp-Banner.png" alt="WDI2015">
-        <h5>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem in, modi maiores, molestiae commodi fugiat velit dolor expedita sunt.</h5>
-        <ul class="steps-bar">
-          <li>SELECT TALK</li>
-          <li>PAYMENT</li>
-          <li>CONFIRM ACTION</li>
-        </ul>
-        <h3>Ticket #19248</h3>
+        <img class="wdiBW_logo" src="img/wdiconf_logo_ww.svg" alt="WDI2015">
+        <h3 class="payment-container-header">Ticket #19248</h3>
 
-        <form id="myForm" method="post" action="http://localhost:3000/api/mailer/payment" data-abide>
-          <div class="row">
-            <div class="large-6 medium-6 columns">
-              <small class="error">Your first name is required.</small>
-              <input type="text" placeholder="First Name" name="payment-firstName" required>
-            </div>
-            <div class="large-6 medium-6 columns end">
-              <small class="error">Your surname name is required.</small>
-              <input type="text" placeholder="Surname" name="payment-surname" required>
-            </div>
-            <div class="large-12 medium-12 columns end">
-              <small class="error">Please enter a valid email(so we can send you your ticket!)</small>
-              <input type="text" placeholder="Email Address" name="payment-email" required>
-            </div>
-          </div>
-          <div class="row">
-            <div class="large-12 medium-12 columns">
-              <h4>Payment details go here:</h4>
-            </div>
-            <div class="large-6 medium-6 columns">
-              <small class="error">Your full name is required.</small>
-              <input type="text" placeholder="Name on card" name="payment-fullName" required>
-            </div>
-            <div class="large-6 medium-6 columns">
-              <small class="error">A valid card number is required.</small>
-              <input type="text" placeholder="Card number" name="payment-cardNumber" required>
-            </div>
-          </div>
-          <div class="row">
-            <div class="large-2 medium-2 columns">
-              <small class="error">Please select a month.</small>
-              <input type="text" placeholder="Month" name="payment-month" required>
-            </div>
-            <div class="large-2 medium-2 columns">
-              <small class="error">A valid CCV code is required.</small>
-              <input type="text" placeholder="CCV" name="payment-ccv" required>
-            </div>
-            <div class="large-8 medium-8 columns end">
-              <h4 class="payment-heading">You are using:</h4>
-              <ul class="payment-type">
-                <li class="Visa"></li>
-                <li class="MasterCard"></li>
-              </ul>
-            </div>
-          </div>
-          <div class="row">
-            <div class="medium-7 medium-push-5 columns">
-              <div class="row">
-                <div class="medium-4 medium-push-2 columns">
-                  <input type="submit" class="nice blue radius button" value="Cancel">
-                </div>
-                <div class="medium-6 medium-push-2 columns end">      
-                  <input type="submit" class="nice blue radius button payment-btn" value="Make Payment">
-                </div>
+        <section class="myForm-Wrapper">
+          <form id="myForm" method="post" action="http://localhost:3000/api/mailer/payment" data-abide>
+            <div class="row">
+              <div class="large-6 medium-6 columns">
+                <small class="error">Your first name is required.</small>
+                <input type="text" placeholder="First Name" name="payment-firstName" required>
+              </div>
+              <div class="large-6 medium-6 columns end">
+                <small class="error">Your surname name is required.</small>
+                <input type="text" placeholder="Surname" name="payment-surname" required>
+              </div>
+              <div class="large-12 medium-12 columns end">
+                <small class="error">Please enter a valid email(so we can send you your ticket!)</small>
+                <input type="text" placeholder="Email Address" name="payment-email" required>
               </div>
             </div>
-          </div>
-        </form>
+            <div class="row">
+              <div class="large-12 medium-12 columns">
+                <h4>Payment details go here:</h4>
+              </div>
+              <div class="large-6 medium-6 columns">
+                <small class="error">Your full name is required.</small>
+                <input type="text" placeholder="Name on card" name="payment-fullName">
+              </div>
+              <div class="large-6 medium-6 columns">
+                <small class="error">A valid card number is required.</small>
+                <input type="text" placeholder="Card number" name="payment-cardNumber">
+              </div>
+            </div>
+            <div class="row">
+              <div class="large-2 medium-2 columns">
+                <small class="error">Please select a month.</small>
+                <input type="text" placeholder="Month" name="payment-month">
+              </div>
+              <div class="large-2 medium-2 columns end">
+                <small class="error">A valid CCV code is required.</small>
+                <input type="text" placeholder="CCV" name="payment-ccv">
+              </div>
+            </div>
+            <div class="row">
+              <div class="paymentPaymentRight">
+                <button type="submit" class="main-button button" >Cancel</button>
+                <button type="submit" class="main-button button" >Make Payment</button>
+              </div>
+            </div>
+          </form>
+        </section>
       </div>
     </div>
   </div>
-
-  <!-- :::::::::: TEMPORARY END :::::::::: -->
 
   <!-- ::::: HEADER SECTION HTML and UX by Jared O'Loughlin ::::: -->
   <div id="content">
@@ -209,7 +194,7 @@
             <li><a href="#Location">Location</a></li>
             <li><a href="#Sponsors">Sponsors</a></li>
             <li><a href="#Contact">Contact</a></li>
-            <li><a href="#" class="button tiny slider-toggle" id="nav-mobile-tickets" data-slider-page=".schedule">BUY TICKETS</a></li>
+            <li><a href="#" class="main-button-mobilebile button slider-toggle" id="nav-mobile-tickets" data-slider-page=".schedule">BUY TICKETS</a></li>
           </ul>
 
       </nav>
@@ -253,7 +238,7 @@
           </ul>
           <ul id="thumbs-mobile" class="show-for-small-only">
           </ul>
-          <button id="Speakers-list-showMore" class="show-for-small-only">VIEW MORE</button>
+
         </section>
       </section>
 
@@ -332,7 +317,7 @@
                 <div class="platinum-sponsors">
                   <img src="img/ga_logo.jpg" alt="big-sponsor">
                   <div class="medium-8 columns hide-for-small-only">
-                    <p>WORKING KNOWLEDGE. Learn technology, design, and business skills from industry professionals in our global community.</p>
+                    <h6>WORKING KNOWLEDGE. Learn technology, design, and business skills from industry professionals in our global community.</h6>
                   </div>
                   <div class="medium-4 columns sponsors-right">
                     <a href="https://generalassemb.ly/" class="button cta-button-sponsor" target="_blank">Visit website</a>
@@ -348,7 +333,7 @@
                 <div class="platinum-sponsors">
                   <img src="img/qc.jpg" alt="big-sponsor">
                   <div class="medium-8 columns hide-for-small-only">
-                    <p>Queens Collective is Melbourne&#39;s home to world class startups. We&#39;re more than just an office, with amazing startup support, community and events.</p>
+                    <h6>Queens Collective is Melbourne&#39;s home to world class startups. We&#39;re more than just an office, with amazing startup support, community and events.</h6>
                   </div>
                   <div class="medium-4 columns sponsors-right">
                     <a href="http://www.queenscollective.com/" class="button cta-button-sponsor" target="_blank">Visit website</a>
@@ -373,7 +358,7 @@
             <li><img src="img/sponsor_github.jpg" alt="small-sponsor"></li>
           </ul>
         </div>
-      </section> <!-- end Sponsors section -->
+      </section> 
 
     <!-- ::::: CONTACT SECTION HTML by Louis Moore, UX by Beta Ngadiman ::::: -->
 
@@ -413,9 +398,9 @@
           </div>
           
           <div id="contactForm" class="medium-6 large-6 columns">
-            <!-- NEW CHANGE START-->
+
             <h4><i class="fa fa-paper-plane"></i> Contact Us</h4>
-            <!-- NEW CHANGE END-->
+
             <form id="myContactForm" method="post" action="http://localhost:3000/api/mailer/contact" data-abide>
               
               <p>Question? Issue? Query? Rash? See a doctor about one of those. For the other three, we&#39;d love to hear from you. Just use this conveniently located form to send us an email.</p>
@@ -433,10 +418,13 @@
       </section> 
 
     </main>
-    <!-- NEW CHANGE START-->
+
     <footer>  
-      <a href="#" data-reveal-id="ConfirmationModal">Click Me For A Modal</a>
-      <button class="elevator-button"></button>
+      <div class="row">
+      <!-- <a href="#" data-reveal-id="ConfirmationModal">Click Me For A Modal</a> -->
+      <h6>&copy; 2015 TEAM UXB. <a href="https://generalassemb.ly/" title="General Assembly" alt="General Assembly" target="_blank">A General Assembly Project</a>. <button class="elevator-button"><img src="img/tardis.gif"></button></h6>
+        
+      </div>
     </footer>
 
   <div id="ConfirmationModal" class="reveal-modal medium" data-reveal aria-labelledby="confirmationModalTitle" aria-hidden="true" role="dialog">
@@ -493,7 +481,7 @@
     <a class="close-reveal-modal" aria-label="Close">&#215;</a>
   </div>
 </div>
-<!-- NEW CHANGE END-->
+
   <script type="text/x-underscore-template" id="speaker-desktop-template">
 
     <a href="" alt="" title=""><img class="th" src={{image_url}} alt="speaker">
@@ -514,21 +502,19 @@
     </div>
     <div class="row">
       <div class="small-5 columns container_100">
-        <h4>SUBJECTS</h4>
         <ul class="inline-list" id ="Speakers-list-badges">
           <li class="badge"><img src={{badge_url}} data-tooltip aria-haspopup="true" class="has-tip" title="Front End Development" alt="Front End Development"></li>
         </ul>
       </div>
       <div class="small-7 columns container_100">
-        <button class="button slider-toggle" data-slider-page=".schedule">Buy ticket</button>
+        <button class="btnbtnmobile button slider-toggle" data-slider-page=".schedule">Buy ticket</button>
       </div>
     </div>
   </script>
 
   <script type="text/x-underscore-template" id="talk-template">
     <section class="sched-row-time medium-2 columns">
-      <h3>{{startTime}}</h3>
-      <h3>&ndash; </h3>
+      <h3>{{startTime}} &ndash;</h3>
       <h3>{{endTime}}</h3>
     </section>
     <section class="sched-row-Details medium-7 columns">
@@ -538,26 +524,39 @@
     <section class="sched-row-Ticket medium-3 columns">
       <h3>Free</h3>
       <input id="qty-input" class="sched-row-TicketInput" type="number" placeholder="0" value="0">
-      <button id="add-qty">+</button>
-      <button id="minus-qty">-</button>
+      <div class="button-sched-wrapper">
+        <button id="add-qty"><i class="fa fa-plus"></i></button>
+        <button id="minus-qty"><i class="fa fa-minus"></i></button>
+      </div>
     </section>
   </script>
 
   <script type="text/x-underscore-template" id="talks-template">
-    <h3>WDICONF 15</h3>
-    <p>Total tickets: <span id="ticketsQty">0</span></p>
-    <ul class="inline-list">
-      <li id="All">All </li>
-      <li id="FE">FE </li>
-      <li id="BE">BE </li>
-      <li id="Tech">Tech</li>
+    <img class="wdiBW_logo" src="img/wdiconf_logo_bw.svg" alt="WDI2015">
+    <p class="totalTicket-wrapper">Total tickets: <span id="ticketsQty">0</span></p>
+
+    <p class="pageNumberSlide-Wrapper">Page <span id="current_page">{{currentPage}}</span> of <span id="max_page">{{maxPage}}</span></p>
+    <div class="clearfix"></div>
+    <div class="row rowrowSlidePage">
+        <ul id="listSlidePage" class="inline-list">
+      <li id="FE"><img src="img/badge_fed.svg" title="Front End Development" alt="Front End Development"></li>
+      <li id="BE"><img src="img/badge_bed.svg" title="Back End Development" alt="Back End Development"></li>
+      <li id="Tech"><img src="img/badge_tech.svg" title="Technology" alt="Technology"></li>
+      <li id="All"><img src="img/badge_all.svg" title="All categories" alt="All categories"></li>      
     </ul>
-    <p>Page <span id="current_page">{{currentPage}}</span> of <span id="max_page">{{maxPage}}</span>.</p>
-    <ul id="Sched" class="medium-9 columns end">
-    
-    </ul>
-    <button id="talks-previous">Previous</button>
     <button id="talks-next">Next</button>
+      <button id="talks-previous">Previous</button>
+      
+    </div>
+    <div class="row rowrowSlidePage">
+      <ul id="Sched" >
+      
+      </ul>
+      <button id="talks-next">Next</button>
+      <button id="talks-previous">Previous</button>
+    </div>
+    
+    
   </script>
 
 <script type="text/x-underscore-template" id="tickets-template">

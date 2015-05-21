@@ -28,7 +28,7 @@
   right: 0;
   top: 0;
   bottom: 0;
-  background: white;
+  background: #fdfdfd;
   min-height: 100vh;
   vertical-align: top;
   overflow-y: auto;
@@ -40,6 +40,7 @@
 .schedule-slider {
   z-index: 51;
   width: 95vw;
+    padding-bottom: 150px;
   box-shadow: -13px 0px 52px rgba(0,0,0,.4);
 }
 
@@ -47,6 +48,7 @@
   width: 90vw;
   z-index: 53;
   box-shadow: -13px 0px 52px rgba(0,0,0,.4);
+  background-color: #333;
 }
 
 .slider-open {
