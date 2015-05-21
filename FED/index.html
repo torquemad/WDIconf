@@ -62,16 +62,6 @@
       <!-- schedule page -->
     <div class='schedule-wrapper'>
       <div class="schedule-cover slider-toggle" data-slider-page=".schedule-wrapper"></div>
-      <div class="schedule">
-        <h3>WDICONF 15</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime impedit aliquid laborum ipsa ratione aut fugiat quis magni nihil quam officiis quibusdam porro, velit saepe amet ipsum repellat sed vero.</p>
-        <p>Chris</p>
-        <p>Chris</p>
-        <p>Chris</p>
-        <p>Chris</p>
-        <p>Chris</p>
-        <button class="">Next</button>
-        <button class="slider-toggle" data-slider-page=".payment-wrapper">Checkout</button>
       </div>
     </div>
 
@@ -495,6 +485,21 @@
     </div>
   </script>
 
+  <script type="text/x-underscore-template" id="talks-template">
+    <h3>WDICONF 15</h3>
+    <ul class="inline-list">
+      <li id="All">All </li>
+      <li id="FE">FE </li>
+      <li id="BE">BE </li>
+      <li id="Tech">Tech</li>
+    </ul>
+    <p>Page <span id="current_page">{{currentPage}}</span> of <span id="max_page">{{maxPage}}</span>.</p>
+    <ul id="talks_list"></ul>
+    <button id="talks-previous">Previous</button>
+    <button id="talks-next">Next</button>
+    <button class="slider-toggle" data-slider-page=".payment-wrapper">Checkout</button>
+  </script>
+
   <script src="js/jquery.min.js"></script>
   <script src="js/foundation.min.js"></script>
   <script src="https://maps.googleapis.com/maps/api/js"></script>
@@ -511,6 +516,11 @@
   <script src="js/backboneApp/speakerDesktopView.js"></script>
   <script src="js/backboneApp/speakerMobileView.js"></script>
   <script src="js/backboneApp/speakersView.js"></script>
+  <script src="js/backboneApp/talk.js"></script>
+  <script src="js/backboneApp/talks.js"></script>
+  <script src="js/backboneApp/talkDesktopView.js"></script>
+  <script src="js/backboneApp/talkMobileView.js"></script>
+  <script src="js/backboneApp/talksView.js"></script>
   <script src="js/backboneApp/backboneMain.js"></script>
 
 
