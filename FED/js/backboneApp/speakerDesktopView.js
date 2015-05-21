@@ -9,15 +9,13 @@ var SpeakerDesktopView = Backbone.View.extend({
     this.model.set('badge', badge);
     switch(this.model.get('badge')) {
       case "FE":
-        return "cat-frontend";
+        $(this.el).attr('class',"cat-frontend");
         break;
       case "BE":
-        return  "cat-backend";
+        $(this.el).attr('class',"cat-backend");
         break;
       case "Tech":
-        // this.className = "cat-tech";
-        this.el = "cat-tech";
-        console.log(this.el);
+        $(this.el).attr('class',"cat-tech");
         break;
     };
   },
@@ -30,9 +28,10 @@ var SpeakerDesktopView = Backbone.View.extend({
     event.preventDefault();
     var name = this.model.attributes['name'];
     var title = this.model.get('talks')[0]['title'];
-    var image_url = "http://localhost:3000" + this.model.get('image')['url'];
+    var image_url = "http://localhost:3000" + this.model.get('image');
     var start_time = this.model.timePlusMinutes(this.model.get('talks')[0]['start_time']);
     var end_time = this.model.timePlusMinutes(start_time,15);
+    var blurb = this.model.get('talks')[0]['blurb'];
     switch(this.model.get('badge')) {
       case "FE":
         $("#Speakers-details").find('img.has-tip').attr('src','img/badge_fed.svg');
@@ -43,17 +42,18 @@ var SpeakerDesktopView = Backbone.View.extend({
       case "Tech":
         $("#Speakers-details").find('img.has-tip').attr('src','img/badge_tech.svg');
         break;
-    }
+    };
 
-    this.renderSpeakersDetails(name, title, image_url, start_time, end_time);
+    this.renderSpeakersDetails(name, title, image_url, start_time, end_time, blurb);
   },
 
-  renderSpeakersDetails: function(name, title, image_url, start_time, end_time) {
+  renderSpeakersDetails: function(name, title, image_url, start_time, end_time, blurb) {
     var $bigSpeaker = $('#Speakers-details');
     $bigSpeaker.find('h4').text("By: " + name);
     $bigSpeaker.find('h3').text(title);
     $bigSpeaker.find("#Speakers-details-highlightedImage").attr('src', image_url);
     $bigSpeaker.find('h5').text(start_time + " - " + end_time);
+    $bigSpeaker.find('p').html(blurb);
   },
 
   render: function(){
@@ -61,7 +61,7 @@ var SpeakerDesktopView = Backbone.View.extend({
     var model = this.model.toJSON();
     var name = model['name'];
     var title = model['talks'][0]['title'];
-    var image_url =  model['image']['url'];
+    var image_url =  "http://localhost:3000" +  model['image'];
     this.$el.html(desktopTemplate({name: name, title: title, image_url: image_url} ));
 
     return this;

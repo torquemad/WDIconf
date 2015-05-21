@@ -1,7 +1,7 @@
 var SpeakersView = Backbone.View.extend({
   
   initialize: function(){
-    var firstImgUrl = this.model.at(0).get('image')['url'];
+    var firstImgUrl = this.model.at(0).get('image');
     var firstImg = "http://localhost:3000" + firstImgUrl;
     $('#Speakers-details-highlightedImage').attr('src', firstImg);
     var title = this.model.at(0).get('talks')[0]['title'];
@@ -13,6 +13,17 @@ var SpeakersView = Backbone.View.extend({
     var start_time = this.model.at(0).get('talks')[0]['start_time'];
     var end_time = this.model.at(0).timePlusMinutes(start_time,15);
     $(".talk-details").find('h5').html(start_time + " - " + end_time);
+    switch(this.model.at(0).get('talks')[0]['badge']) {
+      case "FE":
+        $("#Speakers-details").find('img.has-tip').attr('src','img/badge_fed.svg');
+        break;
+      case "BE":
+        $("#Speakers-details").find('img.has-tip').attr('src','img/badge_bed.svg');
+        break;
+      case "Tech":
+        $("#Speakers-details").find('img.has-tip').attr('src','img/badge_tech.svg');
+        break;
+    };
   },
 
   events:{
