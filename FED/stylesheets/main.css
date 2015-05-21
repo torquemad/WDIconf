@@ -578,4 +578,104 @@ margin-bottom: 0;
 }
 
 
+@media only screen and (max-width: 40em) {
+  .main-logo {
+    width: 80%;
+    margin: 20px auto;
+    float: none !important;
+  }
+
+  .welcome-msg {
+    display: none;
+  }
+
+  .show-nav {
+    background: #ea3939;
+  }
+
+  .header-inner {
+    height: 480px;
+  }
+
+  #Speakers-head {
+    margin-top: 0;
+  }
+
+  #About h3 {
+    font-size: 1.5em;
+  }
+
+  #About h4 {
+    font-size: 21px;
+  }
+
+  .awesome-people {
+    margin-top: 0;
+    font-size: 27px !important;
+  }
+
+  #Speakers h2, #Sponsors h2, #Contact h2{
+    font-size: 2.75em;
+    text-align: center;
+  }
+
+
+.location-details {
+  padding: 0 15px 0 15px;
+  text-align: center;
+}
+  #Location h2 {
+    font-size: 2em;
+      text-align: center;
+  }
+
+  #Location h3, #Sponsors h3 {
+    text-align: center;
+    font-size: 1.25em;
+  }
+
+  #Location h4 {
+      padding: 5px 8px;
+      text-align: center;
+        font-size: 21px;
+  }
+
+  #Sponsors {
+    padding-top: 50px !important;
+  }
+
+  .platinum-sponsors-img li {
+  width: 33% !important;
+  }
+
+  .individual-img-msw, .individual-img-dt {
+    width: 125px;
+    height: 125px;
+  }
+
+  #contactForm h4 {
+    margin-top: 30px;
+  }
+
+  #contactForm .main-button {
+    width: 100%;
+  }
+
+  #thumbs-mobile {
+    text-align: center;
+  }
+
+  #Speakers-list-showMore {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+
+
+
+
+
+
+
 
