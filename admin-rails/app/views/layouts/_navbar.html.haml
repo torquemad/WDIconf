@@ -21,8 +21,9 @@
             =link_to 'Add Speaker', new_speaker_path
           %li
             =link_to 'All Speakers', speakers_path
-        %li
-          =link_to 'My Profile', "/speakers/#{current_user.speaker.id}"
+        - if !is_admin?
+          %li
+            =link_to 'My Profile', "/speakers/#{current_user.speaker.id}"
 
     %li.has-dropdown.not-click
       %a{:href => talks_path } Talks
@@ -32,3 +33,7 @@
         - if is_admin?
           %li
             =link_to 'All Talks', talks_path
+
+        - if !is_admin?
+          %li
+            =link_to 'My Talk', "/talks/speaker_talks/#{current_user.speaker.id}"

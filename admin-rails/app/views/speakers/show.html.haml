@@ -13,14 +13,21 @@
     %h1 My Talk
     %section.speaker_talks.medium-9.column
       - @talks.each do |talk|
-        %article.talk
-          %p
-            =talk.title
-          %p
-            =talk.blurb
-    %aside.medium-3.column
+        %a{:href => "/talks/#{talk.id}/edit"}
+          %article.talk
+            %h2
+              =talk.title
+            %h4
+              =talk.blurb
+
+      %a{:href => "/talks/speaker/1"}
+        %article
+          %button#add_talk
+            +
+
+
       /%button#add_talk Add Talk
-      =link_to 'Add Talk', "/talks/speaker/#{current_user.speaker.id}"
+
   %div.row
     %section.talk_form
 

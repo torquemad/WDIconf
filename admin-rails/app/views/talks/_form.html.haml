@@ -11,7 +11,8 @@
 
 %p
   = f.label :speaker_id, "Speaker"
-  = f.select("speaker_id", Speaker.all.collect {|sp| [sp.name.capitalize, sp.id]}, :selected=>params[:id])
+  - binding.pry
+  = f.select("speaker_id", Speaker.all.collect {|sp| [sp.name.capitalize, sp.id]}, :selected=>@talk.speaker_id)
 
 %p
   = f.label :date, "Talk Date: "
@@ -20,10 +21,10 @@
 %p#duration
   = f.label :duration, "Talk Duration: "
   %span
-    %em 20
+    %em 15
     mins
-  = f.range_field :time, :step =>20, :value => 20, :min =>20, :max=>60
-
+  /= f.range_field :time, :step =>20, :value => 20, :min =>20, :max=>60
+= f.hidden_field :duration, :value =>15
 = f.hidden_field :limit, :value =>30
 
 = f.submit
