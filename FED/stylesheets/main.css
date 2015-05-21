@@ -101,7 +101,7 @@ input[type="text"], input[type="password"], input[type="date"], input[type="date
   height:550px;
   width: 100%;
   position: fixed;
-  background: url('../img/wdiconf_bg.jpg');
+  background: url('../img/wdiconf_bg_mini.jpg');
   background-size: cover;
   z-index: -1;
   top:0;
@@ -231,7 +231,7 @@ text-transform: uppercase;
 
 /***** LOCATION SETTING *****/
 #Location {
-	background: url('../img/melbourne.jpg')no-repeat center center;
+	background: url('../img/melbourne_mini.jpg')no-repeat center center;
 	background-size: cover;
 	padding-top:70px;
 	padding-bottom: 4em;
@@ -520,4 +520,8 @@ margin-bottom: 0;
   font-size: 14px;
     text-transform: uppercase;
   font-family: 'Montserrat', sans-serif;
+}
+
+#bodyContent span {
+  color: #333;
 }
