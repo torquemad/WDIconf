@@ -27,8 +27,8 @@ class SinatraApi < Sinatra::Base
   # ---------------
 
   get '/talks' do  
-  # Talk.all.select(to_json
-    Talk.all.select(:speaker_id, :title, :badge, :limit, :blurb, :description).to_json(:include => :speaker)
+
+    Talk.all.select(:speaker_id, :title, :badge, :limit, :blurb, :description, :date).to_json(:include => :speaker)
 
 
   end
