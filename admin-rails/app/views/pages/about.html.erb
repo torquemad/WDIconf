@@ -12,3 +12,14 @@
 </ul>
 
 
+index.html.erb
+<% talks = @talks.to_json %>
+<%= talks[0] %>
+<script>
+  console.log("#{<%= talks[0] %>}");
+  var talks = parseJSON(<%= @talks_json %>);
+  debugger;
+  // $.each(<%= @talks_json %>, function(x){
+  //   console.log(<%= @blach %>);
+  // });
+</script>

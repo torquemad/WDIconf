@@ -21,6 +21,7 @@ Rails.application.routes.draw do
     resources :talks
     get   '/talks/speaker/:id'        => 'talks#new_by_speaker'
     get   '/talks/speaker_talks/:id'  => 'talks#my_talks'
+    get   '/talks/api/json'           => 'talks#api'
     #post  '/users/signup'         => 'users#create'
   # ----------------------------
 

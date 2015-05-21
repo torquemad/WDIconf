@@ -4,6 +4,12 @@ class TalksController < ApplicationController
     @talks = Talk.all
   end
 
+  def api
+    @talks = Talk.all
+    @talks_json = @talks.to_json
+    render :json => @talks_json
+  end
+
   def create
     @talk = Talk.new(get_talk_params)
     if @talk.save
