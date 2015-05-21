@@ -369,6 +369,10 @@ border-bottom: 1px solid #aaa;
 	  margin-bottom: 0px;
 }
 
+#contactForm textarea {
+  min-height: 150px;
+}
+
 .individual-img-dt {
 	width: 150px;
 	height: 150px;
@@ -635,6 +639,7 @@ margin-bottom: 0;
   #Location h2 {
     font-size: 2em;
       text-align: center;
+      margin-top: -15px;
   }
 
   #Location h3, #Sponsors h3 {
