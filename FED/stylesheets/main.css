@@ -182,8 +182,8 @@ button:hover, button:focus, .button:hover, .button:focus {
 #Speakers h3 {
 	font-family: Georgia,Times,Times New Roman,serif;
 	text-transform: uppercase;
-    font-size: 1.725em;
-    line-height: 1.25;
+    font-size: 1.25em;
+    line-height: 1.5;
 }
 
 #Speakers h5 {
@@ -736,7 +736,7 @@ nav.mobile a {
   font-size: 28px;
   margin-bottom: 5px;
   border-bottom: 1px solid #fdfdfd;
-  
+
 }
 
 
