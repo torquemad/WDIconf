@@ -107,38 +107,43 @@
           <li>CONFIRM ACTION</li>
         </ul>
         <h3>Ticket #19248</h3>
-        <form id="myForm" method="post" data-abide>
+
+        <form id="myForm" method="post" action="http://localhost:3000/api/mailer/payment" data-abide>
           <div class="row">
             <div class="large-6 medium-6 columns">
               <small class="error">Your first name is required.</small>
-              <input type="text" placeholder="First Name" required>
+              <input type="text" placeholder="First Name" name="payment-firstName" required>
             </div>
             <div class="large-6 medium-6 columns end">
               <small class="error">Your surname name is required.</small>
-              <input type="text" placeholder="Surname" required>
+              <input type="text" placeholder="Surname" name="payment-surname" required>
+            </div>
+            <div class="large-12 medium-12 columns end">
+              <small class="error">Please enter a valid email(so we can send you your ticket!)</small>
+              <input type="text" placeholder="Email Address" name="payment-email" required>
             </div>
           </div>
           <div class="row">
             <div class="large-12 medium-12 columns">
-              <h4>PLEASE ENTER YOUR CARD DETAILS:</h4>
+              <h4>Payment details go here:</h4>
             </div>
             <div class="large-6 medium-6 columns">
               <small class="error">Your full name is required.</small>
-              <input type="text" placeholder="Name on card" required>
+              <input type="text" placeholder="Name on card" name="payment-fullName" required>
             </div>
             <div class="large-6 medium-6 columns">
               <small class="error">A valid card number is required.</small>
-              <input type="text" placeholder="Card number" required>
+              <input type="text" placeholder="Card number" name="payment-cardNumber" required>
             </div>
           </div>
           <div class="row">
             <div class="large-2 medium-2 columns">
               <small class="error">Please select a month.</small>
-              <input type="text" placeholder="Month" required>
+              <input type="text" placeholder="Month" name="payment-month" required>
             </div>
             <div class="large-2 medium-2 columns">
               <small class="error">A valid CCV code is required.</small>
-              <input type="text" placeholder="CCV" required>
+              <input type="text" placeholder="CCV" name="payment-ccv" required>
             </div>
             <div class="large-8 medium-8 columns end">
               <h4 class="payment-heading">You are using:</h4>
@@ -155,7 +160,7 @@
                   <input type="submit" class="nice blue radius button" value="Cancel">
                 </div>
                 <div class="medium-6 medium-push-2 columns end">      
-                  <input type="submit" class="payment-btn" value="Make Payment">
+                  <input type="submit" class="nice blue radius button payment-btn" value="Make Payment">
                 </div>
               </div>
             </div>
@@ -429,14 +434,14 @@
             <!-- NEW CHANGE START-->
             <h4><i class="fa fa-paper-plane"></i> Contact Us</h4>
             <!-- NEW CHANGE END-->
-            <form id="myForm" method="post" data-abide>
+            <form id="myForm" method="post" action="http://localhost:3000/api/mailer/contact" data-abide>
               
               <p>Question? Issue? Query? Rash? See a doctor about one of those. For the other three, we&#39;d love to hear from you. Just use this conveniently located form to send us an email.</p>
-              <input type="text" placeholder="Full Name" required>
+              <input type="text" name="name" placeholder="Full Name" required>
               
-              <input type="email" placeholder="Address@email.com" required>
+              <input type="email" name="email" placeholder="Address@email.com" required>
               
-              <textarea placeholder="Enter your message here" required></textarea>
+              <textarea name="message" placeholder="Enter your message here" required></textarea>
               
               <input type="submit" class="main-button button" value="Send Message"></button>
             </form>
