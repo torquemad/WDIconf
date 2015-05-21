@@ -96,8 +96,17 @@ $('.accordion-trigger').on('click', function() {
       triggerDOM.removeClass('open').addClass('closed');
       triggerDOM.next().removeClass('content-open');
       console.log("closed now");
-    }
-
-    
+    } 
 });
 
+
+
+// MR ELEVATOR
+window.onload = function() {
+  var elevator = new Elevator({
+    element: document.querySelector('.elevator-button'),
+    mainAudio: './assets/elevator.mp3',
+    endAudio: './assets/ding.mp3',
+    duration: 7580 // milliseconds
+  });
+}
