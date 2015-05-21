@@ -1,3 +1,9 @@
+/* PLACEHOLDER STUFF for making slider; assume ther*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
 /* 'cover' left side for toggle click event */
 .schedule-slider-cover, .payment-slider-cover {
   position: fixed;
@@ -17,10 +23,9 @@
 
 /* slide out pages */
 .schedule-slider, .payment-slider {
-  /*display: none;*/
   position: fixed;
-  top: 0;
   right: 0;
+  top: 0;
   bottom: 0;
   background: white;
   min-height: 100vh;
@@ -32,8 +37,8 @@
 }
 
 .schedule-slider {
-  width: 93vw;
   z-index: 51;
+  width: 93vw;
 }
 
 .payment-slider {
