@@ -7,17 +7,7 @@ var SpeakerDesktopView = Backbone.View.extend({
   initialize: function(){
     var badge = this.model.get('talks')[0]['badge'];
     this.model.set('badge', badge);
-    switch(this.model.get('badge')) {
-      case "FE":
-        $(this.el).attr('class',"cat-frontend");
-        break;
-      case "BE":
-        $(this.el).attr('class',"cat-backend");
-        break;
-      case "Tech":
-        $(this.el).attr('class',"cat-tech");
-        break;
-    };
+    $(this.el).attr('class',this.model.badgeClassName(badge));
   },
 
   events:{
@@ -32,17 +22,8 @@ var SpeakerDesktopView = Backbone.View.extend({
     var start_time = this.model.timePlusMinutes(this.model.get('talks')[0]['start_time']);
     var end_time = this.model.timePlusMinutes(start_time,15);
     var blurb = this.model.get('talks')[0]['blurb'];
-    switch(this.model.get('badge')) {
-      case "FE":
-        $("#Speakers-details").find('img.has-tip').attr('src','img/badge_fed.svg');
-        break;
-      case "BE":
-        $("#Speakers-details").find('img.has-tip').attr('src','img/badge_bed.svg');
-        break;
-      case "Tech":
-        $("#Speakers-details").find('img.has-tip').attr('src','img/badge_tech.svg');
-        break;
-    };
+    var badge_url = this.model.badgeUrl(this.model.get('badge'));
+    $("#Speakers-details").find('img.has-tip').attr('src', badge_url);
 
     this.renderSpeakersDetails(name, title, image_url, start_time, end_time, blurb);
   },

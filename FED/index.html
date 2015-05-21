@@ -238,7 +238,7 @@
             <h3></h3>
             <p></p>
             <ul class="inline-list" id ="Speakers-details-badges">
-
+              <li class="badge"><img src="img/badge_fed.svg" data-tooltip aria-haspopup="true" class="has-tip" title="Front End Development" alt="Front End Development"></li>
             </ul>
           </div>
           <div class="talk-details medium-3 columns container_200">
@@ -504,20 +504,19 @@
   <script type="text/x-underscore-template" id="speaker-mobile-template">
     <div class="row">
       <div class="small-5 columns container_150">
-        <img id="Speakers-list-image" src="img/james.jpg" alt="photo">
+        <img id="Speakers-list-image" src={{image_url}} alt="photo">
         <h4 id="Speakers-list-name" itemprop="name">{{name}}</h4>
       </div>
       <div class="small-7 columns container_150">
-        <h3>SUPER AWESOME TITLE TALK</h3>
-        <h5 id="Speakers-list-time">10:00PM - 11.30PM</h5>
+        <h3>{{title}}</h3>
+        <h5 id="Speakers-list-time">{{start_time}} - {{end_time}}</h5>
       </div>
     </div>
     <div class="row">
       <div class="small-5 columns container_100">
         <h4>SUBJECTS</h4>
         <ul class="inline-list" id ="Speakers-list-badges">
-          <li><img src="http://placehold.it/40x40" alt="badge 1"> </li>
-          <li><img src="http://placehold.it/40x40" alt="badge 2"> </li>
+          <li class="badge"><img src={{badge_url}} data-tooltip aria-haspopup="true" class="has-tip" title="Front End Development" alt="Front End Development"></li>
         </ul>
       </div>
       <div class="small-7 columns container_100">

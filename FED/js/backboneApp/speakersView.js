@@ -39,17 +39,17 @@ var SpeakersView = Backbone.View.extend({
     this.model.each(this.addOneDesktop, this);
   },
 
-  // addOneMobile: function(speaker){
-  //   var view = new SpeakerMobileView({model: speaker});
-  //   $("#thumbs-mobile").append(view.render().el);
-  // },
+  addOneMobile: function(speaker){
+    var view = new SpeakerMobileView({model: speaker});
+    $("#thumbs-mobile").append(view.render().el);
+  },
 
-  // addAllMobile: function(){
-  //   this.model.each(this.addOneMobile, this);
-  // },
+  addAllMobile: function(){
+    this.model.each(this.addOneMobile, this);
+  },
 
   render: function(){
     this.addAllDesktop();
-    // this.addAllMobile();
+    this.addAllMobile();
   }
 });

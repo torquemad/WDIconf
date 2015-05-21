@@ -23,7 +23,7 @@ var TalkView = Backbone.View.extend({
       title: this.model.get('title'), 
       speaker: this.model.get('speaker')['name'],
       start_time: this.model.get('start_time'),
-      end_time: this.endTime(this.model.get('start_time'))
+      end_time: this.model.timePlusMinutes(this.model.get('start_time'),15)
     }));
     console.log(chosenTalks);
   },
