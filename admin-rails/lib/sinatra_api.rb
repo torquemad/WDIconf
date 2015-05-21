@@ -22,6 +22,8 @@ class SinatraApi < Sinatra::Base
 
     new_ticket.save
 
+
+
   end
 
   # ---------------
