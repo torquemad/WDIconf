@@ -924,12 +924,6 @@ position: relative;
   position: relative;
 }
 
-#Speakers li.cat-tech {
-  
-
-}
-
-
 #thumbs-mobile > li {
     margin-bottom: 30px;
     border-bottom: 3px solid #999;
@@ -938,3 +932,39 @@ position: relative;
   height: inherit;
 }
 }
+
+
+#MobileMobile-nav ul li:last-child a{
+  border-bottom: 0;
+}
+.main-button-mobilebile {
+    font-family: 'Montserrat', sans-serif;
+  background: #FAFAFA;
+color: #28083D !important;
+  font-size: 24px !important;
+  text-transform: uppercase;
+}
+
+
+footer {
+  text-align: center;
+  padding: 10px 0;
+}
+
+footer h6 {
+  font-size: 12px;
+}
+
+.elevator-button {
+   padding: 5px 10px 0 10px;
+  background: none;
+    margin: 0;
+}
+
+.elevator-button img {
+   width: 25px;
+
+}
+
+
+
