@@ -59,13 +59,13 @@ Talk.create([{ title: 'Webscraping with Ruby', badge: 'BE', blurb: 'Webscraping 
 # ----------------------------------------------------------
 User.create([{ access_level_id: 3, email: 'justin@codyperry.com', login_type:1, password: '123', password_salt: 'abcde' }])
 Speaker.create([{ user_id: 3, name: 'Justin Ward', blurb: 'I’m a full stack web developer with a burning love for application development and architecture, coding and high tech funware!', image: '/uploads/speaker/image/3/profile_justin.jpg'}])
-Talk.create([{ speaker_id: 3, badge: 'Tech', title: 'Why Microsoft Windows is a superior development environment', blurb: 'Why Microsoft Windows is a superior development environment', description: 'How to cure premature optimisation with benchmarking. Benchmarking, in-line C and external executables.', date: Time.utc(2015, 05, 22, 10, 45), limit: 30, duration: 15 }])
+Talk.create([{ speaker_id: 3, badge: 'Tech', title: 'Why Windows is a dev environment?', blurb: 'Why Microsoft Windows is a superior development environment', description: 'How to cure premature optimisation with benchmarking. Benchmarking, in-line C and external executables.', date: Time.utc(2015, 05, 22, 10, 45), limit: 30, duration: 15 }])
 # ----------------------------------------------------------
 #                   Mike Goodwin: id=4
 # ----------------------------------------------------------
 User.create([{ access_level_id: 3, email: 'mike@codyperry.com', login_type:1, password: '123', password_salt: 'abcde' }])
 Speaker.create([{ user_id: 4, name: 'Mike Goodwin', blurb: 'I’m a full stack web developer with a burning love for application development and architecture, coding and high tech funware!', image: '/uploads/speaker/image/4/profile_mike.jpg'}])
-Talk.create([{ speaker_id: 4, badge: 'BE',  title: 'Discussions About (Not Quite) Dead Languages Part 1: COBOL', blurb: 'Discussions About (Not Quite) Dead Languages Part 1: COBOL', description: 'We begin our discussion of programming languages for which, despite public perception, the last rites have not yet been read. WS-NOT-QUITE-DEAD-LANGUAGES[0] => COBOL.', date: Time.utc(2015, 05, 22, 10, 15), limit: 30, duration: 15 }])
+Talk.create([{ speaker_id: 4, badge: 'BE',  title: 'Discussions About Dead Languages.', blurb: 'Discussions About (Not Quite) Dead Languages Part 1: COBOL', description: 'We begin our discussion of programming languages for which, despite public perception, the last rites have not yet been read. WS-NOT-QUITE-DEAD-LANGUAGES[0] => COBOL.', date: Time.utc(2015, 05, 22, 10, 15), limit: 30, duration: 15 }])
 # ----------------------------------------------------------
 #                   JC: id=5
 # ----------------------------------------------------------
@@ -76,7 +76,7 @@ Talk.create([{ speaker_id: 5, badge: 'FE', title: 'Song Creation Lighweight', bl
 #                   Matt Cameron: id=6
 # ----------------------------------------------------------
 User.create([{ access_level_id: 3, email: 'matt.c@codyperry.com', login_type:1, password: '123', password_salt: 'abcde' }])
-Speaker.create([{ user_id: 6, name: 'JC Lee', blurb: 'I’m a full stack web developer with a burning love for application development and architecture, coding and high tech funware!', image: '/uploads/speaker/image/6/profile_matt.jpg'}])
+Speaker.create([{ user_id: 6, name: 'Matt Cameron', blurb: 'I’m a full stack web developer with a burning love for application development and architecture, coding and high tech funware!', image: '/uploads/speaker/image/6/profile_matt.jpg'}])
 Talk.create([{ speaker_id: 6, badge: 'Tech', title: 'Stop working and get rich, you idiot!', blurb: 'Stop working and get rich, you idiot!', description: 'Gone are the days of trading time for money. I\'ll show you how to leverage the Internet and earn passive income.', date: Time.utc(2015, 05, 22, 10, 45), limit: 30, duration: 15 }])
 # ----------------------------------------------------------
 #                   Louis Moore: id=7
@@ -101,7 +101,7 @@ Talk.create([{ speaker_id: 9, badge: 'FE', title: 'I have no idea what I am doin
 # ----------------------------------------------------------
 User.create([{ access_level_id: 3, email: 'luke@codyperry.com', login_type:1, password: '123', password_salt: 'abcde' }])
 Speaker.create([{ user_id: 10, name: 'Luke Shillabeer', blurb: 'I’m a full stack web developer with a burning love for application development and architecture, coding and high tech funware!', image: '/uploads/speaker/image/10/profile_luke.jpg'}])
-Talk.create([{ speaker_id: 10, badge: 'BE', title: 'Anatomy of a security vulnerability', blurb: 'Anatomy of a security vulnerability', description: 'We\'ve heard about how hard security is, but whyyyy? Let\'s chat about it, specifically about a particular class of vulnerability called buffer overflow :)', date: Time.utc(2015, 05, 22, 12, 00), limit: 30, duration: 15 }])
+Talk.create([{ speaker_id: 10, badge: 'BE', title: 'Anatomy of a security thingy', blurb: 'Anatomy of a security vulnerability', description: 'We\'ve heard about how hard security is, but whyyyy? Let\'s chat about it, specifically about a particular class of vulnerability called buffer overflow :)', date: Time.utc(2015, 05, 22, 12, 00), limit: 30, duration: 15 }])
 # ----------------------------------------------------------
 #                   Aden Margheriti: id=11
 # ----------------------------------------------------------

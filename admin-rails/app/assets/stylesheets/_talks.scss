@@ -3,10 +3,11 @@
   display: inline-block;
   vertical-align: top;
   border: 1px solid black;
-  padding-left: 10px;
-  height: 130px;
+  padding: 10px;
+  height: 160px;
   width:  180px;
   margin: 0;
+  cursor:pointer;
 
   h1{
     font-size: 0.7em;
@@ -17,7 +18,7 @@
 }
 
 .larger-talk-box {
-  height: 150px;
+  height: 220px;
 }
 
 #talk-list {
