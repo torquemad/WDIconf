@@ -18,9 +18,12 @@ class TalksController < ApplicationController
   end
 
   def new_by_speaker
-    binding.pry
     @talk = Talk.new
     @speaker = Speaker.find(params[:id])
+  end
+
+  def my_talks
+    @talks = Talk.where(speaker_id: params[:id])
   end
 
   def show

@@ -19,7 +19,8 @@ Rails.application.routes.draw do
 
   # ------ Talks routes --------
     resources :talks
-    get   '/talks/speaker/:id'      => 'talks#new_by_speaker'
+    get   '/talks/speaker/:id'        => 'talks#new_by_speaker'
+    get   '/talks/speaker_talks/:id'  => 'talks#my_talks'
     #post  '/users/signup'         => 'users#create'
   # ----------------------------
 

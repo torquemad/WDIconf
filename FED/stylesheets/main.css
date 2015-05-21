@@ -111,6 +111,12 @@ input[type="text"], input[type="password"], input[type="date"], input[type="date
   margin: 3.5em 0 2.5em 0; 
 }
 
+
+button:hover, button:focus, .button:hover, .button:focus {
+  background-color: #fdfdfd !important;
+  color: #1a1a1a;
+}
+
 .welcome-msg {
   width: 60%;
   margin:0 auto 2.5em auto;
@@ -143,6 +149,17 @@ input[type="text"], input[type="password"], input[type="date"], input[type="date
  line-height: 2.5;
 }
 
+.main-nav li:hover {
+  background: #fdfdfd;
+
+}
+
+.main-nav li:hover a {
+    color: #1a1a1a;
+}
+
+
+
 /***** SPEAKER SETTING *****/
 
 #Speakers { 
@@ -165,8 +182,8 @@ input[type="text"], input[type="password"], input[type="date"], input[type="date
 #Speakers h3 {
 	font-family: Georgia,Times,Times New Roman,serif;
 	text-transform: uppercase;
-    font-size: 1.725em;
-    line-height: 1.25;
+    font-size: 1.25em;
+    line-height: 1.5;
 }
 
 #Speakers h5 {
@@ -525,3 +542,201 @@ margin-bottom: 0;
 #bodyContent span {
   color: #333;
 }
+
+.has-tip, .has-tip:hover, .has-tip:focus {
+  cursor: pointer;
+}
+
+.main-nav li.buyTicketLI:hover {
+  background: none;
+}
+
+.main-nav li.logoNavLI:hover {
+  background: none;
+}
+
+.platinum-sponsors-img img{
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.platinum-sponsors-img img:hover {
+  opacity: 1;
+}
+
+.inactive {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.inactive:hover {
+  opacity: 1;
+}
+
+.active {
+  opacity: 1;
+}
+
+
+@media only screen and (max-width: 40em) {
+  .main-logo {
+    width: 80%;
+    margin: 20px auto;
+    float: none !important;
+  }
+
+  .welcome-msg {
+    display: none;
+  }
+
+  .show-nav {
+    background: #ea3939;
+    text-align: left;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    color: rgba(253, 231, 5, 0.95);
+      font-size: 1.25em;
+  line-height: 1;
+  cursor: pointer;
+    padding-left: 10px;
+  }
+
+  .header-inner {
+    height: 480px;
+  }
+
+  #Speakers-head {
+    margin-top: 0;
+  }
+
+  #About h3 {
+    font-size: 1.5em;
+  }
+
+  #About h4 {
+    font-size: 21px;
+  }
+
+  .awesome-people {
+    margin-top: 0;
+    font-size: 27px !important;
+  }
+
+  #Speakers h2, #Sponsors h2, #Contact h2{
+    font-size: 2.75em;
+    text-align: center;
+  }
+
+
+.location-details {
+  padding: 0 15px 0 15px;
+  text-align: center;
+}
+  #Location h2 {
+    font-size: 2em;
+      text-align: center;
+  }
+
+  #Location h3, #Sponsors h3 {
+    text-align: center;
+    font-size: 1.25em;
+  }
+
+  #Location h4 {
+      padding: 5px 8px;
+      text-align: center;
+        font-size: 21px;
+  }
+
+  #Sponsors {
+    padding-top: 50px !important;
+  }
+
+  .platinum-sponsors-img li {
+  width: 33% !important;
+  }
+
+  .individual-img-msw, .individual-img-dt {
+    width: 125px;
+    height: 125px;
+  }
+
+  #contactForm h4 {
+    margin-top: 30px;
+  }
+
+  #contactForm .main-button {
+    width: 100%;
+  }
+
+  #thumbs-mobile {
+    text-align: center;
+  }
+
+  #Speakers-list-showMore {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (max-width: 880px) {
+.main-nav li {
+  padding: 0 .5em;
+  line-height: 3.5;
+  font-size: 12px;
+}
+}
+
+#MobileMobile-nav {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.mobile .main-logo{
+
+  margin-bottom: 0;
+
+}
+
+#NavClose {
+  width: 100%;
+  padding: 15px !important;
+  text-align: right;
+  font-size: 18px;
+  cursor: pointer;
+  color: #F4E30F;
+}
+
+.mobileMobile-Nav-Wrapper {
+  width: 90%;
+  margin: 0 auto;
+    padding: 0px !important;
+    overflow: hidden;
+}
+
+#MobileMobile-nav .main-logo {
+  width: 60%;
+  float: left;
+    margin: 0;
+}
+
+#MobileMobile-nav .main-logo-date-mobile {
+    margin-left: 10px;
+  width: 30%;
+}
+
+#MobileMobile-nav ul {
+  margin: 1em;
+}
+
+nav.mobile a {
+  color: #fff;
+  width: 100%;
+  display: block;
+  line-height: 2;
+  font-size: 28px;
+  margin-bottom: 5px;
+  border-bottom: 1px solid #fdfdfd;
+
+}
+
+

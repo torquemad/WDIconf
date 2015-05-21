@@ -44,17 +44,18 @@
   height:40px;
   width:100%;
   text-align-left;
-  z-index:100;
+  z-index: 30;
   padding-top:.4em;
   color:#ccc;
 }
 
 nav.mobile {
-  background:#888;
+  background: #28083D;
   width:300px;
+  border-right: 1px solid #1a1a1a;
   height: 100%;
   position: fixed;
-  z-index:200;
+  z-index: 31;
   top:0;
   left:0;
   -webkit-transform: translate(-300px, 0);
@@ -75,13 +76,7 @@ nav.mobile a {
   color:#fff;
 }
 
-#NavClose {
-  position: absolute;
-  right:10px;
-  top:5px;
-  font-size:.8em;
-  color:#ccc;
-}
+
 
 
 
