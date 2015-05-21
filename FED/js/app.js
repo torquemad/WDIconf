@@ -110,3 +110,67 @@ window.onload = function() {
     duration: 7580 // milliseconds
   });
 }
+
+
+
+$(document).ready(function(){
+
+// Filtering for Speakers (using Isotope)
+  var $thumbs = $('#thumbs');
+  //$thumbs.isotope({ filter: '.cat-frontend' });
+
+  var $BtnShowAll = $('#BtnShowAll');
+
+  $BtnShowAll.on('click', function(){
+    // if this is already active
+    if($(this).hasClass('active')){
+      $(this).removeClass('active').addClass('inactive');
+      $('.badge').addClass('inactive');
+    } else if ($(this).hasClass('inactive')){ // if this is inactive
+      $(this).addClass('active').removeClass('inactive');
+      //$('.badge').removeClass('inactive');
+      $('#BtnFilterFrontend').addClass('inactive');
+      $('#BtnFilterBackend').addClass('inactive');
+      $('#BtnFilterTech').addClass('inactive');
+    }
+    
+    $('.badge').toggleClass('inactive');
+    //$('.badge').toggleClass('inactive');
+    //$(this).toggleClass('inactive');
+    $thumbs.isotope({ 
+      filter: '*'
+    });
+  });
+
+  $('#BtnFilterFrontend').on('click', function(){
+    $('#BtnFilterTech').addClass('inactive');
+    $('#BtnFilterBackend').addClass('inactive');
+    //$('.badge').addClass('inactive');
+    $(this).toggleClass('inactive');
+    $BtnShowAll.removeClass('active').addClass('inactive');
+    $thumbs.isotope({ filter: '.cat-frontend' });
+  });
+
+
+  $('#BtnFilterBackend').on('click', function(){
+    $('#BtnFilterFrontend').addClass('inactive');
+    $('#BtnFilterTech').addClass('inactive');
+    //$('.badge').addClass('inactive');
+    $(this).toggleClass('inactive');
+    $BtnShowAll.removeClass('active').addClass('inactive');
+    $thumbs.isotope({ filter: '.cat-backend' });
+  });
+
+  $('#BtnFilterTech').on('click', function(){
+    $('#BtnFilterFrontend').addClass('inactive');
+    $('#BtnFilterBackend').addClass('inactive');
+    $(this).toggleClass('inactive');
+    $BtnShowAll.removeClass('active').addClass('inactive');
+    $thumbs.isotope({ filter: '.cat-tech' });
+  });
+
+
+});
+
+
+
