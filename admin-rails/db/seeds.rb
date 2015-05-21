@@ -1,59 +1,126 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
+# ----------------------------------------------------------
+#                   SEED DATA FORMATTING
+#            field names required for table/model
+# 
+# ACCESS LEVELS
+# -------------
+# id:serial, access_type:str
+# 
+# USERS
+# -----
+# id:serial, access_level_id:int, email:str, login_type:int, 
+# password:str, password_salt:str
 #
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
+# SPEAKERS
+# --------
+# id:serial, user_id:int, name:str, blurb:str, image_url:str
+
+# TALKS
+# -----
+# id:serial, title:str, blurb:str, description:text, 
+# timedate:datetime, limit:int, duration:int (mins), 
+# speaker_id:int
+
+# TICKETS
+# -------
+# id: serial, registra: str, talk_id: int
+# ----------------------------------------------------------
 
 
-#  Users
-# id:serial, access_level_id: int, email: str, login_type:int
-User.create([{ access_level_id: 1, email: 'admin@uxb.com', login_type:1, password: '123', password_salt: 'abcde' }]);
-User.create([{ access_level_id: 3, email: 'dt@uxb.com', login_type:1, password: '123', password_salt: 'abcde' }]);
-User.create([{ access_level_id: 3, email: 'beta@codyperry.com', login_type:1, password: '123', password_salt: 'abcde' }]);
-User.create([{ access_level_id: 3, email: 'phil@codyperry.com', login_type:1, password: '123', password_salt: 'abcde' }]);
-User.create([{ access_level_id: 3, email: 'jc@codyperry.com', login_type:1, password: '123', password_salt: 'abcde' }]);
-User.create([{ access_level_id: 3, email: 'jaya@codyperry.com', login_type:1, password: '123', password_salt: 'abcde' }]);
-User.create([{ access_level_id: 3, email: 'luke@codyperry.com', login_type:1, password: '123', password_salt: 'abcde' }]);
-User.create([{ access_level_id: 3, email: 'jared@codyperry.com', login_type:1, password: '123', password_salt: 'abcde' }]);
-User.create([{ access_level_id: 3, email: 'speaker@uxb.com', login_type:1, password: '123', password_salt: 'abcde' }]);
-User.create([{ access_level_id: 3, email: 'aden@codyperry.com', login_type:1, password: '123', password_salt: 'abcde' }]);
-User.create([{ access_level_id: 3, email: 'aden@codyperry.com', login_type:1, password: '123', password_salt: 'abcde' }]);
-User.create([{ access_level_id: 3, email: 'dom@codyperry.com', login_type:1, password: '123', password_salt: 'abcde' }]);
-User.create([{ access_level_id: 3, email: 'jeff@codyperry.com', login_type:1, password: '123', password_salt: 'abcde' }]);
-User.create([{ access_level_id: 3, email: 'justin@codyperry.com', login_type:1, password: '123', password_salt: 'abcde' }]);
-User.create([{ access_level_id: 3, email: 'matt.c@codyperry.com', login_type:1, password: '123', password_salt: 'abcde' }]);
-User.create([{ access_level_id: 1, email: 'matt.swan@codyperry.com', login_type:1, password: '123', password_salt: 'abcde' }]);
-User.create([{ access_level_id: 3, email: 'mike@codyperry.com', login_type:1, password: '123', password_salt: 'abcde' }]);
-User.create([{ access_level_id: 3, email: 'nick@codyperry.com', login_type:1, password: '123', password_salt: 'abcde' }]);
+# ----------------------------------------------------------
+#                     ACCESS LEVELS
+# ----------------------------------------------------------
 
-
-
-#  Users Access Level
-# id:serial, access_type: str
 AccessLevel.create([{access_type:'admin'}]);
 AccessLevel.create([{access_type:'organizer'}]);
 AccessLevel.create([{access_type:'speaker'}]);
 AccessLevel.create([{access_type:'sponsor'}]);
 
-# Talks
-# id: serial, title: str, blurb: str, description: text, timedate: datetime, limit: int, duration: int (mins), speaker_id: int
-Talk.create([{ title: 'Flipping Hair', blurb: 'How to flip your hair', description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem quam sint ea debitis natus quos iusto earum corporis excepturi inventore pariatur ipsum non est itaque repellat, ratione aliquam accusantium placeat.', date: Time.new(2015), limit: 30, duration: 20, speaker_id: 1 }]);
-Talk.create([{ title: 'Advance Hair Flipping', blurb: 'How to flip your hair', description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem quam sint ea debitis natus quos iusto earum corporis excepturi inventore pariatur ipsum non est itaque repellat, ratione aliquam accusantium placeat.', date: Time.new(2015), limit: 30, duration: 20, speaker_id: 1 }]);
-Talk.create([{ title: 'Mastering all slaves', blurb: 'How the real master turns everyone to slaves', description: 'a man who has people working for him, especially servants or slaves.', date: Time.new(2015), limit: 30, duration: 60, speaker_id: 2 }]);
+# ----------------------------------------------------------
+#                        USERS
+#         (who are speakers, who have talk/s)
+#      will have same user, speaker and talk id's
+# ----------------------------------------------------------
+
+# ----------------------------------------------------------
+#                      Phil: id=1
+# ----------------------------------------------------------
+User.create([{ access_level_id: 3, email: 'phil@codyperry.com', login_type:1, password: '123', password_salt: 'abcde' }]);
+Speaker.create([{ user_id: 1, name: 'Philip Castiglione', blurb: 'I’m a full stack web developer with a burning love for application development and architecture, coding and high tech funware!', remote_image_url: 'https://files.slack.com/files-pri/T0351JZQ0-F04V0CWJT/phil.jpg'}]);
+Talk.create([{ title: 'The Language of Programming', blurb: 'The Language of Programming', description: 'Faker::Hacker.say_something_smart might get us through most conversations, but some day soon we will all be applying for jobs. Can you explain the difference between a statement and an expression? A function and a method? A framework and a library? What the heck even is a framework anyway? I have no idea how to answer any of these questions. Hopefully by the time I give this talk I will!', date: Time.new(2015, 05, 22, 9, 30), limit: 30, duration: 15, speaker_id: 1 }]);
+# ----------------------------------------------------------
+#                   Jaya Wijono: id=2
+# ----------------------------------------------------------
+User.create([{ access_level_id: 3, email: 'jaya@codyperry.com', login_type:1, password: '123', password_salt: 'abcde' }]);
+Speaker.create([{ user_id: 2, name: 'Jaya Wijono', blurb: 'I’m a full stack web developer with a burning love for application development and architecture, coding and high tech funware!', remote_image_url: 'https://files.slack.com/files-pri/T0351JZQ0-F04V0CWJT/phil.jpg'}]);
+Talk.create([{ title: 'Webscraping with Ruby', blurb: 'Webscraping with Ruby', description: 'Journey into the world of webscraping, where you can extract almost ANYTHING out there in the internet. any information, news, feeds, you name it, it\'s out there within your reach. In this journey, I\'ll be sharing with you how to scrape stuffs out there in the wild.', date: Time.new(2015, 05, 22, 9, 45), limit: 30, duration: 15, speaker_id: 2 }]);
+# ----------------------------------------------------------
+#                   Justin Ward: id=3
+# ----------------------------------------------------------
+User.create([{ access_level_id: 3, email: 'justin@codyperry.com', login_type:1, password: '123', password_salt: 'abcde' }]);
+Speaker.create([{ user_id: 3, name: 'Justin Ward', blurb: 'I’m a full stack web developer with a burning love for application development and architecture, coding and high tech funware!', remote_image_url: 'https://files.slack.com/files-pri/T0351JZQ0-F04V0CWJT/phil.jpg'}]);
+Talk.create([{ speaker_id: 3, title: 'Why Microsoft Windows is a superior development environment', blurb: 'Why Microsoft Windows is a superior development environment', description: 'How to cure premature optimisation with benchmarking. Benchmarking, in-line C and external executables.', date: Time.new(2015, 05, 22, 10, 45), limit: 30, duration: 15 }]);
+# ----------------------------------------------------------
+#                   Mike Goodwin: id=4
+# ----------------------------------------------------------
+User.create([{ access_level_id: 3, email: 'mike@codyperry.com', login_type:1, password: '123', password_salt: 'abcde' }]);
+Speaker.create([{ user_id: 4, name: 'Mike Goodwin', blurb: 'I’m a full stack web developer with a burning love for application development and architecture, coding and high tech funware!', remote_image_url: 'https://files.slack.com/files-pri/T0351JZQ0-F04V0CWJT/phil.jpg'}]);
+Talk.create([{ speaker_id: 4, title: 'Discussions About (Not Quite) Dead Languages; Part 1: COBOL', blurb: 'Discussions About (Not Quite) Dead Languages; Part 1: COBOL', description: 'We begin our discussion of programming languages for which, despite public perception, the last rites have not yet been read. WS-NOT-QUITE-DEAD-LANGUAGES[0] => COBOL.', date: Time.new(2015, 05, 22, 10, 15), limit: 30, duration: 15 }]);
+# ----------------------------------------------------------
+#                   JC: id=5
+# ----------------------------------------------------------
+User.create([{ access_level_id: 3, email: 'jc@codyperry.com', login_type:1, password: '123', password_salt: 'abcde' }]);
+Speaker.create([{ user_id: 5, name: 'JC Lee', blurb: 'I’m a full stack web developer with a burning love for application development and architecture, coding and high tech funware!', remote_image_url: 'https://files.slack.com/files-pri/T0351JZQ0-F04V0CWJT/phil.jpg'}]);
+Talk.create([{ speaker_id: 5, title: 'Song Creation Lighweight', blurb: 'Song Creation Lighweight', description: 'It\'s always fun to create a song or customize karaoke demo if it\'s as simple as creating it on the fly on a web browser. Introducing Hookpad, demo and a bit of technology used to build it.', date: Time.new(2015, 05, 22, 10, 30), limit: 30, duration: 15 }]);
+# ----------------------------------------------------------
+#                   Matt Cameron: id=6
+# ----------------------------------------------------------
+User.create([{ access_level_id: 3, email: 'matt.c@codyperry.com', login_type:1, password: '123', password_salt: 'abcde' }]);
+Speaker.create([{ user_id: 6, name: 'JC Lee', blurb: 'I’m a full stack web developer with a burning love for application development and architecture, coding and high tech funware!', remote_image_url: 'https://files.slack.com/files-pri/T0351JZQ0-F04V0CWJT/phil.jpg'}]);
+Talk.create([{ speaker_id: 6, title: 'Stop working and get rich, you idiot!', blurb: 'Stop working and get rich, you idiot!', description: 'Gone are the days of trading time for money. I\'ll show you how to leverage the Internet and earn passive income.', date: Time.new(2015, 05, 22, 10, 45), limit: 30, duration: 15 }]);
+# ----------------------------------------------------------
+#                   Louis Moore: id=7
+# ----------------------------------------------------------
+User.create([{ access_level_id: 3, email: 'louis@codyperry.com', login_type:1, password: '123', password_salt: 'abcde' }]);
+Speaker.create([{ user_id: 7, name: 'Louis Moore', blurb: 'I’m a full stack web developer with a burning love for application development and architecture, coding and high tech funware!', remote_image_url: 'https://files.slack.com/files-pri/T0351JZQ0-F04V0CWJT/phil.jpg'}]);
+Talk.create([{ speaker_id: 7, title: 'Stop working and get rich, you idiot!', blurb: 'Stop working and get rich, you idiot!', description: 'Gone are the days of trading time for money. I\'ll show you how to leverage the Internet and earn passive income.', date: Time.new(2015, 05, 22, 11, 00), limit: 30, duration: 15 }]);
+# ----------------------------------------------------------
+#                   Nick Pateman: id=8
+# ----------------------------------------------------------
+User.create([{ access_level_id: 3, email: 'nick@codyperry.com', login_type:1, password: '123', password_salt: 'abcde' }]);
+Speaker.create([{ user_id: 8, name: 'Nick Pateman', blurb: 'I’m a full stack web developer with a burning love for application development and architecture, coding and high tech funware!', remote_image_url: 'https://files.slack.com/files-pri/T0351JZQ0-F04V0CWJT/phil.jpg'}]);
+Talk.create([{ speaker_id: 8, title: 'Panoramas in Photoshop', blurb: 'Panoramas in Photoshop', description: 'Something tech, not code. Seeing the magic of photoshop.', date: Time.new(2015, 05, 22, 11, 30), limit: 30, duration: 15 }]);
+# ----------------------------------------------------------
+#                   Beta Ngadiman: id=9
+# ----------------------------------------------------------
+User.create([{ access_level_id: 3, email: 'beta@codyperry.com', login_type:1, password: '123', password_salt: 'abcde' }]);
+Speaker.create([{ user_id: 9, name: 'Beta Ngadiman', blurb: 'I’m a full stack web developer with a burning love for application development and architecture, coding and high tech funware!', remote_image_url: 'https://files.slack.com/files-pri/T0351JZQ0-F04V0CWJT/phil.jpg'}]);
+Talk.create([{ speaker_id: 9, title: 'I have no idea what I am doing!', blurb: 'I have no idea what I am doing!', description: 'Design on the World Wide Web!', date: Time.new(2015, 05, 22, 11, 45), limit: 30, duration: 15 }]);
+# ----------------------------------------------------------
+#                   Luke Shillabeer: id=10
+# ----------------------------------------------------------
+User.create([{ access_level_id: 3, email: 'luke@codyperry.com', login_type:1, password: '123', password_salt: 'abcde' }]);
+Speaker.create([{ user_id: 10, name: 'Luke Shillabeer', blurb: 'I’m a full stack web developer with a burning love for application development and architecture, coding and high tech funware!', remote_image_url: 'https://files.slack.com/files-pri/T0351JZQ0-F04V0CWJT/phil.jpg'}]);
+Talk.create([{ speaker_id: 10, title: 'Anatomy of a security vulnerability', blurb: 'Anatomy of a security vulnerability', description: 'We\'ve heard about how hard security is, but whyyyy? Let\'s chat about it, specifically about a particular class of vulnerability called buffer overflow :)', date: Time.new(2015, 05, 22, 12, 00), limit: 30, duration: 15 }]);
+# ----------------------------------------------------------
+#                   Aden Margheriti: id=11
+# ----------------------------------------------------------
+User.create([{ access_level_id: 3, email: 'aden@codyperry.com', login_type:1, password: '123', password_salt: 'abcde' }]);
+Speaker.create([{ user_id: 11, name: 'Aden Margheriti', blurb: 'I’m a full stack web developer with a burning love for application development and architecture, coding and high tech funware!', remote_image_url: 'https://files.slack.com/files-pri/T0351JZQ0-F04V0CWJT/phil.jpg'}]);
+Talk.create([{ speaker_id: 11, title: 'Design trends through the years', blurb: 'Design trends through the years', description: 'From Hotdog to Paralax, we take a walk down internet memory lane, and have a look into what\'s in store for the web.', date: Time.new(2015, 05, 22, 12, 15), limit: 30, duration: 15 }]);
 
 
-# Tickets
-# id: serial, registra: str, talk_id: int
+# ----------------------------------------------------------
+#                     ADMIN USERS
+# ----------------------------------------------------------
+User.create([{ access_level_id: 1, email: 'admin@uxb.com', login_type:1, password: '123', password_salt: 'abcde' }]);
+User.create([{ access_level_id: 3, email: 'dt@uxb.com', login_type:1, password: '123', password_salt: 'abcde' }]);
+
+
+# ----------------------------------------------------------
+#                        TICKETS
+# ----------------------------------------------------------
 Ticket.create([{registra: 'my@ga.com', talk_id:1}]);
 Ticket.create([{registra: 'my@ga.com', talk_id:2}]);
 Ticket.create([{registra: 'louis@ga.com', talk_id:1}]);
 Ticket.create([{registra: 'jared@ga.com', talk_id:1}]);
-
-
-# Speakers
-# id: serial, user_id: int, name: str, blurb: str, image_url: str
-Speaker.create([{ user_id: 2, name: 'Daniel Tsui', remote_image_url: 'https://ga-core.s3.amazonaws.com/production/uploads/instructor/image/1700/thumb_HEADSHOTS__2001_.jpg', blurb: 'Lead Instructor, Web Development Immersive, General Assembly'}]);
-Speaker.create([{ user_id: 3, name: 'Beta Ngadiman', blurb: 'Master of all UXB', remote_image_url: 'http://m.c.lnkd.licdn.com/media/p/8/005/06d/30d/2881546.jpg'}]);
-Speaker.create([{ user_id: 4, name: 'Philip Castiglione', blurb: 'I’m a full stack web developer with a burning love for application development and architecture, coding and high tech funware!', remote_image_url: 'https://files.slack.com/files-pri/T0351JZQ0-F04V0CWJT/phil.jpg'}]);
