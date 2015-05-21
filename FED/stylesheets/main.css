@@ -671,6 +671,14 @@ margin-bottom: 0;
   }
 }
 
+@media only screen and (max-width: 880px) {
+.main-nav li {
+  padding: 0 .5em;
+  line-height: 3.5;
+  font-size: 12px;
+}
+}
+
 
 
 
