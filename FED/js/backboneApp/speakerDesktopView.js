@@ -1,12 +1,25 @@
 var SpeakerDesktopView = Backbone.View.extend({
 
   tagName: 'li',
+
+  className: '',
   
   initialize: function(){
-    // console.log("ss");
-    // console.log(this.model);
-    //$('#Speakers-details-highlightedImage').attr('src', 'http://www.fillmurray.com/g/300/200' alt="badge 1');
-    //$('#Speakers-details-highlightedImage').attr('src', this.model.attributes['image_url'];)
+    var badge = this.model.get('talks')[0]['badge'];
+    this.model.set('badge', badge);
+    switch(this.model.get('badge')) {
+      case "FE":
+        return "cat-frontend";
+        break;
+      case "BE":
+        return  "cat-backend";
+        break;
+      case "Tech":
+        // this.className = "cat-tech";
+        this.el = "cat-tech";
+        console.log(this.el);
+        break;
+    };
   },
 
   events:{
@@ -15,23 +28,32 @@ var SpeakerDesktopView = Backbone.View.extend({
 
   selectSpeaker: function(event) {
     event.preventDefault();
-    console.log(this.model);
     var name = this.model.attributes['name'];
     var title = this.model.get('talks')[0]['title'];
     var image_url = "http://localhost:3000" + this.model.get('image')['url'];
-    var time = this.model.get('talks')[0]['start_time'];
-    // var talk_id = this.model.attributes['talk_id'];
+    var start_time = this.model.timePlusMinutes(this.model.get('talks')[0]['start_time']);
+    var end_time = this.model.timePlusMinutes(start_time,15);
+    switch(this.model.get('badge')) {
+      case "FE":
+        $("#Speakers-details").find('img.has-tip').attr('src','img/badge_fed.svg');
+        break;
+      case "BE":
+        $("#Speakers-details").find('img.has-tip').attr('src','img/badge_bed.svg');
+        break;
+      case "Tech":
+        $("#Speakers-details").find('img.has-tip').attr('src','img/badge_tech.svg');
+        break;
+    }
 
-    this.renderSpeakersDetails(name, title, image_url, time);
+    this.renderSpeakersDetails(name, title, image_url, start_time, end_time);
   },
 
-  renderSpeakersDetails: function(name, title, image_url, time) {
+  renderSpeakersDetails: function(name, title, image_url, start_time, end_time) {
     var $bigSpeaker = $('#Speakers-details');
     $bigSpeaker.find('h4').text("By: " + name);
     $bigSpeaker.find('h3').text(title);
     $bigSpeaker.find("#Speakers-details-highlightedImage").attr('src', image_url);
-    $bigSpeaker.find('h5').text(time);
-    // $bigSpeaker.find(call to action button).attr('data-talk-id', talk_id);
+    $bigSpeaker.find('h5').text(start_time + " - " + end_time);
   },
 
   render: function(){
