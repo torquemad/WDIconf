@@ -28,59 +28,49 @@
           / %a{:href => "#{talk.id}/profile"} Show
           / %a{:href => "#{talk.id}/edit"} Edit
           %div.talk-box-close x
-
+%div.result
 :javascript
   $(function() {
-    // $( ".draggable" ).draggable({
-    //   containment: "#talk-list"
-    // });
+
   });
   $('#talk-list').sortable();
-  //$('.single-talk').disableSelection();
-  //talk_draggable();
+  talk_draggable();
+  $('.dropTarget').on('load',function() {
+    console.log('hello');
+  });
+  $.get( "/talks/api/json", function( data ) {
 
-  $('.dropTarget').droppable({
-    drop: function(ev, ui) {
-      $(this)
-        .html( $(this).text().trim() + ($(ui.draggable).html()) )
-        .attr( "class", "inline-block" );
-      // $(this).droppable('disable');
-      //
-      var cell = $( $(this).parent()[0] );
-      var cell_time = cell.find('.cell-time').text().trim().split(':');
-      // this is debug code to help with AJAX call
-      var url = ($(ui.draggable).find('a').attr('href')).split('/');
-      $.ajax({
-        url: "/api/talks/time/" + url[2],
-        method: "PATCH",
-        data: {
-          hour: cell_time[0],
-          minutes: cell_time[1],
+    $.each(data, function(index, key) {
+      debugger;
+      $currentData = $(this);
+      $currentData = $currentData[0].start_time;
+      $match = false;
+      $matchElement = "";
+      $title = "";
+      $allDropTarget = $('.single-talk');
+
+      $.each($allDropTarget, function() {
+        $timeData = $(this).find('span li').html();
+        $droppableElem = $(this).find('.dropTarget');
+
+        if($timeData === $currentData) {
+          $match = true;
+          $matchElement = $(this);
+
         }
       });
-      $(ui.draggable).remove();
-      $(this).find('.talk-box-close').css("display","block");
 
-      // remove the data from the cell via X in top-right
-      $(this).on('click', '.talk-box-close', function(){
-        $parentBeforeMove = $(this).parent().parent();
-        $parentBeforeMove.removeClass("inline-block").addClass('cell-content dropTarget ui-droppable');
-        $removed = $(this).parent().appendTo('#talk-list').addClass("single-talk");
-        $removed =  $(this)
-                      .parent()
-                      .clone()
-                      .appendTo('#talk-list')
-                      .draggable()
-                      .addClass("single-talk");
-        $removeParent = $removed.parent();
-        $removeParent.droppable({disabled: false});
+      if($match) {
+        $title = $('h1').html('Title: '+ key.title);
+        //debugger;
+        $matchElement.find('.dropTarget').append($title[0]).removeClass('dropTarget');
+      }
+      console.log('dataEach');
 
-        $(this)
-        .parent()
-        .fadeOut("slow",function(){
-          $(this).remove();
-        });
-      });
-    }
-  })
+    });
+      //$('.currentTarget').parent().find('span li').html()
+  });
+
+
+
 
