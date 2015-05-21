@@ -173,7 +173,7 @@
 
     <header id="Home" class="row header-inner">
         
-      <p class="show-nav show-for-small-down" >Menu</p>
+      <p class="show-nav show-for-small-down" ><i class="fa fa-bars"></i> Menu</p>
       
       <section class="row"> 
 
@@ -202,12 +202,17 @@
       </nav>
 
       <!-- Mobile Nav -->
-      <nav class="mobile">
+      <nav id="MobileMobile-nav" class="mobile">
         
-        <p id="NavClose">Close</p>
-        <h3>WDICONF 15<br>MELBOURNE<br>22 MAY</h3>
+        <section id="NavClose"><i class="fa fa-times"></i> Close</section>
+
+        <section class="mobileMobile-Nav-Wrapper">
+            <img class="main-logo" src="img/wdiconf_logo.svg" alt="WDI2015">
+            <img class="main-logo main-logo-date-mobile" src="img/wdi_logo_ga.svg" alt="WDI2015">
+        </section>
+
         <ul>
-            <li><a id="nav-home" href="#Home">HOME</a></li>
+            <li><a href="#Home">HOME</a></li>
             <li><a href="#Speakers-head">Speakers</a></li>
             <li><a href="#About">About</a></li>
             <li><a href="#Location">Location</a></li>

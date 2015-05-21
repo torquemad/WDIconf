@@ -50,8 +50,9 @@
 }
 
 nav.mobile {
-  background:#888;
+  background: #28083D;
   width:300px;
+  border-right: 1px solid #1a1a1a;
   height: 100%;
   position: fixed;
   z-index: 31;
@@ -75,13 +76,7 @@ nav.mobile a {
   color:#fff;
 }
 
-#NavClose {
-  position: absolute;
-  right:10px;
-  top:5px;
-  font-size:.8em;
-  color:#ccc;
-}
+
 
 
 
