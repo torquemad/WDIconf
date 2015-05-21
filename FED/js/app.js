@@ -106,7 +106,7 @@ window.onload = function() {
   var elevator = new Elevator({
     element: document.querySelector('.elevator-button'),
     mainAudio: './assets/takeoff.wav',
-    endAudio: './assets/ding.mp3',
+    endAudio: './assets/who.mp3',
     duration: 7580 // milliseconds
   });
 }
