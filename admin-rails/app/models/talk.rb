@@ -1,7 +1,8 @@
 class Talk < ActiveRecord::Base
   belongs_to :speaker
 
-  def initialize
+  def initialize(attributes={})
+    super
     convert_time
   end
 

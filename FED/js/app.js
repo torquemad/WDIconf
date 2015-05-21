@@ -48,6 +48,9 @@ $(document).ready(function(){
 
   // slide animation toggle
   function sliderToggle() {
+    // if mobile nav is open, make it not be
+    $('nav.mobile').removeClass('open');
+
     // disable background scrolling while schedule open
     if ($('.schedule-slider-cover:hidden').length == 0 &&
         $(this).attr('data-slider-page') == '.schedule') {
