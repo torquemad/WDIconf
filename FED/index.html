@@ -562,6 +562,19 @@
     <button id="talks-next">Next</button>
   </script>
 
+<script type="text/x-underscore-template" id="tickets-template">
+  <td>
+    <h3>{{ title }}</h3>
+    <h4 itemprop="name">by {{ speaker }}</h4>
+  </td>
+  <td>
+    <h5>{{ start_time }} - {{ end_time }}</h5>
+  </td>
+  <td>
+    <p>Free</p>
+  </td>
+</script>
+
   <script src="js/jquery.min.js"></script>
   <script src="js/foundation.min.js"></script>
   <script src="https://maps.googleapis.com/maps/api/js"></script>

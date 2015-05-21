@@ -31,10 +31,10 @@
 #                     ACCESS LEVELS
 # ----------------------------------------------------------
 
-AccessLevel.create([{access_type:'admin'}]);
-AccessLevel.create([{access_type:'organizer'}]);
-AccessLevel.create([{access_type:'speaker'}]);
-AccessLevel.create([{access_type:'sponsor'}]);
+AccessLevel.create([{access_type:'admin'}])
+AccessLevel.create([{access_type:'organizer'}])
+AccessLevel.create([{access_type:'speaker'}])
+AccessLevel.create([{access_type:'sponsor'}])
 
 # ----------------------------------------------------------
 #                        USERS
