@@ -931,6 +931,57 @@ position: relative;
 .container_100 {
   height: inherit;
 }
+
+.wdiBW_logo {
+  width: 210px;
+}
+
+.schedule-container, .payment-container {
+  padding-left: 10px;
+}
+.totalTicket-wrapper {
+  width: 120px;
+  padding: 2px 5px;
+  font-size: 10px;
+
+}
+
+.pageNumberSlide-Wrapper {
+  float: none;
+  text-align: center;
+}
+
+.sched-row-Ticket h3 {
+  float: left;
+  margin-right: 20px;
+}
+
+input[type="number"].sched-row-TicketInput {
+  width: 180px;
+}
+
+.rowrowSlidePagePage {
+  margin-left: 5px;
+}
+
+.payment-container-header {
+float: none;
+
+   margin-bottom: 0; 
+  color: #fdfdfd;
+  clear: both;
+  padding-top: 15px;
+}
+
+.myForm-Wrapper h4 {
+  font-size: 14px;
+}
+
+.paymentPaymentRight .main-button {
+  font-size: 18px !important;
+  padding: 10px;
+}
+
 }
 
 
