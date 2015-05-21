@@ -111,6 +111,12 @@ input[type="text"], input[type="password"], input[type="date"], input[type="date
   margin: 3.5em 0 2.5em 0; 
 }
 
+
+button:hover, button:focus, .button:hover, .button:focus {
+  background-color: #fdfdfd !important;
+  color: #1a1a1a;
+}
+
 .welcome-msg {
   width: 60%;
   margin:0 auto 2.5em auto;
@@ -142,6 +148,17 @@ input[type="text"], input[type="password"], input[type="date"], input[type="date
   text-transform: uppercase;
  line-height: 2.5;
 }
+
+.main-nav li:hover {
+  background: #fdfdfd;
+
+}
+
+.main-nav li:hover a {
+    color: #1a1a1a;
+}
+
+
 
 /***** SPEAKER SETTING *****/
 
@@ -524,4 +541,13 @@ margin-bottom: 0;
 
 #bodyContent span {
   color: #333;
+}
+
+.has-tip, .has-tip:hover, .has-tip:focus {
+  cursor: pointer;
+}
+
+
+.main-nav li.buyTicketLI:hover {
+  background: none;
 }
