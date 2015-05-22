@@ -38,38 +38,38 @@
   $('.dropTarget').on('load',function() {
     console.log('hello');
   });
-  $.get( "/talks/api/json", function( data ) {
+  // $.get( "/talks/api/json", function( data ) {
 
-    $.each(data, function(index, key) {
-      debugger;
-      $currentData = $(this);
-      $currentData = $currentData[0].start_time;
-      $match = false;
-      $matchElement = "";
-      $title = "";
-      $allDropTarget = $('.single-talk');
+  //   $.each(data, function(index, key) {
+  //     debugger;
+  //     $currentData = $(this);
+  //     $currentData = $currentData[0].start_time;
+  //     $match = false;
+  //     $matchElement = "";
+  //     $title = "";
+  //     $allDropTarget = $('.single-talk');
 
-      $.each($allDropTarget, function() {
-        $timeData = $(this).find('span li').html();
-        $droppableElem = $(this).find('.dropTarget');
+  //     $.each($allDropTarget, function() {
+  //       $timeData = $(this).find('span li').html();
+  //       $droppableElem = $(this).find('.dropTarget');
 
-        if($timeData === $currentData) {
-          $match = true;
-          $matchElement = $(this);
+  //       if($timeData === $currentData) {
+  //         $match = true;
+  //         $matchElement = $(this);
 
-        }
-      });
+  //       }
+  //     });
 
-      if($match) {
-        $title = $('h1').html('Title: '+ key.title);
-        //debugger;
-        $matchElement.find('.dropTarget').append($title[0]).removeClass('dropTarget');
-      }
-      console.log('dataEach');
+  //     if($match) {
+  //       $title = $('h1').html('Title: '+ key.title);
+  //       //debugger;
+  //       $matchElement.find('.dropTarget').append($title[0]).removeClass('dropTarget');
+  //     }
+  //     console.log('dataEach');
 
-    });
-      //$('.currentTarget').parent().find('span li').html()
-  });
+  //   });
+  //     //$('.currentTarget').parent().find('span li').html()
+  // });
 
 
 
